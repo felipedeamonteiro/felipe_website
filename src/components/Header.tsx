@@ -4,10 +4,10 @@ import { Container } from '../styles/components/Header';
 
 const Header: React.FC = () => (
   <Container>
-    <div>
-      <h1>Logo</h1>
+    <div className="home-div">
+      <h1>Home</h1>
     </div>
-    <div>
+    <div className="menu-div">
       <h2>Experiência</h2>
       <h2>Qualificações</h2>
       <h2>Projetos</h2>
