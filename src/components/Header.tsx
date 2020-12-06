@@ -5,14 +5,14 @@ import { Container } from '../styles/components/Header';
 const Header: React.FC = () => (
   <Container>
     <div className="home-div">
-      <h1>Home</h1>
+      <h1>HOME</h1>
     </div>
     <div className="menu-div">
-      <h2>Experiência</h2>
-      <h2>Qualificações</h2>
-      <h2>Projetos</h2>
-      <h2>Sobre Mim</h2>
-      <h2>Contato</h2>
+      <h2>EXPERIÊNCIA</h2>
+      <h2>QUALIFICAÇÕES</h2>
+      <h2>PROJETOS</h2>
+      <h2>SOBRE MIM</h2>
+      <h2>CONTATO</h2>
     </div>
   </Container>
 );
