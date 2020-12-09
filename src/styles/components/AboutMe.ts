@@ -21,7 +21,26 @@ export const Container = styled.div`
     }
 
     .skills-bars {
+      width: 100%;
 
+      .bar-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background: lightgray;
+        margin-bottom: 15px;
+        height: 50px;
+
+        .bar-fill {
+          width: 50%;
+          padding: 10px;
+
+          .tag-name {
+            background: #175422;
+          }
+        }
+      }
     }
   }
 

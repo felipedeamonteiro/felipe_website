@@ -28,49 +28,49 @@ const AboutMe: React.FC = () => (
 
         <div className="bar-flex">
           <div className="bar-fill">
-            <div className="tag bold flex">CSS</div>
+            <div className="tag-name">CSS</div>
           </div>
           <span>90%</span>
         </div>
 
         <div className="bar-flex">
           <div className="bar-fill">
-            <div className="tag bold flex">HTML</div>
+            <div className="tag-name">HTML</div>
           </div>
           <span>90%</span>
         </div>
 
         <div className="bar-flex">
           <div className="bar-fill">
-            <div className="tag bold flex">Javascript</div>
+            <div className="tag-name">Javascript</div>
           </div>
           <span>70%</span>
         </div>
         
         <div className="bar-flex">
           <div className="bar-fill">
-            <div className="tag bold flex">React</div>
+            <div className="tag-name">React</div>
           </div>
           <span>70%</span>
         </div>
 
         <div className="bar-flex">
           <div className="bar-fill">
-            <div className="tag bold flex">React-Native</div>
+            <div className="tag-name">React-Native</div>
           </div>
           <span>65%</span>
         </div>
 
         <div className="bar-flex">
           <div className="bar-fill">
-            <div className="tag bold flex">Nodejs</div>
+            <div className="tag-name">Nodejs</div>
           </div>
           <span>60%</span>
         </div>
 
         <div className="bar-flex">
           <div className="bar-fill">
-            <div className="tag bold flex">Python</div>
+            <div className="tag-name">Python</div>
           </div>
           <span>45%</span>
         </div>
