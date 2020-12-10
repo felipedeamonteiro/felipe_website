@@ -36,7 +36,8 @@ class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css2?family=Lemonada&display=swap" rel="stylesheet" />
-
+          <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Dancing+Script&family=Great+Vibes&family=Orbitron&family=Press+Start+2P&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />

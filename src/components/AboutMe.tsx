@@ -5,17 +5,17 @@ import { Container } from '../styles/components/AboutMe';
 
 const AboutMe: React.FC = () => (
   <Container>
+    <h1>Sobre mim</h1>
     <div className="skills-wrapper">
       <div className="about-me">
         <img src={FotoFelipe} alt="Foto de Felipe"/>
-        <div className="label_bold">Sobre mim</div>
+        <div className="label_bold">Quem sou eu?</div>
         <div className="description">
           Sou Engenheiro FullStack.
           <br />
           Tenho uma paixão por tecnologia e por construir!
           <br />
-          Mas contruir o que?
-          <br />
+          <p>Mas construir o que?</p>
           Construir soluções inteligentes para problemas diversos.{' '}
           <br />
           <span className="page-link-highlight">
@@ -27,52 +27,75 @@ const AboutMe: React.FC = () => (
       <div className="skills-bars">
 
         <div className="bar-flex">
-          <div className="bar-fill">
-            <div className="tag-name">CSS</div>
+          <div className="bar-content">
+            <div className="bar-tag">
+              CSS
+            </div>
+            <div className="bar-fill-css">
+              <span>90%</span>
+            </div>
           </div>
-          <span>90%</span>
+          
         </div>
 
         <div className="bar-flex">
-          <div className="bar-fill">
-            <div className="tag-name">HTML</div>
+          <div className="bar-content">
+            <div className="bar-tag">HTML
+            </div>
+            <div className="bar-fill-html">
+              <span>90%</span>
+            </div>
           </div>
-          <span>90%</span>
         </div>
 
         <div className="bar-flex">
-          <div className="bar-fill">
-            <div className="tag-name">Javascript</div>
+          <div className="bar-content">
+            <div className="bar-tag">JavaScript
+            </div>
+            <div className="bar-fill-javascript">
+              <span>75%</span>
+            </div>
           </div>
-          <span>70%</span>
+        </div>
+
+        <div className="bar-flex">
+          <div className="bar-content">
+            <div className="bar-tag">React
+            </div>
+            <div className="bar-fill-react">
+              <span>75%</span>
+            </div>
+          </div>
         </div>
         
         <div className="bar-flex">
-          <div className="bar-fill">
-            <div className="tag-name">React</div>
+          <div className="bar-content">
+            <div className="bar-tag">React-Native
+            </div>
+            <div className="bar-fill-react-native">
+              <span>70%</span>
+            </div>
           </div>
-          <span>70%</span>
         </div>
 
         <div className="bar-flex">
-          <div className="bar-fill">
-            <div className="tag-name">React-Native</div>
+          <div className="bar-content">
+            <div className="bar-tag">Node.js
+            </div>
+            <div className="bar-fill-nodejs">
+              <span>65%</span>
+            </div>
           </div>
-          <span>65%</span>
         </div>
 
         <div className="bar-flex">
-          <div className="bar-fill">
-            <div className="tag-name">Nodejs</div>
+          <div className="bar-content">
+            <div className="bar-tag">Python
+            </div>
+            <div className="bar-fill-python">
+              <span>55%</span>
+            </div>
           </div>
-          <span>60%</span>
-        </div>
-
-        <div className="bar-flex">
-          <div className="bar-fill">
-            <div className="tag-name">Python</div>
-          </div>
-          <span>45%</span>
         </div>
 
       </div>

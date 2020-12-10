@@ -14,7 +14,7 @@ export const Container = styled.div`
   padding: 60px 0;
 
   h3 {
-    font-family: 'Lemonada', cursive;
+    font-family: 'Orbitron', sans-serif;
     color: white;
     font-weight: 200;
     font-size: 50px;
