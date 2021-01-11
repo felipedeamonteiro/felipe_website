@@ -1,6 +1,7 @@
 import React from 'react';
 
 import FotoFelipe from '../../public/Foto_felipe2.png';
+import LogoUnicamp from '../../public/unicamp.png';
 import { Container } from '../styles/components/AboutMe';
 
 const AboutMe: React.FC = () => (
@@ -98,6 +99,25 @@ const AboutMe: React.FC = () => (
           </div>
         </div>
 
+      </div>
+    </div>
+    <div className="formacao-div">
+      <div className="col-lg-12 text-center">
+        <h2 className="section-heading text-uppercase">FORMAÇÃO ACADÊMICA</h2>
+
+        <h3 className="section-subheading text-muted">Formação sólida em instituição de Ensino Superior de renome no Brasil</h3>
+      </div>
+      <div>
+        <h2>Formação</h2>
+      </div>
+      <div className="caixa1">
+        <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
+        <h4 className="service">Graduação em Engenharia Mecânica - UNICAMP - Concluído em Janeiro de 2015</h4>
+      </div>
+
+      <div className="caixa2">
+        <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
+        <h4 className="service">Mestrado em Ciência da Computação - Inteligência Artificial e Robótica - UNICAMP - Interrompido</h4>
       </div>
     </div>
   </Container>
