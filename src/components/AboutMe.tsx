@@ -14,7 +14,7 @@ const AboutMe: React.FC = () => (
         <div className="description">
           Sou Engenheiro FullStack.
           <br />
-          Tenho uma paixão por tecnologia e por construir!
+          Tenho paixão por tecnologia e por construir!
           <br />
           <p>Mas construir o que?</p>
           Construir soluções inteligentes para problemas diversos.{' '}
@@ -54,7 +54,7 @@ const AboutMe: React.FC = () => (
             <div className="bar-tag">JavaScript
             </div>
             <div className="bar-fill-javascript">
-              <span>75%</span>
+              <span>80%</span>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ const AboutMe: React.FC = () => (
             <div className="bar-tag">React
             </div>
             <div className="bar-fill-react">
-              <span>75%</span>
+              <span>80%</span>
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ const AboutMe: React.FC = () => (
             <div className="bar-tag">React-Native
             </div>
             <div className="bar-fill-react-native">
-              <span>70%</span>
+              <span>75%</span>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ const AboutMe: React.FC = () => (
             <div className="bar-tag">Node.js
             </div>
             <div className="bar-fill-nodejs">
-              <span>65%</span>
+              <span>70%</span>
             </div>
           </div>
         </div>
@@ -94,28 +94,25 @@ const AboutMe: React.FC = () => (
             <div className="bar-tag">Python
             </div>
             <div className="bar-fill-python">
-              <span>55%</span>
+              <span>60%</span>
             </div>
           </div>
         </div>
 
       </div>
     </div>
-    <div className="formacao-div">
-      <div className="col-lg-12 text-center">
+    <div className="degree-div">
+      <div className="text-center">
         <h2 className="section-heading text-uppercase">FORMAÇÃO ACADÊMICA</h2>
 
         <h3 className="section-subheading text-muted">Formação sólida em instituição de Ensino Superior de renome no Brasil</h3>
       </div>
-      <div>
-        <h2>Formação</h2>
-      </div>
-      <div className="caixa1">
+      <div className="box1">
         <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
         <h4 className="service">Graduação em Engenharia Mecânica - UNICAMP - Concluído em Janeiro de 2015</h4>
       </div>
 
-      <div className="caixa2">
+      <div className="box2">
         <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
         <h4 className="service">Mestrado em Ciência da Computação - Inteligência Artificial e Robótica - UNICAMP - Interrompido</h4>
       </div>

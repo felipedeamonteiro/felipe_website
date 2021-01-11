@@ -14,7 +14,7 @@ const fillJavascriptAndReact = keyframes`
     width: 7%;
   }
   to {
-    width: calc(75% * 0.75);
+    width: calc(75% * 0.8);
   }
 `;
 
@@ -23,7 +23,7 @@ const fillReactNative = keyframes`
     width: 7%;
   }
   to {
-    width: calc(75% * 0.7);
+    width: calc(75% * 0.75);
   }
 `;
 
@@ -32,7 +32,7 @@ const fillNodejs = keyframes`
     width: 7%;
   }
   to {
-    width: calc(75% * 0.65);
+    width: calc(75% * 0.7);
   }
 `;
 
@@ -41,12 +41,12 @@ const fillPython = keyframes`
     width: 7%;
   }
   to {
-    width: calc(75% * 0.55);
+    width: calc(75% * 0.6);
   }
 `;
 
 export const Container = styled.div`
-  height: 840px;
+  height: 1100px;
   padding: 100px 30px 30px 30px;
 
   h1 {
@@ -204,5 +204,47 @@ export const Container = styled.div`
         }
       }
     }
-  } 
+  }
+
+  .degree-div {
+    margin: 100px 0;
+
+    .text-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 70px;
+
+      h2 {
+        font-size: 28px;
+      }
+
+      h3 {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 300;
+        font-style: italic;
+        font-family: 'Audiowide', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+    }
+
+    .box1, .box2 {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 8%;
+      }
+
+      h4 {
+        font-size: 25px;
+        margin-left: 10px;
+        text-align: center;
+      }
+    }
+  }
 `;

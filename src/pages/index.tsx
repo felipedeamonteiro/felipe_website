@@ -1,5 +1,6 @@
 import AboutMe from '../components/AboutMe';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import IntroContainer from '../components/IntroContainer';
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <IntroContainer />
       <AboutMe />
+      <Footer />
     </div>
   )
 }

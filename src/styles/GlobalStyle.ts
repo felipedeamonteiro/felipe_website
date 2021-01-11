@@ -8,6 +8,6 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
   }
 `;
