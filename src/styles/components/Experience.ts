@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
   background: #efe4f5;
+  height: 2500px;
 
   .timeline {
   position: relative;
@@ -57,6 +58,7 @@ export const Container = styled.section`
       margin-left: 0;
       text-align: center;
       color: white;
+      background: lightskyblue;
       border: 7px solid gray;
       border-radius: 100%;
       background-color: #fff;
@@ -65,7 +67,19 @@ export const Container = styled.section`
         line-height: 14px;
         margin-top: 12px;
       }
+      img {
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        z-index: -1;
+      }
+
+      &:last-child {
+        background-color: lightskyblue;
+      }
     }
+
     &.timeline-inverted > .timeline-panel {
       float: right;
       padding: 0 20px 0 100px;
