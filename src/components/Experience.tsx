@@ -14,11 +14,11 @@ const Experience: React.FC = () => {
   return (
     <Container>
       <div className="container">
-          <div className="row">
-            <div className="col-lg-12 text-center">
-              <h2 className="section-heading text-uppercase">EXPERIÊNCIA PROFISSIONAL</h2>
-              <h3 className="section-subheading text-muted">Etapas da carreira profissional</h3>
-            </div>
+          <div className="text-center-row">
+            
+              <h2 className="text-uppercase">Experiência Profissional</h2>
+              <h3 className="text-muted">Etapas da carreira profissional</h3>
+            
           </div>
           <div className="row">
             <div className="col-lg-12">
@@ -34,7 +34,7 @@ const Experience: React.FC = () => {
                       <h4 className="subheading">FÓRMULA SAE UNICAMP</h4>
                     </div>
                     <div className="timeline-body">
-                      <p className="text-muted">FIZ PARTE DA DIVISÃO DE FREIOS, ONDE PROJETAMOS TODO O SISTEMA DE FREIOS DO CARRO F-2009. NOS classNameIFICAMOS EM 5º LUGAR.</p>
+                      <p className="text-muted">FIZ PARTE DA DIVISÃO DE FREIOS, ONDE PROJETAMOS TODO O SISTEMA DE FREIOS DO CARRO F-2009. NOS CLASSIFICAMOS EM 5º LUGAR.</p>
                     </div>
                   </div>
                 </li>

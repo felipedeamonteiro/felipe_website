@@ -2,7 +2,27 @@ import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
   background: #efe4f5;
-  height: 2500px;
+  height: 2950px;
+
+  .text-center-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .text-uppercase {
+      margin-top: 60px;
+      font-size: 45px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .text-muted {
+      margin: 25px 0 50px 0;
+      font-style: 'italic';
+      font-weight: lighter;
+      color: #838b93;
+    }
+  }
 
   .timeline {
   position: relative;
@@ -34,7 +54,7 @@ export const Container = styled.section`
       position: relative;
       float: right;
       width: 100%;
-      padding: 0 20px 0 100px;
+      padding: 36px 20px 20px 14px;
       text-align: left;
       &:before {
         right: auto;
@@ -103,6 +123,7 @@ export const Container = styled.section`
   }
   .timeline-heading {
     h4 {
+      font-size: 25px;
       margin-top: 0;
       color: inherit;
       &.subheading {
@@ -114,6 +135,8 @@ export const Container = styled.section`
      > ul,
     > p {
       margin-bottom: 0;
+      font-size: 20px;
+      color: #6c757d;
     }
   }
 }
@@ -178,7 +201,7 @@ export const Container = styled.section`
     > li {
       min-height: 170px;
       .timeline-panel {
-        padding: 0 20px 20px 100px;
+        padding: 36px 20px 20px 14px;
       }
       .timeline-image {
         width: 170px;
@@ -189,7 +212,7 @@ export const Container = styled.section`
         }
       }
       &.timeline-inverted > .timeline-panel {
-        padding: 0 100px 20px 20px;
+        padding: 30px 5px 20px 20px;
       }
     }
   }
