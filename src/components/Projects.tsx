@@ -6,6 +6,18 @@ const Projects: React.FC = () => {
   return (
     <Container>
       <h1>Projects</h1>
+
+      <div className="card">
+        <div className="box">
+          <div className="imgBox">
+            <img src="" alt=""/>
+          </div>
+          <div>
+            <h2>Project Title</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+        </div>
+      </div>
     </Container>
   );
 }

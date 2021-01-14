@@ -96,7 +96,7 @@ export const Container = styled.section`
       }
 
       &:last-child {
-        background-color: lightskyblue;
+        background-color: #00d0e5;
       }
     }
 
