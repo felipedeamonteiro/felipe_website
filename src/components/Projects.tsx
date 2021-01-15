@@ -7,17 +7,65 @@ const Projects: React.FC = () => {
     <Container>
       <h1>Projects</h1>
 
-      <div className="card">
-        <div className="box">
-          <div className="imgBox">
-            <img src="" alt=""/>
+      <div className="cards-container">
+        <div className="card">
+          <div className="box">
+            <div className="imgBox">
+              <img src="" alt=""/>
+            </div>
+            <div>
+              <h2>Project Title</h2>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
           </div>
-          <div>
-            <h2>Project Title</h2>
-            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+        <div className="card">
+          <div className="box">
+            <div className="imgBox">
+              <img src="" alt=""/>
+            </div>
+            <div>
+              <h2>Project Title</h2>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="box">
+            <div className="imgBox">
+              <img src="" alt=""/>
+            </div>
+            <div>
+              <h2>Project Title</h2>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="box">
+            <div className="imgBox">
+              <img src="" alt=""/>
+            </div>
+            <div>
+              <h2>Project Title</h2>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="box">
+            <div className="imgBox">
+              <img src="" alt=""/>
+            </div>
+            <div>
+              <h2>Project Title</h2>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
           </div>
         </div>
       </div>
+
+      
     </Container>
   );
 }
