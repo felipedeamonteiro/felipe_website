@@ -46,7 +46,7 @@ const fillPython = keyframes`
 `;
 
 export const Container = styled.div`
-  height: 1100px;
+  height: 1200px;
   padding: 100px 30px 30px 30px;
 
   h1 {

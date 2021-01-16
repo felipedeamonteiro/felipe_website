@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
   background: #efe4f5;
-  height: 2950px;
+  height: 3150px;
 
   .text-center-row {
     display: flex;

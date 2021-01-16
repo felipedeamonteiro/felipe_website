@@ -9,7 +9,7 @@ import VenturusImg from '../../public/venturus_test.png';
 const Projects: React.FC = () => {
   return (
     <Container>
-      <h1>Projects</h1>
+      <h1>Projetos</h1>
 
       <div className="cards-container">
         <div className="card">
@@ -17,9 +17,11 @@ const Projects: React.FC = () => {
             <div className="imgBox">
               <img src={CaosImg} alt="Imagem do Teste Caos Focado"/>
             </div>
-            <div>
-              <h2>Project Title</h2>
-              <p>Lorem ipsum dolor sit amet</p>
+            <div className="contentBx">
+              <div>
+                <h2>Project Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget fermentum urna, vitae tempor lectus. In hac habitasse platea dictumst. Duis placerat ex nisi, ac cursus mauris lobortis vestibulum. Proin gravida vel dolor vitae efficitur. Integer maximus est lacus, quis ornare tortor sollicitudin quis.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -28,9 +30,11 @@ const Projects: React.FC = () => {
             <div className="imgBox">
               <img src={CredereImg} alt="Imagem do Teste da Credere"/>
             </div>
-            <div>
-              <h2>Project Title</h2>
-              <p>Lorem ipsum dolor sit amet</p>
+            <div className="contentBx">
+              <div>
+                <h2>Project Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget fermentum urna, vitae tempor lectus. In hac habitasse platea dictumst. Duis placerat ex nisi, ac cursus mauris lobortis vestibulum. Proin gravida vel dolor vitae efficitur. Integer maximus est lacus, quis ornare tortor sollicitudin quis.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -39,31 +43,37 @@ const Projects: React.FC = () => {
             <div className="imgBox">
               <img src={VenturusImg} alt="Imagem do teste da venturus"/>
             </div>
-            <div>
-              <h2>Project Title</h2>
-              <p>Lorem ipsum dolor sit amet</p>
+            <div className="contentBx">
+              <div>
+                <h2>Project Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget fermentum urna, vitae tempor lectus. In hac habitasse platea dictumst. Duis placerat ex nisi, ac cursus mauris lobortis vestibulum. Proin gravida vel dolor vitae efficitur. Integer maximus est lacus, quis ornare tortor sollicitudin quis.</p>
+              </div>
             </div>
           </div>
         </div>
         <div className="card">
           <div className="box">
             <div className="imgBox">
-            <img src={CaosImg} alt="Imagem do Teste Caos Focado"/>
+              <img src={CaosImg} alt="Imagem do Teste Caos Focado"/>
             </div>
-            <div>
-              <h2>Project Title</h2>
-              <p>Lorem ipsum dolor sit amet</p>
+            <div className="contentBx">
+              <div>
+                <h2>Project Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget fermentum urna, vitae tempor lectus. In hac habitasse platea dictumst. Duis placerat ex nisi, ac cursus mauris lobortis vestibulum. Proin gravida vel dolor vitae efficitur. Integer maximus est lacus, quis ornare tortor sollicitudin quis.</p>
+              </div>              
             </div>
           </div>
         </div>
         <div className="card">
           <div className="box">
             <div className="imgBox">
-            <img src={CredereImg} alt="Imagem do Teste da Credere"/>
+              <img src={CredereImg} alt="Imagem do Teste da Credere"/>
             </div>
-            <div>
-              <h2>Project Title</h2>
-              <p>Lorem ipsum dolor sit amet</p>
+            <div className="contentBx">
+              <div>
+                <h2>Project Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget fermentum urna, vitae tempor lectus. In hac habitasse platea dictumst. Duis placerat ex nisi, ac cursus mauris lobortis vestibulum. Proin gravida vel dolor vitae efficitur. Integer maximus est lacus, quis ornare tortor sollicitudin quis.</p>
+              </div>              
             </div>
           </div>
         </div>
