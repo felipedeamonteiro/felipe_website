@@ -18,6 +18,7 @@ export const Container = styled.section`
     flex-wrap: wrap;
     transform-style: preserve-3d;
     width: 1100px;
+    cursor: pointer;
 
     .card {
       position: relative;

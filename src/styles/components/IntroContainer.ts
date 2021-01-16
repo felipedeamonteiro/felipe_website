@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import backgroundImage from '../../../public/background_image.jpg';
 
 
-export const Container = styled.div`
+export const Container = styled.section`
   margin: 0;
   background: url(${backgroundImage})  round;
   width: 100%;

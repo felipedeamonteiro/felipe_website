@@ -45,7 +45,7 @@ const fillPython = keyframes`
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.section`
   height: 1200px;
   padding: 100px 30px 30px 30px;
 
@@ -124,7 +124,7 @@ export const Container = styled.div`
             background: #00c5f2;
             color: #fff; 
             font-weight: bold;
-            padding: 0 15px 0 15px;
+            padding: 0 6px 0 6px;
             height: inherit;
             display: flex;
             align-items: center;
