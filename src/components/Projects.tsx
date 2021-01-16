@@ -1,6 +1,10 @@
 import React from 'react';
 
 import { Container } from '../styles/components/Projects';
+import CaosImg from '../../public/caos_focado_test.png';
+import CredereImg from '../../public/credere_test.png';
+import VenturusImg from '../../public/venturus_test.png';
+
 
 const Projects: React.FC = () => {
   return (
@@ -11,7 +15,7 @@ const Projects: React.FC = () => {
         <div className="card">
           <div className="box">
             <div className="imgBox">
-              <img src="" alt=""/>
+              <img src={CaosImg} alt="Imagem do Teste Caos Focado"/>
             </div>
             <div>
               <h2>Project Title</h2>
@@ -22,7 +26,7 @@ const Projects: React.FC = () => {
         <div className="card">
           <div className="box">
             <div className="imgBox">
-              <img src="" alt=""/>
+              <img src={CredereImg} alt="Imagem do Teste da Credere"/>
             </div>
             <div>
               <h2>Project Title</h2>
@@ -33,7 +37,7 @@ const Projects: React.FC = () => {
         <div className="card">
           <div className="box">
             <div className="imgBox">
-              <img src="" alt=""/>
+              <img src={VenturusImg} alt="Imagem do teste da venturus"/>
             </div>
             <div>
               <h2>Project Title</h2>
@@ -44,7 +48,7 @@ const Projects: React.FC = () => {
         <div className="card">
           <div className="box">
             <div className="imgBox">
-              <img src="" alt=""/>
+            <img src={CaosImg} alt="Imagem do Teste Caos Focado"/>
             </div>
             <div>
               <h2>Project Title</h2>
@@ -55,7 +59,7 @@ const Projects: React.FC = () => {
         <div className="card">
           <div className="box">
             <div className="imgBox">
-              <img src="" alt=""/>
+            <img src={CredereImg} alt="Imagem do Teste da Credere"/>
             </div>
             <div>
               <h2>Project Title</h2>
