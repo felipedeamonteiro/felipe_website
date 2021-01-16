@@ -5,10 +5,24 @@ export const Container = styled.section`
   align-items: center;
   flex-direction: column;
 
-  h1 {
-    margin: 60px 0;
-    font-size: 45px;
-    font-family: 'Orbitron', sans-serif;
+  .text-center-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+      margin-top: 60px;
+      font-size: 45px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    h3 {
+      margin: 25px 0 50px 0;
+      font-style: 'italic';
+      font-weight: lighter;
+      color: #838b93;
+    }
   }
 
   .cards-container {
@@ -68,23 +82,28 @@ export const Container = styled.section`
           transform-style: preserve-3d;
           transform: rotateY(180deg);
 
-          div {
-            transform-style: preserve-3d;
-            padding: 20px;
-            background: linear-gradient(45deg, #fe0061, #ffeb3b);
-            transform: translateZ(100px);
+          a {
+            text-decoration: none;
 
-            h2 {
-              color: #fff;
-              font-size: 20px;
-              letter-spacing: 1px;
-            }
+            div {
+              transform-style: preserve-3d;
+              padding: 20px;
+              background: linear-gradient(45deg, #6dd4fd, #2800b3);
+              transform: translateZ(100px);
 
-            p {
-              color: #fff;
-              font-size: 16px;
+              h2 {
+                color: #fff;
+                font-size: 20px;
+                letter-spacing: 1px;
+              }
+
+              p {
+                color: #fff;
+                font-size: 16px;
+              }
             }
           }
+
         }
       }
 
