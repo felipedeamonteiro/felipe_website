@@ -48,6 +48,7 @@ const fillPython = keyframes`
 export const Container = styled.section`
   height: 1200px;
   padding: 100px 30px 30px 30px;
+  background: #f2e0f5;
 
   h1 {
     font-family: 'Orbitron', sans-serif;
