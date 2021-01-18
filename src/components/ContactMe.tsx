@@ -3,6 +3,7 @@ import * as Yup from 'yup';
 import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 
+import Button from './Button';
 import Input from './Input';
 import TextArea from './TextArea';
 import { Container } from '../styles/components/ContactMe';
@@ -18,7 +19,7 @@ const ContactMe: React.FC = () => {
   return(
     <Container>
       <div className="text-center-row">
-        <h2 className="text-uppercase">Contato</h2>
+        <h1 className="text-uppercase">Contato</h1>
         <h3 className="text-muted">Deixe sua mensagem para batermos um papo</h3>
       </div>
       <div className="contact-form-div">
@@ -27,6 +28,7 @@ const ContactMe: React.FC = () => {
           <Input name="email" label="E-mail" />
           <Input name="assunto" label="Assunto" />
           <TextArea name="mensagem" label="Mensagem" />
+          <Button type="submit">Enviar</Button>
         </Form>
       </div>
     </Container>

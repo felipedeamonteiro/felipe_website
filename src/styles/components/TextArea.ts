@@ -23,11 +23,12 @@ export const Container = styled.div`
     }
 
     &:focus {
-      border: 1px solid #de0039;
+      outline: none;
+      border: 1px solid #2800b3;
     }
   }
 
   textarea:focus + label {
-    color: #de0039;
+    color: #2800b3;
   }
 `;

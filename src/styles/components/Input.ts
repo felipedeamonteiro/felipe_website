@@ -20,7 +20,7 @@ export const Container = styled.div<ContainerProps>`
     ${props =>
       props.isErrored &&
       css`
-        border-color: #c53030;
+        border-color: #2800b3;
       `}
 
     ${props =>
@@ -34,7 +34,8 @@ export const Container = styled.div<ContainerProps>`
     }
 
     &:focus {
-      border: 1px solid #de0039;
+      outline: none;
+      border: 1px solid #2800b3;
     }
   }
 
@@ -43,6 +44,6 @@ export const Container = styled.div<ContainerProps>`
   }
 
   input:focus + label {
-    color: #de0039;
+    color: #2800b3;
   }
 `;
