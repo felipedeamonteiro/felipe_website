@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  top: 0;
+  position: sticky;
   background: #212529;
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
+  z-index: 1000;
 
   .home-div {
     padding-left: 20px;
