@@ -46,7 +46,7 @@ const fillPython = keyframes`
 `;
 
 export const Container = styled.section`
-  height: 1200px;
+  height: 1350px;
   padding: 100px 30px 30px 30px;
   background: #f2e0f5;
 
@@ -230,7 +230,7 @@ export const Container = styled.section`
       }
     }
 
-    .box1, .box2 {
+    .box1, .box2, .box3 {
       margin-top: 40px;
       display: flex;
       flex-direction: row;

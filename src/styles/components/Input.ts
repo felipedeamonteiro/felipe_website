@@ -16,6 +16,8 @@ export const Container = styled.div<ContainerProps>`
     border: 1px solid grey;
     border-radius: 4px;
     padding: 5px;
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
 
     ${props =>
       props.isErrored &&

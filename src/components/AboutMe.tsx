@@ -116,6 +116,11 @@ const AboutMe: React.FC = () => (
         <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
         <h4 className="service">Mestrado em Ciência da Computação - Inteligência Artificial e Robótica - UNICAMP - Interrompido</h4>
       </div>
+
+      <div className="box3">
+        <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
+        <h4 className="service">Graduação em Engenharia Elétrica - Focado em desenvlvimento de software e Inteligência Artificial - UNICAMP - Em curso desde 2021</h4>
+      </div>
     </div>
   </Container>
 );
