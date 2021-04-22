@@ -15,10 +15,25 @@ export const Container = styled.div`
     padding-left: 20px;
 
     h1 {
-      color: #00CDE2;
-      font-size: 26px;
-      font-weight: 400;
-      font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; 
+      a {
+        color: #00CDE2;
+        font-size: 26px;
+        font-weight: 400;
+        font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; 
+        text-decoration: none;
+        transition: font-size .5s;
+
+        :hover {
+          text-decoration: none;
+          transition: font-size .5s;
+          font-size: 30px;
+          cursor: pointer;
+        }
+
+        :focus, :active, :visited {
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -30,17 +45,25 @@ export const Container = styled.div`
     justify-content: space-between;
 
     h2 {
-      color: #fff;
-      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 95%;
-      font-weight: 400;
-      letter-spacing: 1px;
-      transition: color 0.2s;
+      a {
+        color: #fff;
+        font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        transition: color 0.2s;
+        text-decoration: none;
 
-      :hover {
-        color: #00CDE2;
-        cursor: pointer;
+        :hover {
+          color: #00CDE2;
+          cursor: pointer;
+          text-decoration: none;
+        }
+        :focus, :active, :visited {
+          text-decoration: none;
+        }
       }
+      
     }
   }
 `;
