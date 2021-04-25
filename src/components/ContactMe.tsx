@@ -41,23 +41,21 @@ const ContactMe: React.FC = () => {
   }, []);
 
   return(
-    <section id="section-contato">
-      <Container>
-        <div className="text-center-row">
-          <h1 className="text-uppercase">Contato</h1>
-          <h3 className="text-muted">Deixe sua mensagem para batermos um papo</h3>
-        </div>
-        <div className="contact-form-div">
-          <Form ref={formRef} onSubmit={handleSubmit} >
-            <Input name="name" label="Nome" value={name} onChange={e => setName(e.target.value)}/>
-            <Input name="mail" label="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
-            <Input name="subject" label="Assunto" value={subject} onChange={e => setSubject(e.target.value)} />
-            <TextArea name="message" label="Mensagem" value={message} onChange={e => setMessage(e.target.value)} />
-            <Button type="submit">Enviar</Button>
-          </Form>
-        </div>
-      </Container>
-    </section>
+    <Container id="section-contato">
+      <div className="text-center-row">
+        <h1 className="text-uppercase">Contato</h1>
+        <h3 className="text-muted">Deixe sua mensagem para batermos um papo</h3>
+      </div>
+      <div className="contact-form-div">
+        <Form ref={formRef} onSubmit={handleSubmit} >
+          <Input name="name" label="Nome" value={name} onChange={e => setName(e.target.value)}/>
+          <Input name="mail" label="E-mail" value={email} onChange={e => setEmail(e.target.value)} />
+          <Input name="subject" label="Assunto" value={subject} onChange={e => setSubject(e.target.value)} />
+          <TextArea name="message" label="Mensagem" value={message} onChange={e => setMessage(e.target.value)} />
+          <Button type="submit">Enviar</Button>
+        </Form>
+      </div>
+    </Container>
   );
 }
 

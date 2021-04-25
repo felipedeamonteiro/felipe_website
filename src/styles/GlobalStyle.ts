@@ -12,4 +12,8 @@ export default createGlobalStyle`
     font-family: 'Roboto Slab', sans-serif;
     min-height: 100vh;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 `;

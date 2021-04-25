@@ -1,8 +1,9 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.section`
   background: #efe4f5;
-  height: 3150px;
+  height: 3250px;
+  padding: 100px 30px 30px 30px;
 
   .text-center-row {
     display: flex;

@@ -12,6 +12,7 @@ export const Container = styled.section`
   justify-content: space-between;
   align-items: center;
   padding: 60px 0;
+  padding: 100px 30px 30px 30px;
 
   h3 {
     font-family: 'Orbitron', sans-serif;
