@@ -1,5 +1,9 @@
 import nodemailer from 'nodemailer';
 
+/**
+ * https://medium.com/nerd-for-tech/coding-a-contact-form-with-next-js-and-nodemailer-d3a8dc6cd645
+ */
+
 export default function (req, res) {
   const transporter = nodemailer.createTransport({
     port: 465,
@@ -13,7 +17,7 @@ export default function (req, res) {
 
   const mailData = {
     from: 'Mensagem do site portfolio',
-    to: 'felipedeamonteiro@gmail.com',
+    to: process.env.DESTINATION_MAIL,
     subject: 'Mensagem do site portfolio',
     text: req.body.message,
     html: `<div>

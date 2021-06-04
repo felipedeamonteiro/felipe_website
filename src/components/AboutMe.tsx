@@ -105,7 +105,7 @@ const AboutMe: React.FC = () => (
       <div className="text-center">
         <h2 className="section-heading text-uppercase">FORMAÇÃO ACADÊMICA</h2>
 
-        <h3 className="section-subheading text-muted">Formação sólida em instituição de Ensino Superior de renome no Brasil</h3>
+        <h3 className="section-subheading text-muted">Desenvolvimento técnico constante em instituição de Ensino Superior de renome no Brasil</h3>
       </div>
       <div className="box1">
         <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />

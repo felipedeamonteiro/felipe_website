@@ -8,6 +8,7 @@ import LdemImg from '../../public/LDEM.jpg';
 import MeuColegioImg from '../../public/MeuColegio.png';
 import NubankImg from '../../public/Nubank.jpg';
 import SiemensImg from '../../public/Siemens.jpg';
+import ObjectEdgeLogo from '../../public/object-edge-squarelogo.png';
 
 const Experience: React.FC = () => {
 
@@ -142,16 +143,31 @@ const Experience: React.FC = () => {
                       <p className="text-muted">ATUEI COMO DESENVOLVEDOR FRONTEND NOS DIVERSOS PROJETOS DA EMPRESA. ATUEI COM DESIGN SYSTEM, INTEGRAÇÃO COM HUBSPOT, RESOLUÇÃO DE BUGS, MANUTENÇÃO/ATUALIZAÇÃO DO CÓDIGO E PARTICIPAÇÃO NA CRIAÇÃO DE UM BACKOFFICE.</p>
                     </div>
                   </div>
+                </li>
+
+                <li>
+                  <div className="timeline-image">
+                    <img className="rounded-circle img-fluid" src={ObjectEdgeLogo} alt="Object Edge"/>
+                  </div>
+                  <div className="timeline-panel">
+                    <div className="timeline-heading">
+                      <h4>9 - DE FEVEREIRO DE 2021 ATÉ AGORA</h4>
+                      <h4 className="subheading">OBJECT EDGE</h4>
+                    </div>
+                    <div className="timeline-body">
+                      <p className="text-muted">DESENVOLVEDOR FRONTEND REACT.</p>
+                    </div>
+                  </div>
                 </li> 
 
                 
-                <li className="timeline-inverted">
+                {/* <li className="timeline-inverted">
                   <div className="timeline-image">
                     <h4>READY FOR
                     <br/>NEW
                     <br/>CHALLENGES!</h4>
                   </div>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
