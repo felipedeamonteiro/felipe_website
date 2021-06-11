@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
 
+/**
+ * https://www.webtips.dev/webtips/react-hooks/element-in-viewport
+ */
+
 const intersectionMethod = (element: any, rootMargin: string) => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
 

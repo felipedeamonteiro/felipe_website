@@ -1,4 +1,8 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
+
+interface ContainerProps {
+  sobreMimInViewport: boolean;
+}
 
 const fillCssAndHtml = keyframes`
   from {
@@ -45,7 +49,7 @@ const fillPython = keyframes`
   }
 `;
 
-export const Container = styled.section`
+export const Container = styled.section<ContainerProps>`
   height: 1350px;
   padding: 100px 30px 30px 30px;
   background: #f2e0f5;
@@ -132,70 +136,93 @@ export const Container = styled.section`
             justify-content: center;
           }
 
-          .bar-fill-css {
-            height: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            animation: ${fillCssAndHtml} 4s forwards;
-            background: linear-gradient(to bottom, #70008c, #7100d1);
-          }
+          
+          ${props => props.sobreMimInViewport &&
+            css`
+              .bar-fill-css {
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                background: linear-gradient(to bottom, #70008c, #7100d1);
+                animation: ${fillCssAndHtml} 4s forwards;
+              }
+            `}   
+
+          ${props => props.sobreMimInViewport &&
+            css`
+              .bar-fill-html {
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                background: linear-gradient(to bottom, #70008c, #7100d1);
+                animation: ${fillCssAndHtml} 4s forwards;
+              }
+            `}
+          
+          ${props => props.sobreMimInViewport &&
+            css`
+              .bar-fill-javascript {
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                background: linear-gradient(to bottom, #70008c, #7100d1);
+                animation: ${fillJavascriptAndReact} 4s forwards;
+              }
+            `}
 
           
+          ${props => props.sobreMimInViewport &&
+            css`
+              .bar-fill-react {
+              height: inherit;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              background: linear-gradient(to bottom, #70008c, #7100d1);
+              animation: ${fillJavascriptAndReact} 4s forwards;
+              }
+            `}
 
-          .bar-fill-html {
-            height: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            animation: ${fillCssAndHtml} 4s forwards;
-            background: linear-gradient(to bottom, #70008c, #7100d1);
-          }
+          
+          ${props => props.sobreMimInViewport &&
+            css`
+              .bar-fill-react-native {
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                background: linear-gradient(to bottom, #70008c, #7100d1);
+                animation: ${fillReactNative} 4s forwards;
+              }
+            `}
 
-          .bar-fill-javascript {
-            height: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            animation: ${fillJavascriptAndReact} 4s forwards;
-            background: linear-gradient(to bottom, #70008c, #7100d1);
-          }
+          ${props => props.sobreMimInViewport &&
+            css`
+              .bar-fill-nodejs {
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                background: linear-gradient(to bottom, #70008c, #7100d1);
+                animation: ${fillNodejs} 4s forwards;
+              }
+            `}
 
-          .bar-fill-react {
-            height: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            animation: ${fillJavascriptAndReact} 4s forwards;
-            background: linear-gradient(to bottom, #70008c, #7100d1);
-          }
-
-          .bar-fill-react-native {
-            height: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            animation: ${fillReactNative} 4s forwards;
-            background: linear-gradient(to bottom, #70008c, #7100d1);
-          }
-
-          .bar-fill-nodejs {
-            height: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            animation: ${fillNodejs} 4s forwards;
-            background: linear-gradient(to bottom, #70008c, #7100d1);
-          }
-
-          .bar-fill-python {
-            height: inherit;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            animation: ${fillPython} 4s forwards;
-            background: linear-gradient(to bottom, #70008c, #7100d1);
-          }
+          
+          ${props => props.sobreMimInViewport &&
+            css`
+              .bar-fill-python {
+                height: inherit;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                background: linear-gradient(to bottom, #70008c, #7100d1);
+                animation: ${fillPython} 4s forwards;
+              }
+            `}
 
           span {
             margin-right: 5px;

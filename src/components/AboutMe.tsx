@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import FotoFelipe from '../../public/Foto_felipe2.png';
 import LogoUnicamp from '../../public/unicamp.png';
@@ -6,22 +6,22 @@ import { Container } from '../styles/components/AboutMe';
 import intersectionMethod from '../utils/intersectionMethod';
 
 const AboutMe: React.FC = () => {
+  const [sobreMimInViewport, setSobreMimInViewport] = useState<boolean>(false);
+  
   const ref = useRef();
-  const inViewport = intersectionMethod(ref, '0px');
-  // useEffect(() => {
-  //   const aboutMeSection = document.getElementById('section-sobreMim');
-  //   window.addEventListener('scroll', () => {
-  //     if (aboutMeSection.scrollIntoView(true)) {
-  //       console.log(aboutMeSection);
-  //     }
-  //   });
-  // }, []);
-  if (inViewport) {
-    console.log('in viewport:', ref.current);
-}
+  const inViewport = intersectionMethod(ref, '20px');
+  useEffect(() => {
+    if (inViewport) {
+      setSobreMimInViewport(true);
+    } else {
+      setSobreMimInViewport(false);
+    }    
+  }, [inViewport]);
+
+  console.log('SobreMimInViewport:', sobreMimInViewport);
 
   return (
-    <Container ref={ref} id="section-sobreMim">
+    <Container sobreMimInViewport ref={ref} id="section-sobreMim">
       <h1>Sobre mim</h1>
       <div className="skills-wrapper">
         <div className="about-me">
@@ -48,9 +48,10 @@ const AboutMe: React.FC = () => {
               <div className="bar-tag">
                 CSS
               </div>
+              {sobreMimInViewport && 
               <div className="bar-fill-css">
                 <span>90%</span>
-              </div>
+              </div>}
             </div>
             
           </div>
@@ -59,9 +60,10 @@ const AboutMe: React.FC = () => {
             <div className="bar-content">
               <div className="bar-tag">HTML
               </div>
+              {sobreMimInViewport && 
               <div className="bar-fill-html">
                 <span>90%</span>
-              </div>
+              </div>}
             </div>
           </div>
 
@@ -69,9 +71,10 @@ const AboutMe: React.FC = () => {
             <div className="bar-content">
               <div className="bar-tag">JavaScript
               </div>
+              {sobreMimInViewport && 
               <div className="bar-fill-javascript">
                 <span>80%</span>
-              </div>
+              </div>}
             </div>
           </div>
 
@@ -79,9 +82,10 @@ const AboutMe: React.FC = () => {
             <div className="bar-content">
               <div className="bar-tag">React
               </div>
+              {sobreMimInViewport && 
               <div className="bar-fill-react">
                 <span>80%</span>
-              </div>
+              </div>}
             </div>
           </div>
           
@@ -89,9 +93,9 @@ const AboutMe: React.FC = () => {
             <div className="bar-content">
               <div className="bar-tag">React-Native
               </div>
-              <div className="bar-fill-react-native">
+              {sobreMimInViewport && <div className="bar-fill-react-native">
                 <span>75%</span>
-              </div>
+              </div>}
             </div>
           </div>
 
@@ -99,9 +103,10 @@ const AboutMe: React.FC = () => {
             <div className="bar-content">
               <div className="bar-tag">Node.js
               </div>
+              {sobreMimInViewport && 
               <div className="bar-fill-nodejs">
                 <span>70%</span>
-              </div>
+              </div>}
             </div>
           </div>
 
@@ -109,9 +114,10 @@ const AboutMe: React.FC = () => {
             <div className="bar-content">
               <div className="bar-tag">Python
               </div>
+              {sobreMimInViewport && 
               <div className="bar-fill-python">
                 <span>60%</span>
-              </div>
+              </div>}
             </div>
           </div>
 
