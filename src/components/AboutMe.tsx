@@ -18,8 +18,6 @@ const AboutMe: React.FC = () => {
     }    
   }, [inViewport]);
 
-  console.log('SobreMimInViewport:', sobreMimInViewport);
-
   return (
     <Container sobreMimInViewport ref={ref} id="section-sobreMim">
       <h1>Sobre mim</h1>
