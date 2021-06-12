@@ -88,7 +88,7 @@ const Projects: React.FC = () => {
               <a style={{ cursor: 'not-allowed' }}>
                 <div>
                   <h2>Teste para Dev FullStack - Conta Simples</h2>
-                  <p>Backend pronto, mas ainda falta o front. Em contrução...</p>
+                  <p>Backend pronto, mas ainda falta o front. Em construção...</p>
                 </div>
               </a>
             </div>

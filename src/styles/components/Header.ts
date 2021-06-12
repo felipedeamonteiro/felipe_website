@@ -1,20 +1,30 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.nav`
   top: 0;
   position: sticky;
-  background: #212529;
+  background: transparent;
   height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
   z-index: 1000;
+  transition: background-color .5s;
+
+  &.navbarActive {
+    background: #212529;
+    transition: background-color .5s;
+  }
 
   .home-div {
     padding-left: 20px;
-
+    
     h1 {
+      display: flex;
+      align-items: center;
+      text-align: center;
+
       a {
         color: #00CDE2;
         font-size: 26px;

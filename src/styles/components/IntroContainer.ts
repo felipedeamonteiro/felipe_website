@@ -3,6 +3,7 @@ import backgroundImage from '../../../public/background_image.jpg';
 
 
 export const Container = styled.section`
+  top: 0;
   margin: 0;
   background: url(${backgroundImage})  round;
   width: 100%;
@@ -11,8 +12,7 @@ export const Container = styled.section`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 0;
-  padding: 100px 30px 30px 30px;
+  padding: 0 30px 30px 30px;
 
   h3 {
     font-family: 'Orbitron', sans-serif;

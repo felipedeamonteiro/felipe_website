@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import { Container } from '../styles/components/Header';
 
 const Header: React.FC = () =>  {
+  const [viewNavBar, setViewNavBar] = useState<boolean>(false);
+
+  useEffect(() => {}, []);
+
+  const changeBackground = useCallback(() => {
+    if (window.scrollY >= 80) {
+      setViewNavBar(true);
+    } else {
+      setViewNavBar(false)
+    }
+  }, []);
+
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', changeBackground);
+  }
+
   return (
-    <Container>
+    <Container className={viewNavBar ? 'navbarActive' : ''}>
       <div className="home-div">
         <h1><a href="#section-home">HOME</a></h1>
       </div>

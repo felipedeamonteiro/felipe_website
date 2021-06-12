@@ -32,7 +32,7 @@ export const Container = styled.section`
   &:before {
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: 15px;
     left: 40px;
     width: 2px;
     margin-left: -1.5px;
