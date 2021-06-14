@@ -1,14 +1,12 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 
 import { Container } from '../styles/components/Header';
 
 const Header: React.FC = () =>  {
   const [viewNavBar, setViewNavBar] = useState<boolean>(false);
 
-  useEffect(() => {}, []);
-
   const changeBackground = useCallback(() => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 180) {
       setViewNavBar(true);
     } else {
       setViewNavBar(false)

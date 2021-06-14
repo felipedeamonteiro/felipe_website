@@ -4,10 +4,12 @@ import backgroundImage from '../../../public/background_image.jpg';
 
 export const Container = styled.section`
   top: 0;
-  margin: 0;
+  margin-top: -85px;
   background: url(${backgroundImage})  round;
+  background-size: cover;
+  background-position: center center;
   width: 100%;
-  height: 750px;
+  height: 775px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
