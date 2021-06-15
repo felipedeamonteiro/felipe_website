@@ -34,15 +34,16 @@ export const Container = styled.section`
     top: 0;
     bottom: 15px;
     left: 40px;
-    width: 2px;
+    width: 3px;
     margin-left: -1.5px;
     content: '';
-    background-color: gray;
+    background-color: #00d0e5;
   }
   > li {
     position: relative;
     min-height: 50px;
     margin-bottom: 50px;
+    
     &:after,
     &:before {
       display: table;
@@ -79,15 +80,19 @@ export const Container = styled.section`
       margin-left: 0;
       text-align: center;
       color: white;
-      background: lightskyblue;
       border: 7px solid gray;
       border-radius: 100%;
       background-color: #fff;
-      h4 {
-        font-size: 10px;
-        line-height: 14px;
-        margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color .5s;
+
+      &.circleActive {
+        border: 7px solid #00d0e5;
+        transition: border-color .5s;
       }
+      
       img {
         border-radius: 100%;
         width: 100%;
@@ -122,6 +127,7 @@ export const Container = styled.section`
       margin-bottom: 0;
     }
   }
+
   .timeline-heading {
     h4 {
       font-size: 25px;
@@ -138,6 +144,12 @@ export const Container = styled.section`
       margin-bottom: 0;
       font-size: 20px;
       color: #6c757d;
+      transition: color .5s;
+
+      &.activeText {
+        color: #13b5c5;
+        transition: color .5s;
+      }
     }
   }
 }
