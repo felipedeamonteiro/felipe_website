@@ -108,8 +108,8 @@ export const Container = styled.div`
     }
 
     label {
-      height: 110px;
-      width: 220px;
+      height: 55px;
+      width: 110px;
       background-color: #39315a;
       border-radius: 100px;
       display: block;
@@ -118,8 +118,8 @@ export const Container = styled.div`
         inset 0 0 5px -2px rgba(#000, 0.4);
       
       .bulb {
-        height: 90px;
-        width: 90px;
+        height: 35px;
+        width: 35px;
         background-color: #4a426b;
         border-radius: 50%;
         position: relative;
@@ -135,8 +135,8 @@ export const Container = styled.div`
         .bulb-center {
           position: absolute;
           display: block;
-          height: 36px;
-          width: 36px;
+          height: 18px;
+          width: 18px;
           background-color: #5a527b;
           border-radius: 50%;
           top: 50%;
@@ -148,8 +148,8 @@ export const Container = styled.div`
           &:after {
             content: '';
             display: block;
-            height: 14px;
-            width: 14px;
+            height: 7px;
+            width: 7px;
             background-color: #7b7394;
             border-radius: 50%;
             position: absolute;
@@ -164,8 +164,8 @@ export const Container = styled.div`
         .filament-1, .filament-2 {
           position: absolute;
           display: block;
-          height: 35px;
-          width: 35px;
+          height: 17.5px;
+          width: 17.5px;
           border-radius: 50%;
           top: 50%;
           left: 50%;
@@ -175,8 +175,8 @@ export const Container = styled.div`
           &:after, &:before {
             content: '';
             display: block;
-            height: 6px;
-            width: 17px;
+            height: 3px;
+            width: 8.5px;
             border-radius: 50%;
             border: 2px solid #4a426b;
             position: absolute;
@@ -210,8 +210,8 @@ export const Container = styled.div`
     perspective: 70px;
 
     span {
-      height: 80px;
-      width: 80px;
+      height: 40px;
+      width: 40px;
       border-radius: 50%;
       background-image: linear-gradient(-135deg, transparent 10%, rgba(#fff, 0.3));
       position: absolute;
@@ -221,8 +221,8 @@ export const Container = styled.div`
       &:after {
         content: '';
         display: block;
-        height: 35px;
-        width: 20px;
+        height: 17.5px;
+        width: 10px;
         position: absolute;
         top: -36px;
         right: -40px;
@@ -236,8 +236,8 @@ export const Container = styled.div`
     &:after {
       content: '';
       display: block;
-      height: 80px;
-      width: 50px;
+      height: 40px;
+      width: 25px;
       background-image: linear-gradient(80deg, rgba(#fff, 0.5) 45%, rgba(#fff, 0.5));
       border-radius: 10% 20% 50% 30% / 30% 60% 30% 40%;
       position: absolute;
@@ -251,8 +251,8 @@ export const Container = styled.div`
       content: '';
       display: block;
       position: absolute;
-      height: 10px;
-      width: 30px;
+      height: 5px;
+      width: 15px;
       background-image: linear-gradient(to right, transparent, rgba(#fff, 0.15));
       bottom: 10px;
       right: 0px;
@@ -312,7 +312,7 @@ export const Container = styled.div`
   }
 
   input:checked ~ label .bulb {
-    left: 120px;
+    left: 60px;
     background-color: #a7694a;
     box-shadow: 
     inset 0 0 1px 3px #a56758,
