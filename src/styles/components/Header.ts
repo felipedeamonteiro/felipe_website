@@ -18,7 +18,7 @@ export const Container = styled.nav`
   }
 
   .home-div {
-    padding-left: 20px;
+    padding: 0 20px;
     
     h1 {
       display: flex;
@@ -47,14 +47,21 @@ export const Container = styled.nav`
     }
   }
 
+  .bulb-div {
+    position: static;
+  }
+
   .menu-div {
     padding-right: 20px;
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
     h2 {
+      margin-bottom: 5px;
+      
       a {
         color: #fff;
         font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;

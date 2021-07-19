@@ -12,9 +12,6 @@ const BulbSwitch: React.FC = () => {
             <span className="bulb-center"></span>
             <span className="filament-1"></span>
             <span className="filament-2"></span>
-            <span className="reflections">
-              <span></span>
-            </span>
             <span className="sparks">
               <i className="spark1"></i>
               <i className="spark2"></i>

@@ -84,6 +84,7 @@ const spark4 = keyframes`
 
 
 export const Container = styled.div`
+  margin-left: 10px;
 
   /* body {
     height: 100vh;
@@ -108,8 +109,8 @@ export const Container = styled.div`
     }
 
     label {
-      height: 55px;
-      width: 110px;
+      height: 25px;
+      width: 65px;
       background-color: #39315a;
       border-radius: 100px;
       display: block;
@@ -118,13 +119,13 @@ export const Container = styled.div`
         inset 0 0 5px -2px rgba(#000, 0.4);
       
       .bulb {
-        height: 35px;
-        width: 35px;
+        height: 20px;
+        width: 20px;
         background-color: #4a426b;
         border-radius: 50%;
         position: relative;
-        top: 10px;
-        left: 10px;
+        top: 3px;
+        left: 2px;
         display: block;
         transition: 0.7s;
         box-shadow: 
@@ -164,7 +165,7 @@ export const Container = styled.div`
         .filament-1, .filament-2 {
           position: absolute;
           display: block;
-          height: 17.5px;
+          height: 17px;
           width: 17.5px;
           border-radius: 50%;
           top: 50%;
@@ -175,14 +176,14 @@ export const Container = styled.div`
           &:after, &:before {
             content: '';
             display: block;
-            height: 3px;
-            width: 8.5px;
+            height: 17px;
+            width: 2.5px;
             border-radius: 50%;
-            border: 2px solid #4a426b;
+            border: 1px solid #4a426b;
             position: absolute;
             transition: 0.7s;
             top: -4px;
-            left: --2px;
+            left: -2px;
             transform: rotate(-10deg)
           }
 
@@ -199,7 +200,7 @@ export const Container = styled.div`
     }
   }
 
-  .reflections {
+  /* .reflections {
     height: 100%;
     width: 100%;
     display: block;
@@ -215,8 +216,8 @@ export const Container = styled.div`
       border-radius: 50%;
       background-image: linear-gradient(-135deg, transparent 10%, rgba(#fff, 0.3));
       position: absolute;
-      left: -40px;
-      bottom: -45px;
+      left: 0px;
+      bottom: 0px;
 
       &:after {
         content: '';
@@ -224,8 +225,8 @@ export const Container = styled.div`
         height: 17.5px;
         width: 10px;
         position: absolute;
-        top: -36px;
-        right: -40px;
+        top: 20px;
+        right: 18px;
         border-radius: 50%;
         box-shadow: 4px -2px 0 -3px rgba(#fff, 0.4);
         filter: blur(1px);
@@ -258,7 +259,7 @@ export const Container = styled.div`
       right: 0px;
       transform: rotate(45deg);
     }
-  }
+  } */
 
   .sparks {
     .spark1 {
@@ -279,9 +280,9 @@ export const Container = styled.div`
       width: 3px;
       background-color: #d1b82b;
       position: absolute;
-      right: 20px;
+      right: 30px;
       border-radius: 50%;
-      bottom: 80px;
+      bottom: 0px;
       transition: 0.4s;
       opacity: 0;
     }
@@ -291,9 +292,9 @@ export const Container = styled.div`
       width: 3px;
       background-color: #d1b82b;
       position: absolute;
-      left: 20px;
+      left: 0px;
       border-radius: 50%;
-      bottom: 80px;
+      bottom: 0px;
       transition: 0.4s;
       opacity: 0;
     }
@@ -312,7 +313,7 @@ export const Container = styled.div`
   }
 
   input:checked ~ label .bulb {
-    left: 60px;
+    left: 42px;
     background-color: #a7694a;
     box-shadow: 
     inset 0 0 1px 3px #a56758,
@@ -325,8 +326,8 @@ export const Container = styled.div`
     background-color: #feed6b;
     box-shadow:
       inset 0 0 0 4px #fdec6a,
-      0 0 12px 10px #bca83c,
-      0 0 20px 14px #a1664a;
+      0 0 8px 7px #bca83c,
+      0 0 12px 9px #a1664a;
     
     &:after {
       background-color: #fef401;
@@ -334,7 +335,13 @@ export const Container = styled.div`
     }
   }
 
-  input:checked ~ label .bulb > &.filament-1, &filament-2{
+  input:checked ~ label .bulb > .filament-1{
+    &:before, &:after {
+      border-color: #fef4d5;
+    }
+  }
+
+  input:checked ~ label .bulb > .filament-2{
     &:before, &:after {
       border-color: #fef4d5;
     }

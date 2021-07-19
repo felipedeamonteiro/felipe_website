@@ -23,8 +23,8 @@ const Header: React.FC = () =>  {
       <div className="home-div">
         <h1><a href="#section-home">HOME</a></h1>
       </div>
-      <BulbSwitch />
       <div className="menu-div">
+        <BulbSwitch />
         <h2><a href="#section-experiencia">EXPERIÊNCIA</a></h2>
         <h2><a href="#section-projetos">PROJETOS</a></h2>
         <h2><a href="#section-sobreMim">SOBRE MIM</a></h2>
