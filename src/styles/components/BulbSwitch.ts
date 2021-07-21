@@ -86,14 +86,6 @@ const spark4 = keyframes`
 export const Container = styled.div`
   margin-left: 10px;
 
-  /* body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #514878;
-  } */
-
   .switch {
     position: relative;
     
@@ -111,9 +103,10 @@ export const Container = styled.div`
     label {
       height: 25px;
       width: 65px;
-      background-color: #39315a;
+      background-color: #7b7394;
       border-radius: 100px;
       display: block;
+      transition: background-color 0.4s ease;
       box-shadow: 
         inset 0 0 20px rgba(#000, 0.2),
         inset 0 0 5px -2px rgba(#000, 0.4);
@@ -340,6 +333,12 @@ export const Container = styled.div`
       border-color: #fef4d5;
     }
   }
+
+  input:checked ~ label {
+    background-color: #39315a;
+    transition: background-color 0.4s ease;
+  }
+
 
   input:checked ~ label .bulb > .filament-2{
     &:before, &:after {

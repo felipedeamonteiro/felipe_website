@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Container } from '../styles/components/BulbSwitch';
 
 const BulbSwitch: React.FC = () => {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    console.log('BulbSwitch darkMode:', darkMode);
+  }, [darkMode]);
   return (
     <Container>
       <div className="switch">
-        <input type="checkbox" name="toggle" />
+        <input type="checkbox" defaultChecked={false} onChange={() => setDarkMode(!darkMode)}  name="toggle" />
         <label htmlFor="toggle">
           <i className="bulb">
             <span className="bulb-center"></span>
