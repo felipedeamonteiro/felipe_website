@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  background: #efe4f5;
+  background: #d7d8fc;
   height: 3250px;
   padding: 100px 30px 30px 30px;
 
@@ -21,7 +21,7 @@ export const Container = styled.section`
       margin: 25px 0 50px 0;
       font-style: 'italic';
       font-weight: lighter;
-      color: #838b93;
+      color: #676e75;
     }
   }
 
@@ -80,7 +80,7 @@ export const Container = styled.section`
       margin-left: 0;
       text-align: center;
       color: white;
-      border: 7px solid gray;
+      border: 9px solid gray;
       border-radius: 100%;
       background-color: #fff;
       display: flex;
@@ -89,7 +89,7 @@ export const Container = styled.section`
       transition: border-color .5s;
 
       &.circleActive {
-        border: 7px solid #00d0e5;
+        border: 9px solid #00d0e5;
         transition: border-color .5s;
       }
       

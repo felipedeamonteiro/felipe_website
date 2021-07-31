@@ -12,6 +12,7 @@ export const Container = styled.button`
   font-size: 18px;
   margin-top: 20px;
   outline: none;
+  cursor: pointer;
   background: linear-gradient(to bottom, #6dd4fd, #2800b3);
 
   &:hover {

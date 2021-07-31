@@ -52,7 +52,7 @@ const fillPython = keyframes`
 export const Container = styled.section<ContainerProps>`
   height: 1350px;
   padding: 100px 30px 30px 30px;
-  background: #f2e0f5;
+  background: #d7d8fc;
 
   h1 {
     font-family: 'Orbitron', sans-serif;
@@ -79,7 +79,7 @@ export const Container = styled.section<ContainerProps>`
         width: 250px;
         height: 250px;
         border-radius: 50%;
-        border: 4px solid #00c5f2;
+        border: 6px solid #00c5f2;
         object-fit: cover;
       }
       
@@ -113,7 +113,7 @@ export const Container = styled.section<ContainerProps>`
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        background: lightgray;
+        background: #edeef5;
         margin-bottom: 25px;
         height: 30px;
 
@@ -226,7 +226,7 @@ export const Container = styled.section<ContainerProps>`
 
           span {
             margin-right: 5px;
-            color: white;
+            color: #fff;
             font-weight: bold;
           }
         }

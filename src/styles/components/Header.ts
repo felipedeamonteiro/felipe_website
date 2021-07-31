@@ -13,7 +13,7 @@ export const Container = styled.nav`
   transition: background-color .5s;
 
   &.navbarActive {
-    background: #03316b;
+    background: #252525;
     transition: background-color .5s;
   }
 
