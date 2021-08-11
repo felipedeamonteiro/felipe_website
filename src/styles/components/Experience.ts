@@ -153,12 +153,20 @@ export const Container = styled.section`
     }
   }
 }
-@media(min-width:768px) {
+
+@media only screen and (max-width:768px) {
+  width: 401%;
+  height: 3370px;
+
   .timeline {
+    position: relative;
+    width: 80%;
+
     &:before {
       left: 50%;
     }
     > li {
+      width: 375px;
       min-height: 100px;
       margin-bottom: 100px;
       .timeline-panel {
@@ -186,7 +194,8 @@ export const Container = styled.section`
     }
   }
 }
-@media(min-width:992px) {
+
+@media only screen and (min-width:992px) {
   .timeline {
     > li {
       min-height: 150px;
@@ -209,7 +218,8 @@ export const Container = styled.section`
     }
   }
 }
-@media(min-width:1200px) {
+
+@media only screen and (min-width:1200px) {
   .timeline {
     > li {
       min-height: 170px;

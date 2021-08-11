@@ -113,7 +113,6 @@ const Experience: React.FC = () => {
             
           </div>
           <div className="row">
-            <div className="col-lg-12">
               <ul className="timeline">
 
                 <li>
@@ -260,7 +259,6 @@ const Experience: React.FC = () => {
                   </div>
                 </li> */}
               </ul>
-            </div>
           </div>
         </div>
     </Container>

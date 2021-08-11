@@ -16,6 +16,8 @@ export const Container = styled.section`
   align-items: center;
   padding: 0 30px 30px 30px;
 
+ 
+
   h3 {
     font-family: 'Orbitron', sans-serif;
     color: white;
@@ -31,5 +33,13 @@ export const Container = styled.section`
     font-family: 'Roboto Slab', serif;
     font-size: 75px;
     text-align: center;
+  }
+
+  @media only screen and (max-width: 414px) {
+    width: 401%;
+  }
+
+  @media only screen and (min-width: 415px) and (max-width: 975px) {
+    width: 122%;
   }
 `;
