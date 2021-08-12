@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../helperScreens';
 
 export const Container = styled.section`
   background: #d7d8fc;
@@ -154,19 +155,19 @@ export const Container = styled.section`
   }
 }
 
-@media only screen and (max-width:768px) {
-  width: 401%;
-  height: 3370px;
+@media only screen and (min-width: ${mobileScreenMax}) {
+  /* width: 401%;
+  height: 3370px; */
 
   .timeline {
-    position: relative;
-    width: 80%;
+    /* position: relative;
+    width: 80%; */
 
     &:before {
       left: 50%;
     }
     > li {
-      width: 375px;
+      /* width: 375px; */
       min-height: 100px;
       margin-bottom: 100px;
       .timeline-panel {
@@ -195,7 +196,7 @@ export const Container = styled.section`
   }
 }
 
-@media only screen and (min-width:992px) {
+/* @media only screen and (min-width:992px) {
   .timeline {
     > li {
       min-height: 150px;
@@ -217,9 +218,9 @@ export const Container = styled.section`
       }
     }
   }
-}
+} */
 
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width: ${desktopScreenMin}) {
   .timeline {
     > li {
       min-height: 170px;
