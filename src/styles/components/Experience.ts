@@ -34,7 +34,7 @@ export const Container = styled.section`
     position: absolute;
     top: 0;
     bottom: 15px;
-    left: 40px;
+    left: 50%;
     width: 3px;
     margin-left: -1.5px;
     content: '';
@@ -42,8 +42,8 @@ export const Container = styled.section`
   }
   > li {
     position: relative;
-    min-height: 50px;
-    margin-bottom: 50px;
+    min-height: 170px;
+    margin: 100px 0;
     
     &:after,
     &:before {
@@ -54,11 +54,12 @@ export const Container = styled.section`
       clear: both;
     }
     .timeline-panel {
+      display: flex;
+      flex-direction: column;
       position: relative;
-      float: right;
-      width: 100%;
-      padding: 36px 20px 20px 14px;
-      text-align: left;
+      width: 43%;
+      padding: 10px 20px 20px 14px;
+      text-align: right;
       &:before {
         right: auto;
         left: -15px;
@@ -75,10 +76,10 @@ export const Container = styled.section`
     .timeline-image {
       position: absolute;
       z-index: 100;
-      left: 0;
-      width: 80px;
-      height: 80px;
-      margin-left: 0;
+      left: 50%;
+      width: 170px;
+      height: 170px;
+      margin-left: -85px;
       text-align: center;
       color: white;
       border: 9px solid gray;
@@ -102,27 +103,21 @@ export const Container = styled.section`
         z-index: -1;
       }
 
+      h4 {
+        margin-top: 40px;
+      }
+
       &:last-child {
         background-color: #00d0e5;
       }
     }
 
     &.timeline-inverted > .timeline-panel {
-      float: right;
-      padding: 0 20px 0 100px;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 30px 20px 20px;
       text-align: left;
-      &:before {
-        right: auto;
-        left: -15px;
-        border-right-width: 15px;
-        border-left-width: 0;
-      }
-      &:after {
-        right: auto;
-        left: -14px;
-        border-right-width: 14px;
-        border-left-width: 0;
-      }
+      float: right;
     }
     &:last-child {
       margin-bottom: 0;
@@ -155,19 +150,73 @@ export const Container = styled.section`
   }
 }
 
-@media only screen and (min-width: ${mobileScreenMax}) {
-  /* width: 401%;
-  height: 3370px; */
+@media only screen and (max-width: ${mobileScreenMax}) {
+    width: 401%;
+  }
+
+  @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+    width: 122%;
+  }
+
+/* @media only screen and (min-width:992px) {
+  .timeline {
+    > li {
+      min-height: 150px;
+      .timeline-panel {
+        padding: 0 20px 20px;
+      }
+      .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+        h4 {
+          font-size: 18px;
+          line-height: 26px;
+          margin-top: 30px;
+        }
+      }
+      &.timeline-inverted > .timeline-panel {
+        padding: 0 20px 20px;
+      }
+    }
+  }
+} */
+
+/* @media only screen and (min-width: ${desktopScreenMin}) {
+  .timeline {
+    > li {
+      min-height: 170px;
+      .timeline-panel {
+        padding: 36px 20px 20px 14px;
+      }
+      .timeline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
+        h4 {
+          margin-top: 40px;
+        }
+      }
+      &.timeline-inverted > .timeline-panel {
+        padding: 30px 5px 20px 20px;
+      }
+    }
+  }
+} */
+
+/* @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+  width: 401%;
+  height: 3370px;
 
   .timeline {
-    /* position: relative;
-    width: 80%; */
+    position: relative;
+    width: 80%;
 
     &:before {
       left: 50%;
     }
     > li {
-      /* width: 375px; */
+      width: 375px;
       min-height: 100px;
       margin-bottom: 100px;
       .timeline-panel {
@@ -194,51 +243,5 @@ export const Container = styled.section`
       }
     }
   }
-}
-
-/* @media only screen and (min-width:992px) {
-  .timeline {
-    > li {
-      min-height: 150px;
-      .timeline-panel {
-        padding: 0 20px 20px;
-      }
-      .timeline-image {
-        width: 150px;
-        height: 150px;
-        margin-left: -75px;
-        h4 {
-          font-size: 18px;
-          line-height: 26px;
-          margin-top: 30px;
-        }
-      }
-      &.timeline-inverted > .timeline-panel {
-        padding: 0 20px 20px;
-      }
-    }
-  }
 } */
-
-@media only screen and (min-width: ${desktopScreenMin}) {
-  .timeline {
-    > li {
-      min-height: 170px;
-      .timeline-panel {
-        padding: 36px 20px 20px 14px;
-      }
-      .timeline-image {
-        width: 170px;
-        height: 170px;
-        margin-left: -85px;
-        h4 {
-          margin-top: 40px;
-        }
-      }
-      &.timeline-inverted > .timeline-panel {
-        padding: 30px 5px 20px 20px;
-      }
-    }
-  }
-}
 `; 

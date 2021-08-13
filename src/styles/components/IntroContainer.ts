@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import backgroundImage from '../../../public/background_image.jpg';
+import { mobileScreenMax, tabletScreenMax } from '../helperScreens';
 
 
 export const Container = styled.section`
@@ -35,11 +36,11 @@ export const Container = styled.section`
     text-align: center;
   }
 
-  @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: ${mobileScreenMax}) {
     width: 401%;
   }
 
-  @media only screen and (min-width: 415px) and (max-width: 975px) {
+  @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
     width: 122%;
   }
 `;

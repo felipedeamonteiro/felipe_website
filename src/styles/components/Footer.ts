@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mobileScreenMax, tabletScreenMax } from '../helperScreens';
 
 export const Container = styled.footer`
   height: 60px;
@@ -9,11 +10,11 @@ export const Container = styled.footer`
   align-items: center;
   bottom: 0;
 
-  @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: ${mobileScreenMax}) {
     width: 401%;
   }
 
-  @media only screen and (min-width: 415px) and (max-width: 975px) {
+  @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
     width: 122%;
   }
 `;

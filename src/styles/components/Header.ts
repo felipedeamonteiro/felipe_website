@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mobileScreenMax, tabletScreenMax } from '../helperScreens';
 
 export const Container = styled.nav`
   top: 0;
@@ -84,11 +85,11 @@ export const Container = styled.nav`
     }
   }
 
-  @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: ${mobileScreenMax}) {
     width: 400%;
   }
 
-  @media only screen and (min-width: 415px) and (max-width: 975px) {
+  @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
     width: 122%;
   }
 `;
