@@ -18,8 +18,16 @@ const Header: React.FC = () =>  {
     window.addEventListener('scroll', changeBackground);
   }
 
+  //Criar hook de tamanhos de telas
+  // Video do hamburguer: https://www.youtube.com/watch?v=H4MkGzoACpQ
+
   return (
     <Container className={viewNavBar ? 'navbarActive' : ''}>
+      <div className="hamburger">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
       <div className="home-div">
         <h1><a href="#section-home">HOME</a></h1>
       </div>

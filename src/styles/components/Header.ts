@@ -92,4 +92,18 @@ export const Container = styled.nav`
   @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
     width: 122%;
   }
+
+  @media screen and (max-width: ${tabletScreenMax}) {
+    position: fixed;
+    background: #252525;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+
+    .menu-div {
+      flex-direction: column;
+    }
+  }
 `;
