@@ -1,4 +1,7 @@
 const withImages = require('next-images')
 module.exports = withImages({
-  inlineImageLimit: false
+  inlineImageLimit: false,
 })
+module.exports = {
+  reactStrictMode: false
+}

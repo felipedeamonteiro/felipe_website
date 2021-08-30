@@ -1,21 +1,33 @@
+import React, { useState } from 'react';
 import AboutMe from '../components/AboutMe';
-import Header from '../components/Header';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import IntroContainer from '../components/IntroContainer';
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import ContactMe from '../components/ContactMe';
+import Sidebar from '../components/Sidebar';
 
-export default function Home() {
+function Home() {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const toogleSidebar = () => {
+    setIsOpen(!isOpen);
+    console.log('fui clicado');
+  }
+
   return (
-    <div>
-      <Header />
-      <IntroContainer />
-      {/* <Experience />
+    <>
+      <Sidebar isOpen={isOpen} toogle={toogleSidebar} />
+      <Navbar toogle={toogleSidebar} />
+      {/*<IntroContainer />
+      <Experience />
       <Projects />
       <AboutMe />
       <ContactMe />
       <Footer /> */}
-    </div>
+    </>
   )
 }
+
+export default Home;
