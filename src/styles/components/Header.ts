@@ -86,11 +86,11 @@ export const Container = styled.nav`
   }
 
   @media only screen and (max-width: ${mobileScreenMax}) {
-    width: 400%;
+    width: 100%;
   }
 
   @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
-    width: 122%;
+    width: 100%;
   }
 
   @media screen and (max-width: ${tabletScreenMax}) {

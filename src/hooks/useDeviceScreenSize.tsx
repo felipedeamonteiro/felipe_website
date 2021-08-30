@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 
 const xs = 576;
- const sm = 768;
- const md = 992;
- const lg = 1100;
- const xl = 1680;
+const sm = 768;
+const md = 992;
+const lg = 1100;
+const xl = 1680;
 
 
-const useWindowSize = () => {
+export const useWindowSize = () => {
     const [windowSize, setWindowSize] = useState({
         width: undefined,
         height: undefined,

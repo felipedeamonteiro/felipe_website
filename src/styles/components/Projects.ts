@@ -114,13 +114,13 @@ export const Container = styled.section`
     }
   }
   
-  @media only screen and (max-width: 414px) {
+  /* @media only screen and (max-width: 414px) {
     width: 401%;
   }
 
   @media only screen and (min-width: 415px) and (max-width: 975px) {
     width: 122%;
-  }
+  } */
 
   
   

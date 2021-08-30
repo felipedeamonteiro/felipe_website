@@ -11,11 +11,11 @@ export default function Home() {
     <div>
       <Header />
       <IntroContainer />
-      <Experience />
+      {/* <Experience />
       <Projects />
       <AboutMe />
       <ContactMe />
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }

@@ -150,13 +150,13 @@ export const Container = styled.section`
   }
 }
 
-@media only screen and (max-width: ${mobileScreenMax}) {
+/* @media only screen and (max-width: ${mobileScreenMax}) {
     width: 401%;
   }
 
   @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
     width: 122%;
-  }
+  } */
 
 /* @media only screen and (min-width:992px) {
   .timeline {
