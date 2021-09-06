@@ -20,12 +20,12 @@ function Home() {
     <>
       <Sidebar isOpen={isOpen} toogle={toogleSidebar} />
       <Navbar toogle={toogleSidebar} />
-      {/*<IntroContainer />
+      <IntroContainer />
       <Experience />
       <Projects />
       <AboutMe />
       <ContactMe />
-      <Footer /> */}
+      <Footer />
     </>
   )
 }

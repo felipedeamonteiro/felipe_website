@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import backgroundImage from '../../../public/background_image.jpg';
+import backgroundImage from '../../../public/backgroundImage.jpg';
 import { mobileScreenMax, tabletScreenMax } from '../helperScreens';
 
 

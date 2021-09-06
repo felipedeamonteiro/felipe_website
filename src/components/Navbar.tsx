@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { useDeviceScreenSize, useWindowSize } from '../hooks/useDeviceScreenSize';
 import BulbSwitch from './BulbSwitch';
-import { Nav, NavbarContainer, NavbarHome, MobileIcon, NavMenu, NavItem, NavLinks } from '../styles/components/Navbar';
+import { Nav, NavbarContainer, NavbarHome, MobileContent, MobileIcon, NavMenu, NavItem, NavLinks } from '../styles/components/Navbar';
 import { FaBars } from 'react-icons/fa';
 
 interface NavbarProps {
@@ -51,9 +51,14 @@ const Navbar: React.FC<NavbarProps> = ({ toogle }) =>  {
               <NavLinks href="#section-contato">CONTATO</NavLinks>
             </NavItem>
           </NavMenu>
-          <MobileIcon onClick={toogle}>
-            <FaBars />
-          </MobileIcon>
+          {(isMobile || isTablet) && ( 
+            <MobileContent>
+              <BulbSwitch />
+              <MobileIcon onClick={toogle}>    
+                <FaBars />
+              </MobileIcon>
+            </MobileContent>
+          )}
         </NavbarContainer>
       </Nav>
     </>

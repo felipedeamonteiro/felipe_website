@@ -13,14 +13,12 @@ export const SidebarContainer = styled.aside`
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
-  top: ${({ isOpen }) => (isOpen ? 0 : -1)};
+  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
+  top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
 `;
-
 export const CloseIcon = styled(FaTimes)`
   color: #fff;
 `;
-
 export const Icon = styled.div`
   position: absolute;
   top: 1.2rem;
@@ -30,24 +28,16 @@ export const Icon = styled.div`
   cursor: pointer;
   outline: none;
 `;
-
 export const SidebarWrapper = styled.div`
   color: #fff;
 `;
-
 export const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 80px);
   text-align: center;
-
-  /* @media screen and (max-width: ${mobileScreenMax}) {
-    grid-template-rows: repeat(4, 60px);
-  } */
 `;
-
 export const SidebarMenuItem = styled.li``;
-
 export const SidebarMenuLink = styled.a`
   display: flex;
   align-items: center;

@@ -167,6 +167,13 @@ export const NavbarHome = styled.a`
   }
 `;
 
+export const MobileContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+`;
+
 export const MobileIcon = styled.div`
   display: none;
 

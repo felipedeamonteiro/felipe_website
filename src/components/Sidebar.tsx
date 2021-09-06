@@ -16,16 +16,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toogle }) => {
       <SidebarWrapper>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuLink href="#section-experiencia">EXPERIÊNCIA</SidebarMenuLink>
+            <SidebarMenuLink href="#section-experiencia" onClick={toogle}>EXPERIÊNCIA</SidebarMenuLink>
           </SidebarMenuItem>
           <SidebarMenuItem >
-            <SidebarMenuLink href="#section-projetos">PROJETOS</SidebarMenuLink>
+            <SidebarMenuLink href="#section-projetos" onClick={toogle}>PROJETOS</SidebarMenuLink>
           </SidebarMenuItem>
           <SidebarMenuItem >
-            <SidebarMenuLink href="#section-sobreMim">SOBRE MIM</SidebarMenuLink>
+            <SidebarMenuLink href="#section-sobreMim" onClick={toogle}>SOBRE MIM</SidebarMenuLink>
           </SidebarMenuItem>
           <SidebarMenuItem >
-            <SidebarMenuLink href="#section-contato">CONTATO</SidebarMenuLink>
+            <SidebarMenuLink href="#section-contato" onClick={toogle}>CONTATO</SidebarMenuLink>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarWrapper>
