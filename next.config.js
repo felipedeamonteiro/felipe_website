@@ -2,21 +2,10 @@ const withImages = require('next-images');
 module.exports = withImages(
   {
     inlineImageLimit: false,
-    esModule: true
+    esModule: true,
+    fileExtensions: ["jpg", "jpeg", "png", "gif"],
+    webpack(config, options) {
+      return config
+    }
   }
 )
-module.exports = {
-  reactStrictMode: false,
-  future: {
-    webpack5: true,
-  },
-  webpack(config, options) {
-    config.module.rules.push(
-      {
-        test: '/.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(?[a-z0-9=.]+)?$/',
-        loader: 'url-loader?limit=100000' 
-      }
-    )
-    return config
-  }
-}
