@@ -21,11 +21,11 @@ function Home() {
       <Sidebar isOpen={isOpen} toogle={toogleSidebar} />
       <Navbar toogle={toogleSidebar} />
       <IntroContainer />
-      <Experience />
+      {/* <Experience />
       <Projects />
       <AboutMe />
       <ContactMe />
-      <Footer />
+      <Footer /> */}
     </>
   )
 }

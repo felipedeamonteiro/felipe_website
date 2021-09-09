@@ -7,7 +7,7 @@ export const Container = styled.section`
   top: 0;
   margin-top: -85px;
   background: url(${backgroundImage})  round;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
   width: 100%;
   height: 775px;
@@ -36,11 +36,21 @@ export const Container = styled.section`
     text-align: center;
   }
 
-  /* @media only screen and (max-width: ${mobileScreenMax}) {
-    width: 401%;
+  @media only screen and (max-width: ${tabletScreenMax}) {
+    background: black;
+
+    h3 {
+      font-size: 30px;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: 100px;
+    }
+    
   }
 
-  @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+  /* @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
     width: 122%;
   } */
 `;
