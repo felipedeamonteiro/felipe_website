@@ -6,8 +6,9 @@ import { mobileScreenMax, tabletScreenMax } from '../helperScreens';
 export const Container = styled.section`
   top: 0;
   margin-top: -85px;
-  background: url(${backgroundImage})  round;
-  background-size: contain;
+  background-image: url(${backgroundImage});
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
   width: 100%;
   height: 775px;

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-const xs = 576;
+const mobileScreenMax = 576;
 const sm = 768;
-const md = 992;
+const tabletScreenMax = 992;
 const lg = 1100;
 const xl = 1680;
 
@@ -34,13 +34,13 @@ export const useDeviceScreenSize = () => {
     const windowWidth = size.width;
 
     useEffect(() => {
-        if (windowWidth < lg && windowWidth > xs) {
-            setIsMobile(true);
-            setIsTablet(true);
-        } else if (windowWidth < xs) {
+        if (windowWidth < mobileScreenMax) {
             setIsMobile(true);
             setIsTablet(false);
-        } else if (windowWidth > md) {
+        } else if (windowWidth < tabletScreenMax && windowWidth > mobileScreenMax) {
+            setIsMobile(false);
+            setIsTablet(true);
+        } else if (windowWidth > tabletScreenMax) {
             setIsMobile(false);
             setIsTablet(false);
         }

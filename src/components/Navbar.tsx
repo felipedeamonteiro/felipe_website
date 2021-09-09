@@ -8,53 +8,56 @@ interface NavbarProps {
   toogle: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ toogle }) =>  {
+const Navbar: React.FC<NavbarProps> = ({ toogle }) => {
   const [viewNavBar, setViewNavBar] = useState<boolean>(false);
 
-  const {width: screenWidth, height: screenHeight} = useWindowSize();
-  const {isMobile, isTablet} = useDeviceScreenSize();
+  const { width: screenWidth, height: screenHeight } = useWindowSize();
+  const { isMobile, isTablet } = useDeviceScreenSize();
 
-  const changeBackground = useCallback(() => {
-    if (window.scrollY >= 180) {
+  const changeNavBarBackground = useCallback(() => {
+    if ((!isMobile && !isTablet) && (window.scrollY >= 180)) {
       setViewNavBar(true);
-    } else {
+    } else if ((!isMobile && !isTablet) && (window.scrollY < 180)) {
       setViewNavBar(false)
     }
   }, []);
 
   if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', changeBackground);
+    window.addEventListener('scroll', changeNavBarBackground);
   }
 
-  useEffect(() => {
-    console.log('window x screen', screenWidth);
-  } , [screenWidth]);
+  // useEffect(() => {
+  //   console.log('window x screen', screenWidth);
+  // }, [screenWidth]);
+  // console.log('isMobile', isMobile);
+  // console.log('isTablet', isTablet);
 
   return (
     <>
-      <Nav>
+      <Nav viewNavBar={viewNavBar}>
         <NavbarContainer>
           <NavbarHome href="#section-home">HOME</NavbarHome>
-          
-          <NavMenu>
-            <BulbSwitch />
-            <NavItem>
-              <NavLinks href="#section-experiencia">EXPERIÊNCIA</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks href="#section-projetos">PROJETOS</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks href="#section-sobreMim">SOBRE MIM</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks href="#section-contato">CONTATO</NavLinks>
-            </NavItem>
-          </NavMenu>
-          {(isMobile || isTablet) && ( 
+
+          {(!isMobile && !isTablet) ? (
+            <NavMenu>
+              <BulbSwitch />
+              <NavItem>
+                <NavLinks href="#section-experiencia">EXPERIÊNCIA</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks href="#section-projetos">PROJETOS</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks href="#section-sobreMim">SOBRE MIM</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks href="#section-contato">CONTATO</NavLinks>
+              </NavItem>
+            </NavMenu>
+          ) : (
             <MobileContent>
               <BulbSwitch />
-              <MobileIcon onClick={toogle}>    
+              <MobileIcon onClick={toogle}>
                 <FaBars />
               </MobileIcon>
             </MobileContent>
@@ -63,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ toogle }) =>  {
       </Nav>
     </>
   );
-} 
-  
+}
+
 
 export default Navbar;

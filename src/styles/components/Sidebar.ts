@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 import { FaTimes } from 'react-icons/fa';
-import { mobileScreenMax } from '../helperScreens';
 
 export const SidebarContainer = styled.aside`
   position: fixed;
-  z-index: 999;
+  z-index: 10000;
   width: 100%;
   height: 100%;
   background: #00CDE2;
@@ -38,6 +37,7 @@ export const SidebarMenu = styled.ul`
   text-align: center;
 `;
 export const SidebarMenuItem = styled.li``;
+
 export const SidebarMenuLink = styled.a`
   display: flex;
   align-items: center;

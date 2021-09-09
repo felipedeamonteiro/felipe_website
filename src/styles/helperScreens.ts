@@ -1,3 +1,3 @@
-export const mobileScreenMax: string = '550px';
-export const tabletScreenMax: string = '950px';
-export const desktopScreenMin: string = '992px'; 
+export const mobileScreenMax: string = '576px';
+export const tabletScreenMax: string = '992px';
+export const desktopScreenMin: string = '993px';

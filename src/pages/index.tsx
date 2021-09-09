@@ -13,7 +13,6 @@ function Home() {
 
   const toogleSidebar = () => {
     setIsOpen(!isOpen);
-    console.log('fui clicado');
   }
 
   return (
@@ -21,7 +20,7 @@ function Home() {
       <Sidebar isOpen={isOpen} toogle={toogleSidebar} />
       <Navbar toogle={toogleSidebar} />
       <IntroContainer />
-      {/* <Experience />
+      {/*<Experience />
       <Projects />
       <AboutMe />
       <ContactMe />
