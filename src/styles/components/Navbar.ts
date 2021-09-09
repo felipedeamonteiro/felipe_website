@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { tabletScreenMax } from '../helperScreens';
+import { tabletScreenMax, mobileScreenMax } from '../helperScreens';
 
 interface NavbarProps {
   viewNavBar: boolean;
@@ -58,6 +58,9 @@ export const MobileContent = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 30%;
+  @media screen and (max-width: ${mobileScreenMax}) {
+    width: 45%;
+  }
 `;
 
 export const MobileIcon = styled.div`

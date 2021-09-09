@@ -26,12 +26,6 @@ const Navbar: React.FC<NavbarProps> = ({ toogle }) => {
     window.addEventListener('scroll', changeNavBarBackground);
   }
 
-  // useEffect(() => {
-  //   console.log('window x screen', screenWidth);
-  // }, [screenWidth]);
-  // console.log('isMobile', isMobile);
-  // console.log('isTablet', isTablet);
-
   return (
     <>
       <Nav viewNavBar={viewNavBar}>
