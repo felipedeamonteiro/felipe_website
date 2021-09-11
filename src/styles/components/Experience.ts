@@ -78,7 +78,7 @@ export const Container = styled.section`
 
     @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
       left: 21%;
-      bottom: 110px;
+      bottom: 170px;
     }
   }
   > li {
