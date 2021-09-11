@@ -1,12 +1,16 @@
 import styled from 'styled-components';
-import backgroundImage from '../../../public/backgroundImage.jpg';
+import darkThemeImage from '../../../public/blue_night_sky.jpg';
+import lightThemeImage from '../../../public/brightsky.jpg';
 import { mobileScreenMax, tabletScreenMax } from '../helperScreens';
 
+interface IntroContainerProps {
+  darkMode: boolean;
+}
 
-export const Container = styled.section`
+export const Container = styled.section<IntroContainerProps>`
   top: 0;
   margin-top: -85px;
-  background-image: url(${backgroundImage});
+  background-image: url(${(props: IntroContainerProps) => props.darkMode ? darkThemeImage : lightThemeImage});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -17,6 +21,7 @@ export const Container = styled.section`
   justify-content: space-between;
   align-items: center;
   padding: 0 30px 30px 30px;
+  transition: background-image 0.5s ease-in-out;
 
  
 
@@ -35,23 +40,19 @@ export const Container = styled.section`
     font-family: 'Roboto Slab', serif;
     font-size: 75px;
     text-align: center;
+    margin-bottom: 150px;
   }
 
   @media only screen and (max-width: ${tabletScreenMax}) {
-    background: black;
-
+    
     h3 {
       font-size: 30px;
+      margin-top: 230px;
     }
 
     h1 {
       font-size: 50px;
-      margin-bottom: 100px;
+      margin-bottom: 150px;
     }
-    
   }
-
-  /* @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
-    width: 122%;
-  } */
 `;

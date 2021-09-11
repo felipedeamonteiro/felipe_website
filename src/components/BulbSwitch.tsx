@@ -2,16 +2,17 @@ import React, { useState, useEffect } from 'react';
 
 import { Container } from '../styles/components/BulbSwitch';
 
-const BulbSwitch: React.FC = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+interface BulbSwitchProps {
+  handleDarkMode: () => void;
+  darkMode: boolean;
+}
 
-  useEffect(() => {
-    console.log('BulbSwitch darkMode:', darkMode);
-  }, [darkMode]);
+const BulbSwitch: React.FC<BulbSwitchProps> = ({ handleDarkMode, darkMode }) => {
+
   return (
     <Container>
       <div className="switch">
-        <input type="checkbox" defaultChecked={false} onChange={() => setDarkMode(!darkMode)}  name="toggle" />
+        <input type="checkbox" defaultChecked={darkMode} onChange={() => handleDarkMode()} name="toggle" />
         <label htmlFor="toggle">
           <i className="bulb">
             <span className="bulb-center"></span>

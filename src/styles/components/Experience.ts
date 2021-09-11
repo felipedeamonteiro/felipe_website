@@ -3,8 +3,28 @@ import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../helperScr
 
 export const Container = styled.section`
   background: #d7d8fc;
+  width: 100%;
   height: 3250px;
   padding: 100px 30px 30px 30px;
+
+  @media only screen and (max-width: ${mobileScreenMax}) {
+    width: 100%;
+    height: 4550px;
+    padding: 80px 20px 20px 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    @media only screen and (max-height: 812px) {
+      height: 4850px;
+    }
+  }
+
+  @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+    width: 100%;
+    padding: 80px 20px 20px 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
 
   .text-center-row {
     display: flex;
@@ -16,11 +36,21 @@ export const Container = styled.section`
       margin-top: 60px;
       font-size: 45px;
       font-family: 'Orbitron', sans-serif;
+
+      @media only screen and (max-width: ${mobileScreenMax}) {
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+        margin-top: 40px;
+        text-align: center;
+      }
     }
 
     .text-muted {
       margin: 25px 0 50px 0;
-      font-style: 'italic';
+      font-style: italic;
       font-weight: lighter;
       color: #676e75;
     }
@@ -33,12 +63,22 @@ export const Container = styled.section`
   &:before {
     position: absolute;
     top: 0;
-    bottom: 15px;
+    bottom: 85px;
     left: 50%;
     width: 3px;
     margin-left: -1.5px;
     content: '';
     background-color: #00d0e5;
+
+    @media only screen and (max-width: ${mobileScreenMax}) {
+      left: 20%;
+      bottom: 400px;
+    }
+
+    @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+      left: 21%;
+      bottom: 110px;
+    }
   }
   > li {
     position: relative;
@@ -60,6 +100,21 @@ export const Container = styled.section`
       width: 43%;
       padding: 10px 20px 20px 14px;
       text-align: right;
+
+      @media only screen and (max-width: ${mobileScreenMax}) {
+        text-align: left;
+        float: none;
+        left: 37%;
+        width: 65%;
+      }
+
+      @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+        text-align: left;
+        float: none;
+        left: 33%;
+        width: 70%;
+      }
+
       &:before {
         right: auto;
         left: -15px;
@@ -90,6 +145,18 @@ export const Container = styled.section`
       justify-content: center;
       transition: border-color .5s;
 
+      @media only screen and (max-width: ${mobileScreenMax}) {
+        width: 130px;
+        height: 130px;
+        left: 25%;
+      }
+
+      @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+        width: 150px;
+        height: 150px;
+        left: 22%;
+      }
+
       &.circleActive {
         border: 9px solid #00d0e5;
         transition: border-color .5s;
@@ -118,6 +185,20 @@ export const Container = styled.section`
       padding: 0 30px 20px 20px;
       text-align: left;
       float: right;
+
+      @media only screen and (max-width: ${mobileScreenMax}) {
+        text-align: left;
+        float: none;
+        left: 37%;
+        width: 65%;
+        font-size: 18px;
+      }
+
+      @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+        float: none;
+        left: 33%;
+        width: 70%;
+      }
     }
     &:last-child {
       margin-bottom: 0;
@@ -129,6 +210,11 @@ export const Container = styled.section`
       font-size: 25px;
       margin-top: 0;
       color: inherit;
+
+      @media only screen and (max-width: ${mobileScreenMax}) {
+        font-size: 20px;
+      }
+
       &.subheading {
         text-transform: none;
       }
@@ -142,21 +228,26 @@ export const Container = styled.section`
       color: #6c757d;
       transition: color .5s;
 
+      @media only screen and (max-width: ${mobileScreenMax}) {
+        font-size: 18px;
+      }
+
       &.activeText {
         color: #13b5c5;
         transition: color .5s;
       }
     }
   }
+  
 }
 
 /* @media only screen and (max-width: ${mobileScreenMax}) {
-    width: 401%;
-  }
+  width: 100%;
+}
 
-  @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
-    width: 122%;
-  } */
+@media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+  width: 122%;
+} */
 
 /* @media only screen and (min-width:992px) {
   .timeline {
@@ -244,4 +335,4 @@ export const Container = styled.section`
     }
   }
 } */
-`; 
+`;

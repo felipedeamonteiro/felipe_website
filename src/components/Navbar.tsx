@@ -6,12 +6,13 @@ import { FaBars } from 'react-icons/fa';
 
 interface NavbarProps {
   toogle: () => void;
+  handleDarkMode: () => void;
+  darkMode: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ toogle }) => {
+const Navbar: React.FC<NavbarProps> = ({ toogle, handleDarkMode, darkMode }) => {
   const [viewNavBar, setViewNavBar] = useState<boolean>(false);
 
-  const { width: screenWidth, height: screenHeight } = useWindowSize();
   const { isMobile, isTablet } = useDeviceScreenSize();
 
   const changeNavBarBackground = useCallback(() => {
@@ -34,7 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ toogle }) => {
 
           {(!isMobile && !isTablet) ? (
             <NavMenu>
-              <BulbSwitch />
+              <BulbSwitch handleDarkMode={handleDarkMode} darkMode={darkMode} />
               <NavItem>
                 <NavLinks href="#section-experiencia">EXPERIÊNCIA</NavLinks>
               </NavItem>
@@ -50,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ toogle }) => {
             </NavMenu>
           ) : (
             <MobileContent>
-              <BulbSwitch />
+              <BulbSwitch handleDarkMode={handleDarkMode} darkMode={darkMode} />
               <MobileIcon onClick={toogle}>
                 <FaBars />
               </MobileIcon>

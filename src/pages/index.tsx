@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import AboutMe from '../components/AboutMe';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -10,6 +10,11 @@ import Sidebar from '../components/Sidebar';
 
 function Home() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  const handleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   const toogleSidebar = () => {
     setIsOpen(!isOpen);
@@ -18,10 +23,10 @@ function Home() {
   return (
     <>
       <Sidebar isOpen={isOpen} toogle={toogleSidebar} />
-      <Navbar toogle={toogleSidebar} />
-      <IntroContainer />
-      {/*<Experience />
-      <Projects />
+      <Navbar toogle={toogleSidebar} handleDarkMode={handleDarkMode} darkMode={darkMode} />
+      <IntroContainer darkMode={darkMode} />
+      <Experience />
+      {/* <Projects />
       <AboutMe />
       <ContactMe />
       <Footer /> */}
