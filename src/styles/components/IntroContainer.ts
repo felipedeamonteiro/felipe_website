@@ -46,12 +46,12 @@ export const Container = styled.section<IntroContainerProps>`
   @media only screen and (max-width: ${mobileScreenMax}) {
     h3 {
       font-size: 30px;
-      margin-top: 180px;
+      margin-top: 150px;
     }
 
     h1 {
       font-size: 50px;
-      margin-bottom: 150px;
+      margin-bottom: 130px;
     }
   }
 
