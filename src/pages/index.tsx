@@ -28,8 +28,8 @@ function Home() {
       <Experience />
       <Projects />
       <AboutMe />
-      {/*<ContactMe />
-      <Footer /> */}
+      <ContactMe />
+      <Footer />
     </>
   )
 }
