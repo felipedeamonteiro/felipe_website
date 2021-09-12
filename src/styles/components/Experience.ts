@@ -8,7 +8,6 @@ export const Container = styled.section`
 
   @media only screen and (max-width: ${mobileScreenMax}) {
     width: 100%;
-    height: 4550px;
     padding: 80px 20px 20px 20px;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -72,7 +71,7 @@ export const Container = styled.section`
 
     @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
       left: 21%;
-      bottom: 195px;
+      bottom: 215px;
     }
   }
   > li {
