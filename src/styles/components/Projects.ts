@@ -23,6 +23,7 @@ export const Container = styled.section`
       font-style: 'italic';
       font-weight: lighter;
       color: #838b93;
+      text-align: center;
     }
   }
 
@@ -32,7 +33,7 @@ export const Container = styled.section`
     justify-content: center;
     flex-wrap: wrap;
     transform-style: preserve-3d;
-    width: 1100px;
+    width: 100%;
     cursor: pointer;
 
     .card {
@@ -124,4 +125,4 @@ export const Container = styled.section`
 
   
   
-`; 
+`;

@@ -4,7 +4,6 @@ import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../helperScr
 export const Container = styled.section`
   background: #d7d8fc;
   width: 100%;
-  height: 3250px;
   padding: 100px 30px 30px 30px;
 
   @media only screen and (max-width: ${mobileScreenMax}) {
@@ -13,15 +12,10 @@ export const Container = styled.section`
     padding: 80px 20px 20px 20px;
     overflow-x: hidden;
     overflow-y: hidden;
-
-    @media only screen and (max-height: 812px) {
-      height: 4850px;
-    }
   }
 
   @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
     width: 100%;
-    height: 4050px;
     padding: 80px 20px 20px 20px;
     overflow-x: hidden;
     overflow-y: hidden;

@@ -26,8 +26,8 @@ function Home() {
       <Navbar toogle={toogleSidebar} handleDarkMode={handleDarkMode} darkMode={darkMode} />
       <IntroContainer darkMode={darkMode} />
       <Experience />
-      {/* <Projects />
-      <AboutMe />
+      <Projects />
+      {/* <AboutMe />
       <ContactMe />
       <Footer /> */}
     </>
