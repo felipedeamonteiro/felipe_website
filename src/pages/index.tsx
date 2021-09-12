@@ -27,8 +27,8 @@ function Home() {
       <IntroContainer darkMode={darkMode} />
       <Experience />
       <Projects />
-      {/* <AboutMe />
-      <ContactMe />
+      <AboutMe />
+      {/*<ContactMe />
       <Footer /> */}
     </>
   )

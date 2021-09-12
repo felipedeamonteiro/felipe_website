@@ -7,7 +7,7 @@ import intersectionMethod from '../utils/intersectionMethod';
 
 const AboutMe: React.FC = () => {
   const [sobreMimInViewport, setSobreMimInViewport] = useState<boolean>(false);
-  
+
   const ref = useRef();
   const inViewport = intersectionMethod(ref, '20px');
   useEffect(() => {
@@ -15,7 +15,7 @@ const AboutMe: React.FC = () => {
       setSobreMimInViewport(true);
     } else {
       setSobreMimInViewport(false);
-    }    
+    }
   }, [inViewport]);
 
   return (
@@ -23,7 +23,7 @@ const AboutMe: React.FC = () => {
       <h1>Sobre mim</h1>
       <div className="skills-wrapper">
         <div className="about-me">
-          <img src={FotoFelipe} alt="Foto de Felipe"/>
+          <img src={FotoFelipe} alt="Foto de Felipe" />
           <div className="label_bold">Quem sou eu?</div>
           <div className="description">
             Sou Engenheiro FullStack.
@@ -38,7 +38,7 @@ const AboutMe: React.FC = () => {
             </span>
           </div>
         </div>
-        
+
         <div className="skills-bars">
 
           <div className="bar-flex">
@@ -46,22 +46,22 @@ const AboutMe: React.FC = () => {
               <div className="bar-tag">
                 CSS
               </div>
-              {sobreMimInViewport && 
-              <div className="bar-fill-css">
-                <span>90%</span>
-              </div>}
+              {sobreMimInViewport &&
+                <div className="bar-fill-css">
+                  <span>95%</span>
+                </div>}
             </div>
-            
+
           </div>
 
           <div className="bar-flex">
             <div className="bar-content">
               <div className="bar-tag">HTML
               </div>
-              {sobreMimInViewport && 
-              <div className="bar-fill-html">
-                <span>90%</span>
-              </div>}
+              {sobreMimInViewport &&
+                <div className="bar-fill-html">
+                  <span>95%</span>
+                </div>}
             </div>
           </div>
 
@@ -69,10 +69,10 @@ const AboutMe: React.FC = () => {
             <div className="bar-content">
               <div className="bar-tag">JavaScript
               </div>
-              {sobreMimInViewport && 
-              <div className="bar-fill-javascript">
-                <span>80%</span>
-              </div>}
+              {sobreMimInViewport &&
+                <div className="bar-fill-javascript">
+                  <span>85%</span>
+                </div>}
             </div>
           </div>
 
@@ -80,13 +80,13 @@ const AboutMe: React.FC = () => {
             <div className="bar-content">
               <div className="bar-tag">React
               </div>
-              {sobreMimInViewport && 
-              <div className="bar-fill-react">
-                <span>80%</span>
-              </div>}
+              {sobreMimInViewport &&
+                <div className="bar-fill-react">
+                  <span>85%</span>
+                </div>}
             </div>
           </div>
-          
+
           <div className="bar-flex">
             <div className="bar-content">
               <div className="bar-tag">React-Native
@@ -101,10 +101,10 @@ const AboutMe: React.FC = () => {
             <div className="bar-content">
               <div className="bar-tag">Node.js
               </div>
-              {sobreMimInViewport && 
-              <div className="bar-fill-nodejs">
-                <span>70%</span>
-              </div>}
+              {sobreMimInViewport &&
+                <div className="bar-fill-nodejs">
+                  <span>70%</span>
+                </div>}
             </div>
           </div>
 
@@ -112,10 +112,10 @@ const AboutMe: React.FC = () => {
             <div className="bar-content">
               <div className="bar-tag">Python
               </div>
-              {sobreMimInViewport && 
-              <div className="bar-fill-python">
-                <span>60%</span>
-              </div>}
+              {sobreMimInViewport &&
+                <div className="bar-fill-python">
+                  <span>60%</span>
+                </div>}
             </div>
           </div>
 
@@ -129,13 +129,13 @@ const AboutMe: React.FC = () => {
         </div>
         <div className="box1">
           <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
-          <h4 className="service">Graduação em Engenharia Mecânica - UNICAMP - Concluído em Janeiro de 2015</h4>
+          <h4 className="service">Graduação em Engenharia Mecânica - UNICAMP - Concluído 2014</h4>
         </div>
 
-        <div className="box2">
+        {/* <div className="box2">
           <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
           <h4 className="service">Mestrado em Ciência da Computação - Inteligência Artificial e Robótica - UNICAMP - Interrompido em 2019</h4>
-        </div>
+        </div> */}
 
         <div className="box3">
           <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />

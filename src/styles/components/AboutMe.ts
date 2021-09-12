@@ -1,4 +1,5 @@
 import styled, { keyframes, css } from 'styled-components';
+import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../helperScreens';
 
 interface ContainerProps {
   sobreMimInViewport: boolean;
@@ -9,7 +10,7 @@ const fillCssAndHtml = keyframes`
     width: 7%;
   }
   to {
-    width: calc(75% * 0.9);
+    width: calc(75% * 0.95);
   }
 `;
 
@@ -18,7 +19,7 @@ const fillJavascriptAndReact = keyframes`
     width: 7%;
   }
   to {
-    width: calc(75% * 0.8);
+    width: calc(75% * 0.85);
   }
 `;
 
@@ -50,9 +51,10 @@ const fillPython = keyframes`
 `;
 
 export const Container = styled.section<ContainerProps>`
-  height: 1350px;
   padding: 100px 30px 30px 30px;
   background: #d7d8fc;
+
+  
 
   h1 {
     font-family: 'Orbitron', sans-serif;
@@ -66,6 +68,28 @@ export const Container = styled.section<ContainerProps>`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: ${mobileScreenMax}) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .description {
+        margin-bottom: 30px;
+      }
+
+      .bar-tag {
+        font-size: 12px;
+      }
+    }
+
+    @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .description {
+        margin-bottom: 30px;
+      }
+    }
 
     .about-me{
       width: 100%;
@@ -138,7 +162,7 @@ export const Container = styled.section<ContainerProps>`
 
           
           ${props => props.sobreMimInViewport &&
-            css`
+    css`
               .bar-fill-css {
                 height: inherit;
                 display: flex;
@@ -150,7 +174,7 @@ export const Container = styled.section<ContainerProps>`
             `}   
 
           ${props => props.sobreMimInViewport &&
-            css`
+    css`
               .bar-fill-html {
                 height: inherit;
                 display: flex;
@@ -162,7 +186,7 @@ export const Container = styled.section<ContainerProps>`
             `}
           
           ${props => props.sobreMimInViewport &&
-            css`
+    css`
               .bar-fill-javascript {
                 height: inherit;
                 display: flex;
@@ -175,7 +199,7 @@ export const Container = styled.section<ContainerProps>`
 
           
           ${props => props.sobreMimInViewport &&
-            css`
+    css`
               .bar-fill-react {
               height: inherit;
               display: flex;
@@ -188,7 +212,7 @@ export const Container = styled.section<ContainerProps>`
 
           
           ${props => props.sobreMimInViewport &&
-            css`
+    css`
               .bar-fill-react-native {
                 height: inherit;
                 display: flex;
@@ -200,7 +224,7 @@ export const Container = styled.section<ContainerProps>`
             `}
 
           ${props => props.sobreMimInViewport &&
-            css`
+    css`
               .bar-fill-nodejs {
                 height: inherit;
                 display: flex;
@@ -213,7 +237,7 @@ export const Container = styled.section<ContainerProps>`
 
           
           ${props => props.sobreMimInViewport &&
-            css`
+    css`
               .bar-fill-python {
                 height: inherit;
                 display: flex;
