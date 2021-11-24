@@ -27,7 +27,7 @@ export const Container = styled.section`
     }
   }
 
-  .cards-container {
+  .cards-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,12 +36,11 @@ export const Container = styled.section`
     width: 100%;
     cursor: pointer;
 
-    .card {
+    .card-container {
       position: relative;
       width: 320px;
       height: 320px;
       margin: 20px;
-      transform-style: preserve-3d;
       perspective: 1000px;
 
       .box {
@@ -53,7 +52,7 @@ export const Container = styled.section`
         transform-style: preserve-3d;
         transition: 1s ease;
 
-        .imgBox {
+        .imgBox-front {
           position: absolute;
           top: 0;
           left: 0;
@@ -70,7 +69,7 @@ export const Container = styled.section`
           }
         }
 
-        .contentBx {
+        .contentBx-back {
           position: absolute;
           top: 0;
           left: 0;

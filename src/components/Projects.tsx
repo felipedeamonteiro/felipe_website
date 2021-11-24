@@ -11,20 +11,20 @@ import ContaSimplesImg from '../../public/conta_simples.jpeg';
 
 const Projects: React.FC = () => {
   return (
-    
+
     <Container id="section-projetos">
       <div className="text-center-row">
         <h1>Projetos</h1>
         <h3>Projetos de testes de processos seletivos de empresas</h3>
       </div>
 
-      <div className="cards-container">
-        <div className="card">
+      <div className="cards-wrapper">
+        <div className="card-container">
           <div className="box">
-            <div className="imgBox">
-              <img src={CaosImg} alt="Imagem do Teste Caos Focado"/>
+            <div className="imgBox-front">
+              <img src={CaosImg} alt="Imagem do Teste Caos Focado" />
             </div>
-            <div className="contentBx">
+            <div className="contentBx-back">
               <a target="_blank" rel="noopener noreferrer" href="https://caos-focado-frontend-test-git-master.felipedeamonteiro.vercel.app/">
                 <div>
                   <h2>Teste para Dev Frontend - Caos Focado</h2>
@@ -34,12 +34,12 @@ const Projects: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="card">
+        <div className="card-container">
           <div className="box">
-            <div className="imgBox">
-              <img src={CredereImg} alt="Imagem do Teste da Credere"/>
+            <div className="imgBox-front">
+              <img src={CredereImg} alt="Imagem do Teste da Credere" />
             </div>
-            <div className="contentBx">
+            <div className="contentBx-back">
               <a target="_blank" rel="noopener noreferrer" href="https://credere-frontend-test.vercel.app/">
                 <div>
                   <h2>Teste para Dev Backend - Credere</h2>
@@ -49,12 +49,12 @@ const Projects: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="card">
+        <div className="card-container">
           <div className="box">
-            <div className="imgBox">
-              <img src={VenturusImg} alt="Imagem do teste da venturus"/>
+            <div className="imgBox-front">
+              <img src={VenturusImg} alt="Imagem do teste da venturus" />
             </div>
-            <div className="contentBx">
+            <div className="contentBx-back">
               <a target="_blank" rel="noopener noreferrer" href="https://venturus-frontend-test-2020.vercel.app/">
                 <div>
                   <h2>Teste para Dev Frontend - Venturus</h2>
@@ -64,27 +64,27 @@ const Projects: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="card">
+        <div className="card-container">
           <div className="box">
-            <div className="imgBox">
-              <img src={CodeMinerImg} alt="Imagem do Teste Caos Focado"/>
+            <div className="imgBox-front">
+              <img src={CodeMinerImg} alt="Imagem do Teste Caos Focado" />
             </div>
-            <div className="contentBx">
+            <div className="contentBx-back">
               <a style={{ cursor: 'not-allowed' }}>
                 <div>
                   <h2>Teste para Dev FullStack - Code Miner</h2>
                   <p>Ainda em construção...</p>
                 </div>
-              </a>           
+              </a>
             </div>
           </div>
         </div>
-        <div className="card">
+        <div className="card-container">
           <div className="box">
-            <div className="imgBox">
-              <img src={ContaSimplesImg} alt="Imagem do Teste da Credere"/>
+            <div className="imgBox-front">
+              <img src={ContaSimplesImg} alt="Imagem do Teste da Credere" />
             </div>
-            <div className="contentBx">
+            <div className="contentBx-back">
               <a style={{ cursor: 'not-allowed' }}>
                 <div>
                   <h2>Teste para Dev FullStack - Conta Simples</h2>
