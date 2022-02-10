@@ -42,6 +42,8 @@ export const Container = styled.section`
       height: 320px;
       margin: 20px;
       perspective: 1000px;
+      transform: perspective(1000px);
+      transform-style: preserve-3d;
 
       .box {
         position: absolute;
@@ -58,6 +60,8 @@ export const Container = styled.section`
           left: 0;
           width: 100%;
           height: 100%;
+          transform-style: preserve-3d;
+          backface-visibility: hidden;          
 
           img {
             position: absolute;
@@ -81,6 +85,7 @@ export const Container = styled.section`
           align-items: center;
           justify-content: center;
           transform-style: preserve-3d;
+          /* z-index: -1; //TODO: Remover gambiarra */
           transform: rotateY(180deg);
 
           a {
@@ -88,6 +93,7 @@ export const Container = styled.section`
 
             div {
               transform-style: preserve-3d;
+              
               padding: 20px;
               background: linear-gradient(45deg, #6dd4fd, #2800b3);
               transform: translateZ(100px);
