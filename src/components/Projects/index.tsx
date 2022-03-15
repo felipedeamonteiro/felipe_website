@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Container } from './styles';
+import Card3D from '../Card3D';
 import CaosImg from '../../../public/caos_focado_test.png';
 import CredereImg from '../../../public/credere_test.png';
 import VenturusImg from '../../../public/venturus_test.png';
@@ -19,81 +20,41 @@ const Projects: React.FC = () => {
       </div>
 
       <div className="cards-wrapper">
-        <div className="card-container">
-          <div className="box">
-            <div className="imgBox-front">
-              <img src={CaosImg} alt="Imagem do Teste Caos Focado" />
-            </div>
-            <div className="contentBx-back">
-              <a target="_blank" rel="noopener noreferrer" href="https://caos-focado-frontend-test-git-master.felipedeamonteiro.vercel.app/">
-                <div>
-                  <h2>Teste para Dev Frontend - Caos Focado</h2>
-                  <p>O projeto se baseia em contruir uma listagem de clínicas, previamente dadas e também de um formulário para adicionar mais clínicas. Tinha a tarefa de seguir o layout dado, trabalhar com a Api dos correios e ordenação.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card-container">
-          <div className="box">
-            <div className="imgBox-front">
-              <img src={CredereImg} alt="Imagem do Teste da Credere" />
-            </div>
-            <div className="contentBx-back">
-              <a target="_blank" rel="noopener noreferrer" href="https://credere-frontend-test.vercel.app/">
-                <div>
-                  <h2>Teste para Dev Backend - Credere</h2>
-                  <p>O Projeto é FullStack, possui um backend hospedado na Digital Ocean e o Front na Vercel, onde temos uma "sonda" que pode se locomover num plano 2D.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card-container">
-          <div className="box">
-            <div className="imgBox-front">
-              <img src={VenturusImg} alt="Imagem do teste da venturus" />
-            </div>
-            <div className="contentBx-back">
-              <a target="_blank" rel="noopener noreferrer" href="https://venturus-frontend-test-2020.vercel.app/">
-                <div>
-                  <h2>Teste para Dev Frontend - Venturus</h2>
-                  <p>Neste projeto toda aplicação está somente no frontend. A ideia era criar uma dashboard nos moldes do CartolaFC onde se criava times personalizados de futebol usando uma API externa. O layout é bem complexo e é um dos trabalhos mais desafiadores que eu fiz.</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card-container">
-          <div className="box">
-            <div className="imgBox-front">
-              <img src={CodeMinerImg} alt="Imagem do Teste Caos Focado" />
-            </div>
-            <div className="contentBx-back">
-              <a style={{ cursor: 'not-allowed' }}>
-                <div>
-                  <h2>Teste para Dev FullStack - Code Miner</h2>
-                  <p>Ainda em construção...</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="card-container">
-          <div className="box">
-            <div className="imgBox-front">
-              <img src={ContaSimplesImg} alt="Imagem do Teste da Credere" />
-            </div>
-            <div className="contentBx-back">
-              <a style={{ cursor: 'not-allowed' }}>
-                <div>
-                  <h2>Teste para Dev FullStack - Conta Simples</h2>
-                  <p>Backend pronto, mas ainda falta o front. Em construção...</p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
+        <Card3D
+          imgSrc={CaosImg}
+          imgAlt="Imagem do Teste Caos Focado"
+          projectHref="https://caos-focado-frontend-test-git-master.felipedeamonteiro.vercel.app/"
+          backCardTitle="Teste para Dev Frontend - Caos Focado"
+          backCardDescritption="O projeto se baseia em contruir uma listagem de clínicas, previamente dadas e também de um formulário para adicionar mais clínicas. Tinha a tarefa de seguir o layout dado, trabalhar com a Api dos correios e ordenação."
+        />
+        <Card3D
+          imgSrc={CredereImg}
+          imgAlt="Imagem do Teste da Credere"
+          projectHref="https://credere-frontend-test.vercel.app/"
+          backCardTitle="Teste para Dev Backend - Credere"
+          backCardDescritption="O Projeto é FullStack, possui um backend hospedado na Digital Ocean e o Front na Vercel, onde temos uma 'sonda' que pode se locomover num plano 2D."
+        />
+        <Card3D
+          imgSrc={VenturusImg}
+          imgAlt="Imagem do teste da Venturus"
+          projectHref="https://venturus-frontend-test-2020.vercel.app/"
+          backCardTitle="Teste para Dev Frontend - Venturus"
+          backCardDescritption="Neste projeto toda aplicação está somente no frontend. A ideia era criar uma dashboard nos moldes do CartolaFC onde se criava times personalizados de futebol usando uma API externa. O layout é bem complexo e é um dos trabalhos mais desafiadores que eu fiz."
+        />
+        <Card3D
+          imgSrc={CodeMinerImg}
+          imgAlt="Imagem do Teste Caos Focado"
+          aTagStyle={true}
+          backCardTitle="Teste para Dev FullStack - Code Miner"
+          backCardDescritption="Ainda em construção..."
+        />
+        <Card3D
+          imgSrc={ContaSimplesImg}
+          imgAlt="Imagem do Teste da Credere"
+          projectHref="https://caos-focado-frontend-test-git-master.felipedeamonteiro.vercel.app/"
+          backCardTitle="Teste para Dev FullStack - Conta Simples"
+          backCardDescritption="ackend pronto, mas ainda falta o front. Em construção..."
+        />
       </div>
     </Container>
   );
