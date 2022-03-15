@@ -1,7 +1,7 @@
 import React, { InputHTMLAttributes, useEffect, useRef, useState } from 'react';
 import { useField } from '@unform/core';
 
-import { Container } from '../styles/components/Input';
+import { Container } from './styles';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;

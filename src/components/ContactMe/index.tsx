@@ -3,10 +3,10 @@ import * as Yup from 'yup';
 import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 
-import Button from './Button';
-import Input from './Input';
-import TextArea from './TextArea';
-import { Container } from '../styles/components/ContactMe';
+import Button from '../Button';
+import Input from '../Input';
+import TextArea from '../TextArea';
+import { Container } from './styles';
 
 const ContactMe: React.FC = () => {
   const [name, setName] = useState<string>('');

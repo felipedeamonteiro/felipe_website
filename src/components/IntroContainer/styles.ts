@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import darkThemeImage from '../../../public/blue_night_sky.jpg';
 import lightThemeImage from '../../../public/brightsky.jpg';
-import { mobileScreenMax, tabletScreenMax } from '../helperScreens';
+import { mobileScreenMax, tabletScreenMax } from '../../styles/helperScreens';
 
 interface IntroContainerProps {
   darkMode: boolean;

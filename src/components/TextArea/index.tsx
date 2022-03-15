@@ -1,7 +1,7 @@
 import React, { TextareaHTMLAttributes, useEffect, useRef } from 'react';
 import { useField } from '@unform/core';
 
-import { Container } from '../styles/components/TextArea';
+import { Container } from './styles';
 
 interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;

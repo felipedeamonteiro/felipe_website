@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from 'styled-components';
-import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../helperScreens';
+import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../../styles/helperScreens';
 
 interface ContainerProps {
   sobreMimInViewport: boolean;

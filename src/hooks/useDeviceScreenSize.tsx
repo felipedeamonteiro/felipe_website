@@ -6,9 +6,14 @@ const tabletScreenMax = 992;
 const lg = 1100;
 const xl = 1680;
 
+interface WindowSizeProps {
+    width: number | undefined;
+    height: number | undefined;
+}
+
 
 export const useWindowSize = () => {
-    const [windowSize, setWindowSize] = useState({
+    const [windowSize, setWindowSize] = useState<WindowSizeProps>({
         width: undefined,
         height: undefined,
     });
@@ -34,13 +39,13 @@ export const useDeviceScreenSize = () => {
     const windowWidth = size.width;
 
     useEffect(() => {
-        if (windowWidth < mobileScreenMax) {
+        if (windowWidth != undefined && windowWidth < mobileScreenMax) {
             setIsMobile(true);
             setIsTablet(false);
-        } else if (windowWidth < tabletScreenMax && windowWidth > mobileScreenMax) {
+        } else if (windowWidth != undefined && windowWidth < tabletScreenMax && windowWidth > mobileScreenMax) {
             setIsMobile(false);
             setIsTablet(true);
-        } else if (windowWidth > tabletScreenMax) {
+        } else if (windowWidth != undefined && windowWidth > tabletScreenMax) {
             setIsMobile(false);
             setIsTablet(false);
         }

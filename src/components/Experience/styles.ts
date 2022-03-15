@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../helperScreens';
+import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../../styles/helperScreens';
 
 export const Container = styled.section`
   background: #d7d8fc;

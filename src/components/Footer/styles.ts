@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mobileScreenMax, tabletScreenMax } from '../helperScreens';
+import { mobileScreenMax, tabletScreenMax } from '../../styles/helperScreens';
 
 export const Container = styled.footer`
   height: 60px;

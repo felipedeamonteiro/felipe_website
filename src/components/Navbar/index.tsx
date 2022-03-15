@@ -1,7 +1,7 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { useDeviceScreenSize, useWindowSize } from '../hooks/useDeviceScreenSize';
-import BulbSwitch from './BulbSwitch';
-import { Nav, NavbarContainer, NavbarHome, MobileContent, MobileIcon, NavMenu, NavItem, NavLinks } from '../styles/components/Navbar';
+import React, { useState, useCallback } from 'react';
+import { useDeviceScreenSize } from '../../hooks/useDeviceScreenSize';
+import BulbSwitch from '../BulbSwitch';
+import { Nav, NavbarContainer, NavbarHome, MobileContent, MobileIcon, NavMenu, NavItem, NavLinks } from './styles';
 import { FaBars } from 'react-icons/fa';
 
 interface NavbarProps {

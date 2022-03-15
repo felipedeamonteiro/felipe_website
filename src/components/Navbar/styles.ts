@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { tabletScreenMax, mobileScreenMax } from '../helperScreens';
+import { tabletScreenMax, mobileScreenMax } from '../../styles/helperScreens';
 
 interface NavbarProps {
   viewNavBar: boolean;

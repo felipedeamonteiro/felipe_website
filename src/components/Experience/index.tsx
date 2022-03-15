@@ -1,14 +1,14 @@
 import React, { useCallback, useState } from 'react';
 
-import { Container } from '../styles/components/Experience';
-import LetrusImg from '../../public/letrus.png';
-import AprendizImg from '../../public/AprendizDigital.png';
-import FormulaImg from '../../public/FormulaSAE.png';
-import LdemImg from '../../public/LDEM.jpg';
-import MeuColegioImg from '../../public/MeuColegio.png';
-import NubankImg from '../../public/Nubank.jpg';
-import SiemensImg from '../../public/Siemens.jpg';
-import ObjectEdgeLogo from '../../public/object-edge-squarelogo.png';
+import { Container } from './styles';
+import LetrusImg from '../../../public/letrus.png';
+import AprendizImg from '../../../public/AprendizDigital.png';
+import FormulaImg from '../../../public/FormulaSAE.png';
+import LdemImg from '../../../public/LDEM.jpg';
+import MeuColegioImg from '../../../public/MeuColegio.png';
+import NubankImg from '../../../public/Nubank.jpg';
+import SiemensImg from '../../../public/Siemens.jpg';
+import ObjectEdgeLogo from '../../../public/object-edge-squarelogo.png';
 
 const Experience: React.FC = () => {
 

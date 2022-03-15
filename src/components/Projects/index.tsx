@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Container } from '../styles/components/Projects';
-import CaosImg from '../../public/caos_focado_test.png';
-import CredereImg from '../../public/credere_test.png';
-import VenturusImg from '../../public/venturus_test.png';
-import CodeMinerImg from '../../public/code_miner.png';
-import ContaSimplesImg from '../../public/conta_simples.jpeg';
+import { Container } from './styles';
+import CaosImg from '../../../public/caos_focado_test.png';
+import CredereImg from '../../../public/credere_test.png';
+import VenturusImg from '../../../public/venturus_test.png';
+import CodeMinerImg from '../../../public/code_miner.png';
+import ContaSimplesImg from '../../../public/conta_simples.jpeg';
 
 
 

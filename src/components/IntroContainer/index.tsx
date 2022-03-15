@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from '../styles/components/IntroContainer';
+import { Container } from './styles';
 
 interface IntroContainerProps {
   darkMode: boolean;

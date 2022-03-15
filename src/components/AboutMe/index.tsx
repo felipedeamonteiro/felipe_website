@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import FotoFelipe from '../../public/Foto_felipe2.png';
-import LogoUnicamp from '../../public/unicamp.png';
-import { Container } from '../styles/components/AboutMe';
-import intersectionMethod from '../utils/intersectionMethod';
+import FotoFelipe from '../../../public/Foto_felipe2.png';
+import LogoUnicamp from '../../../public/unicamp.png';
+import { Container } from './styles';
+import intersectionMethod from '../../utils/intersectionMethod';
 
 const AboutMe: React.FC = () => {
   const [sobreMimInViewport, setSobreMimInViewport] = useState<boolean>(false);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Container } from '../styles/components/BulbSwitch';
+import { Container } from './styles';
 
 interface BulbSwitchProps {
   handleDarkMode: () => void;

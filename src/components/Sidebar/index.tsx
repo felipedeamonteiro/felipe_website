@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarMenuItem, SidebarMenuLink } from '../styles/components/Sidebar';
+import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarMenuItem, SidebarMenuLink } from './styles';
 
 interface SidebarProps {
   isOpen: boolean;
