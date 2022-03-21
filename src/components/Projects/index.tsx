@@ -53,7 +53,7 @@ const Projects: React.FC = () => {
           imgAlt="Imagem do Teste da Credere"
           projectHref="https://caos-focado-frontend-test-git-master.felipedeamonteiro.vercel.app/"
           backCardTitle="Teste para Dev FullStack - Conta Simples"
-          backCardDescritption="ackend pronto, mas ainda falta o front. Em construção..."
+          backCardDescritption="Backend pronto, mas ainda falta o front. Em construção..."
         />
       </div>
     </Container>

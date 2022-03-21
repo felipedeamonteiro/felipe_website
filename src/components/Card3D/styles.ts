@@ -54,7 +54,7 @@ export const Container = styled.div<ContainerCard3DProps>`
       align-items: center;
       justify-content: center;
       transform-style: preserve-3d;
-      z-index: -1; //TODO: Remover gambiarra */
+      z-index: -1;
       transform: rotateY(180deg);
 
       a {

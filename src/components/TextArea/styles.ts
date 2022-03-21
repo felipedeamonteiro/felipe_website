@@ -11,7 +11,7 @@ export const Container = styled.div`
 
   textarea {
     resize: none;
-    border: 1px solid grey;
+    border: 1px solid #808080;
     border-radius: 4px;
     padding: 5px;
     font-size: 16px;

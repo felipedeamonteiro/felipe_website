@@ -162,7 +162,7 @@ export const Container = styled.section<ContainerProps>`
 
           
           ${props => props.sobreMimInViewport &&
-    css`
+            css`
               .bar-fill-css {
                 height: inherit;
                 display: flex;
@@ -174,7 +174,7 @@ export const Container = styled.section<ContainerProps>`
             `}   
 
           ${props => props.sobreMimInViewport &&
-    css`
+            css`
               .bar-fill-html {
                 height: inherit;
                 display: flex;
@@ -186,7 +186,7 @@ export const Container = styled.section<ContainerProps>`
             `}
           
           ${props => props.sobreMimInViewport &&
-    css`
+            css`
               .bar-fill-javascript {
                 height: inherit;
                 display: flex;
@@ -199,7 +199,7 @@ export const Container = styled.section<ContainerProps>`
 
           
           ${props => props.sobreMimInViewport &&
-    css`
+            css`
               .bar-fill-react {
               height: inherit;
               display: flex;
@@ -212,7 +212,7 @@ export const Container = styled.section<ContainerProps>`
 
           
           ${props => props.sobreMimInViewport &&
-    css`
+            css`
               .bar-fill-react-native {
                 height: inherit;
                 display: flex;
@@ -224,7 +224,7 @@ export const Container = styled.section<ContainerProps>`
             `}
 
           ${props => props.sobreMimInViewport &&
-    css`
+            css`
               .bar-fill-nodejs {
                 height: inherit;
                 display: flex;
@@ -237,7 +237,7 @@ export const Container = styled.section<ContainerProps>`
 
           
           ${props => props.sobreMimInViewport &&
-    css`
+            css`
               .bar-fill-python {
                 height: inherit;
                 display: flex;

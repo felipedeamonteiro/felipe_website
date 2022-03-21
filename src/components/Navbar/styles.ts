@@ -6,7 +6,7 @@ interface NavbarProps {
 }
 
 export const Nav = styled.nav<NavbarProps>`
-  background: ${(props: NavbarProps) => props.viewNavBar ? '#252525' : 'tranparent'};
+  background: ${props => props.viewNavBar ? props.theme.colors.navbarBackground : 'tranparent'};
   height: 80px;
   transition: background-color .5s;
   display: flex;
@@ -34,7 +34,7 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavbarHome = styled.a`
-  color: #00CDE2;
+  color: ${props => props.theme.colors.navbarHomeTitle};
   font-size: 26px;
   font-weight: 400;
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; 
@@ -74,7 +74,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: ${props => props.theme.colors.mobileIcon};
   }
 `;
 
@@ -97,7 +97,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled.a`
-  color: #fff;
+  color: ${props => props.theme.colors.navLinks};
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   display: flex;
   align-items: center;
@@ -108,7 +108,7 @@ export const NavLinks = styled.a`
   text-decoration: none;
 
   :hover {
-    color: #00CDE2;
+    color: ${props => props.theme.colors.navLinksHover};
     cursor: pointer;
     text-decoration: none;
   }

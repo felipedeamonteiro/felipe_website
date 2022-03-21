@@ -22,13 +22,13 @@ export const Container = styled.div<ContainerProps>`
     ${props =>
       props.isErrored &&
       css`
-        border-color: #2800b3;
+        border-color: #ff0000;
       `}
 
     ${props =>
       props.isDisabled &&
       css`
-        background: lightgray;
+        background: #d3d3d3;
       `}
 
     &::placeholder {
