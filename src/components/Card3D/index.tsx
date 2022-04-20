@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 interface Card3DProps {
   imgSrc: string;
@@ -11,7 +11,14 @@ interface Card3DProps {
   backCardDescritption: string;
 }
 
-const Card3D: React.FC<Card3DProps> = ({ imgSrc, imgAlt, projectHref, aTagStyle, backCardTitle, backCardDescritption }) => {
+const Card3D: React.FC<Card3DProps> = ({
+  imgSrc,
+  imgAlt,
+  projectHref,
+  aTagStyle,
+  backCardTitle,
+  backCardDescritption,
+}) => {
   return (
     <Container aTagStyle={aTagStyle}>
       <div className="card-container">
@@ -31,6 +38,6 @@ const Card3D: React.FC<Card3DProps> = ({ imgSrc, imgAlt, projectHref, aTagStyle,
       </div>
     </Container>
   );
-}
+};
 
 export default Card3D;

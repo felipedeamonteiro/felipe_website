@@ -3,7 +3,7 @@ import { mobileScreenMax, tabletScreenMax } from '../../styles/helperScreens';
 
 export const Container = styled.footer`
   height: 60px;
-  background: #c0faeb;
+  background: ${(props) => props.theme.colors.footerBackground};
   width: 100%;
   display: flex;
   justify-content: center;

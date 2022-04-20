@@ -8,14 +8,15 @@ export const Container = styled.button`
   border: none;
   font-weight: bold;
   border-radius: 5px;
-  color: #fff;
+  color: ${(props) => props.theme.colors.buttonText};
   font-size: 18px;
   margin-top: 20px;
   outline: none;
   cursor: pointer;
-  background: linear-gradient(to bottom, #6dd4fd, #2800b3);
+  background: linear-gradient(to bottom, ${(props) => props.theme.colors.buttonBackground1}, ${(props) => props.theme.colors.buttonBackground2});
 
   &:hover {
-    background: ${shade(0.2, '#6dd4fd')};
+    background: ${(props) => shade(0.2, props.theme.colors.buttonHover)};
   }
 `;
+

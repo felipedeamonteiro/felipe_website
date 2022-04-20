@@ -11,24 +11,25 @@ export const Container = styled.div`
 
   textarea {
     resize: none;
-    border: 1px solid #808080;
+    border: 1px solid ${(props) => props.theme.colors.textAreaBorder};
+    //color: ${(props) => props.theme.colors.textAreaText};
     border-radius: 4px;
     padding: 5px;
     font-size: 16px;
     height: 170px;
     font-family: 'Roboto Slab', serif;
 
-    &::placeholder {
-      color: #b5bcc7;
-    }
+    /* &::placeholder {
+      color: ${(props) => props.theme.colors.textAreaPlaceholder};
+    } */
 
     &:focus {
       outline: none;
-      border: 1px solid #2800b3;
+      border: 1px solid ${(props) => props.theme.colors.textAreaBorderFocus};
     }
   }
 
   textarea:focus + label {
-    color: #2800b3;
+    color: ${(props) => props.theme.colors.textAreaLabelFocus};
   }
 `;

@@ -48,7 +48,7 @@ export const Container = styled.div<ContainerCard3DProps>`
       width: 100%;
       height: 100%;
       //background: #333;
-      background: linear-gradient(45deg, #6dd4fd, #2800b3);
+      background: linear-gradient(45deg, ${(props) => props.theme.colors.cardBackground1}, ${(props) => props.theme.colors.buttonBackground2});
       backface-visibility: hidden;
       display: flex;
       align-items: center;
@@ -71,17 +71,17 @@ export const Container = styled.div<ContainerCard3DProps>`
           transform-style: preserve-3d;
           
           padding: 20px;
-          //background: linear-gradient(45deg, #6dd4fd, #2800b3);
+          //background: linear-gradient(45deg, ${(props) => props.theme.colors.cardBackground1}, ${(props) => props.theme.colors.buttonBackground2});
           transform: translateZ(100px);
 
           h2 {
-            color: #fff;
+            color: ${(props) => props.theme.colors.cardBackH2};
             font-size: 20px;
             letter-spacing: 1px;
           }
 
           p {
-            color: #fff;
+            color: ${(props) => props.theme.colors.cardBackP};
             font-size: 16px;
           }
         }

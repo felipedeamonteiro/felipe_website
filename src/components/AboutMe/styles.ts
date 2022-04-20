@@ -52,7 +52,7 @@ const fillPython = keyframes`
 
 export const Container = styled.section<ContainerProps>`
   padding: 100px 30px 30px 30px;
-  background: #d7d8fc;
+  background: ${props => props.theme.colors.aboutMeBackground};
 
   
 
@@ -103,7 +103,7 @@ export const Container = styled.section<ContainerProps>`
         width: 250px;
         height: 250px;
         border-radius: 50%;
-        border: 6px solid #00c5f2;
+        border: 6px solid ${props => props.theme.colors.aboutMeRoundedBorders};
         object-fit: cover;
       }
       
@@ -113,11 +113,11 @@ export const Container = styled.section<ContainerProps>`
         line-height: 30px;
 
         p {
-          color: #7100d1;
+          color: ${props => props.theme.colors.aboutMeDescriptionP};
         }
 
         .page-link-highlight {
-          color: #00c5f2;
+          color: ${props => props.theme.colors.aboutMePageLinkHighlight};
         }
       }
 
@@ -137,7 +137,7 @@ export const Container = styled.section<ContainerProps>`
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        background: #edeef5;
+        background: ${props => props.theme.colors.aboutMeSkillsBarsBackground};
         margin-bottom: 25px;
         height: 30px;
 
@@ -150,8 +150,8 @@ export const Container = styled.section<ContainerProps>`
 
           .bar-tag {
             width: 20%;
-            background: #00c5f2;
-            color: #fff; 
+            background: ${props => props.theme.colors.aboutMeSkillsBarsTags};
+            color: ${props => props.theme.colors.aboutMeSkillsBarsText}; 
             font-weight: bold;
             padding: 0 6px 0 6px;
             height: inherit;
@@ -168,7 +168,7 @@ export const Container = styled.section<ContainerProps>`
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
-                background: linear-gradient(to bottom, #70008c, #7100d1);
+                background: linear-gradient(to bottom, ${(props) => props.theme.colors.aboutMeSkillsBarsFill1}, ${(props) => props.theme.colors.aboutMeSkillsBarsFill2});
                 animation: ${fillCssAndHtml} 4s forwards;
               }
             `}   
@@ -180,7 +180,7 @@ export const Container = styled.section<ContainerProps>`
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
-                background: linear-gradient(to bottom, #70008c, #7100d1);
+                background: linear-gradient(to bottom, ${(props) => props.theme.colors.aboutMeSkillsBarsFill1}, ${(props) => props.theme.colors.aboutMeSkillsBarsFill2});
                 animation: ${fillCssAndHtml} 4s forwards;
               }
             `}
@@ -192,7 +192,7 @@ export const Container = styled.section<ContainerProps>`
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
-                background: linear-gradient(to bottom, #70008c, #7100d1);
+                background: linear-gradient(to bottom, ${(props) => props.theme.colors.aboutMeSkillsBarsFill1}, ${(props) => props.theme.colors.aboutMeSkillsBarsFill2});
                 animation: ${fillJavascriptAndReact} 4s forwards;
               }
             `}
@@ -205,7 +205,7 @@ export const Container = styled.section<ContainerProps>`
               display: flex;
               align-items: center;
               justify-content: flex-end;
-              background: linear-gradient(to bottom, #70008c, #7100d1);
+              background: linear-gradient(to bottom, ${(props) => props.theme.colors.aboutMeSkillsBarsFill1}, ${(props) => props.theme.colors.aboutMeSkillsBarsFill2});
               animation: ${fillJavascriptAndReact} 4s forwards;
               }
             `}
@@ -218,7 +218,7 @@ export const Container = styled.section<ContainerProps>`
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
-                background: linear-gradient(to bottom, #70008c, #7100d1);
+                background: linear-gradient(to bottom, ${(props) => props.theme.colors.aboutMeSkillsBarsFill1}, ${(props) => props.theme.colors.aboutMeSkillsBarsFill2});
                 animation: ${fillReactNative} 4s forwards;
               }
             `}
@@ -230,7 +230,7 @@ export const Container = styled.section<ContainerProps>`
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
-                background: linear-gradient(to bottom, #70008c, #7100d1);
+                background: linear-gradient(to bottom, ${(props) => props.theme.colors.aboutMeSkillsBarsFill1}, ${(props) => props.theme.colors.aboutMeSkillsBarsFill2});
                 animation: ${fillNodejs} 4s forwards;
               }
             `}
@@ -243,14 +243,14 @@ export const Container = styled.section<ContainerProps>`
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
-                background: linear-gradient(to bottom, #70008c, #7100d1);
+                background: linear-gradient(to bottom, ${(props) => props.theme.colors.aboutMeSkillsBarsFill1}, ${(props) => props.theme.colors.aboutMeSkillsBarsFill2});
                 animation: ${fillPython} 4s forwards;
               }
             `}
 
           span {
             margin-right: 5px;
-            color: #fff;
+            color: ${(props) => props.theme.colors.aboutMeSkillsBarsFillSpan};
             font-weight: bold;
           }
         }

@@ -8,7 +8,7 @@ export default {
     navLinks: '#FFFFFF',
     navLinksHover: '#00CDE2',
 
-    aboutMeBackground: '#d7d8fc',
+    aboutMeBackground: '#F9F1F7',
     aboutMeRoundedBorders: '#00c5f2',
     aboutMeDescriptionP: '#7100d1',
     aboutMePageLinkHighlight: '#00c5f2',
@@ -31,7 +31,7 @@ export default {
 
     contactMeH3: '#838b93',
 
-    experienceContainerBackground: '#d7d8fc',
+    experienceContainerBackground: '#F9F1F7',
     experienceContainerTextMuted: '#676e75',
     experienceContainerTimelineBefore: '#00d0e5',
     experienceContainerTimelineImageBack: '#FFFFFF',

@@ -22,7 +22,7 @@ export const Container = styled.section`
       margin: 25px 0 50px 0;
       font-style: 'italic';
       font-weight: lighter;
-      color: #838b93;
+      color: ${(props) => props.theme.colors.contactMeH3};
     }
   }
 

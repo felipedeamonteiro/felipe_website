@@ -22,22 +22,22 @@ export const Container = styled.div<ContainerProps>`
     ${props =>
       props.isErrored &&
       css`
-        border-color: #ff0000;
+        border-color: ${(props) => props.theme.colors.inputBorderError};
       `}
 
     ${props =>
       props.isDisabled &&
       css`
-        background: #d3d3d3;
+        background: ${(props) => props.theme.colors.inputBorderDisabled};
       `}
 
     &::placeholder {
-      color: #b5bcc7;
+      color: ${(props) => props.theme.colors.inputBorderPlaceholder};
     }
 
     &:focus {
       outline: none;
-      border: 1px solid #2800b3;
+      border: 1px solid ${(props) => props.theme.colors.inputBorderFocus};
     }
   }
 
@@ -46,6 +46,6 @@ export const Container = styled.div<ContainerProps>`
   }
 
   input:focus + label {
-    color: #2800b3;
+    color: ${(props) => props.theme.colors.inputBorderLabelFocus};
   }
 `;

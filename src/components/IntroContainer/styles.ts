@@ -35,7 +35,7 @@ export const Container = styled.section<IntroContainerProps>`
   }
 
   h1 {
-    color: #fff;
+    color: ${(props) => props.theme.colors.introContainerH1};
     font-weight: 700;
     font-family: 'Roboto Slab', serif;
     font-size: 75px;

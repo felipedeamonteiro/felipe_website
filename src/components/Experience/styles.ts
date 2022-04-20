@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../../styles/helperScreens';
 
 export const Container = styled.section`
-  background: #d7d8fc;
+  background: ${(props) => props.theme.colors.experienceContainerBackground};
   width: 100%;
   padding: 100px 30px 30px 30px;
 
@@ -46,7 +46,7 @@ export const Container = styled.section`
       margin: 25px 0 50px 0;
       font-style: italic;
       font-weight: lighter;
-      color: #676e75;
+      color: ${(props) => props.theme.colors.experienceContainerTextMuted};
     }
   }
 
@@ -62,7 +62,7 @@ export const Container = styled.section`
     width: 3px;
     margin-left: -1.5px;
     content: '';
-    background-color: #00d0e5;
+    background-color: ${(props) => props.theme.colors.experienceContainerTimelineBefore};
 
     @media only screen and (max-width: ${mobileScreenMax}) {
       left: 20%;
@@ -133,7 +133,7 @@ export const Container = styled.section`
       color: white;
       border: 9px solid gray;
       border-radius: 100%;
-      background-color: #fff;
+      background-color: ${(props) => props.theme.colors.experienceContainerTimelineImageBack};
       display: flex;
       align-items: center;
       justify-content: center;
@@ -152,7 +152,7 @@ export const Container = styled.section`
       }
 
       &.circleActive {
-        border: 9px solid #00d0e5;
+        border: 9px solid ${(props) => props.theme.colors.experienceContainerTimelineCircleActive};
         transition: border-color .5s;
       }
       
@@ -169,7 +169,7 @@ export const Container = styled.section`
       }
 
       &:last-child {
-        background-color: #00d0e5;
+        background-color: ${(props) => props.theme.colors.experienceContainerTimelineLastChild};
       }
     }
 
@@ -219,7 +219,7 @@ export const Container = styled.section`
     > p {
       margin-bottom: 0;
       font-size: 20px;
-      color: #6c757d;
+      color: ${(props) => props.theme.colors.experienceContainerTimelineBodyUlP};
       transition: color .5s;
 
       @media only screen and (max-width: ${mobileScreenMax}) {
@@ -227,7 +227,7 @@ export const Container = styled.section`
       }
 
       &.activeText {
-        color: #13b5c5;
+        color: ${(props) => props.theme.colors.experienceContainerTimelineBodyUlPActiveText};
         transition: color .5s;
       }
     }
