@@ -8,7 +8,11 @@ import Input from "../Input";
 import TextArea from "../TextArea";
 import { Container } from "./styles";
 
-const ContactMe: React.FC = () => {
+interface ContactMeProps {
+  darkMode: boolean;
+}
+
+const ContactMe: React.FC<ContactMeProps> = ({ darkMode }) => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
@@ -41,7 +45,7 @@ const ContactMe: React.FC = () => {
   }, []);
 
   return (
-    <Container id="section-contato">
+    <Container id="section-contato" darkMode={darkMode}>
       <div className="text-center-row">
         <h1 className="text-uppercase">Contato</h1>
         <h3 className="text-muted">Deixe sua mensagem para batermos um papo</h3>

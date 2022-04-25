@@ -1,19 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import { Container } from './styles';
-import Card3D from '../Card3D';
-import CaosImg from '../../../public/caos_focado_test.png';
-import CredereImg from '../../../public/credere_test.png';
-import VenturusImg from '../../../public/venturus_test.png';
-import CodeMinerImg from '../../../public/code_miner.png';
-import ContaSimplesImg from '../../../public/conta_simples.jpeg';
+import { Container } from "./styles";
+import Card3D from "../Card3D";
+import CaosImg from "../../../public/caos_focado_test.png";
+import CredereImg from "../../../public/credere_test.png";
+import VenturusImg from "../../../public/venturus_test.png";
+import CodeMinerImg from "../../../public/code_miner.png";
+import ContaSimplesImg from "../../../public/conta_simples.jpeg";
 
+interface ProjectsProps {
+  darkMode: boolean;
+}
 
-
-const Projects: React.FC = () => {
+const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
   return (
-
-    <Container id="section-projetos">
+    <Container id="section-projetos" darkMode={darkMode}>
       <div className="text-center-row">
         <h1>Projetos</h1>
         <h3>Projetos de testes de processos seletivos de empresas</h3>
@@ -58,6 +59,6 @@ const Projects: React.FC = () => {
       </div>
     </Container>
   );
-}
+};
 
 export default Projects;

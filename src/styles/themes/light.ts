@@ -2,11 +2,11 @@ export default {
   title: 'light',
 
   colors: {
-    navbarBackground: '#252525',
-    navbarHomeTitle: '#00CDE2',
+    navbarBackground: '#b8cadd',
+    navbarHomeTitle: '#2b3391',
     mobileIcon: '#FFFFFF',
-    navLinks: '#FFFFFF',
-    navLinksHover: '#00CDE2',
+    navLinks: '#2b3391',
+    navLinksHover: '#de6304',
 
     aboutMeBackground: '#F9F1F7',
     aboutMeRoundedBorders: '#00c5f2',
@@ -32,6 +32,7 @@ export default {
     contactMeH3: '#838b93',
 
     experienceContainerBackground: '#F9F1F7',
+    experienceContainerTextUppercase: '#000',
     experienceContainerTextMuted: '#676e75',
     experienceContainerTimelineBefore: '#00d0e5',
     experienceContainerTimelineImageBack: '#FFFFFF',
@@ -48,8 +49,10 @@ export default {
     inputBorderFocus: '#2800b3',
     inputBorderLabelFocus: '#2800b3',
 
-    introContainerH1: '#FFFFFF',
+    introContainerH1: '#2b3391',
+    introContainerH3: '#2b3391',
 
+    projectsBackground: '#edeef5',
     projectsContainerH3: '#838b93',
 
     sidebarContainerBackground: '#00CDE2',
@@ -58,6 +61,7 @@ export default {
     sidebarMenuLinkText: '#FFFFFF',
     sidebarMenuLinkTextHover: '#000000',
 
+    contactMeBackground: '#edeef5',
     textAreaText: '#b5bcc7',
     textAreaPlaceholder: '#b5bcc7',
     textAreaBorder: '#808080',

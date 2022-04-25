@@ -35,6 +35,7 @@ declare module 'styled-components' {
       contactMeH3: string;
 
       experienceContainerBackground: string;
+      experienceContainerTextUppercase: string;
       experienceContainerTextMuted: string;
       experienceContainerTimelineBefore: string;
       experienceContainerTimelineImageBack: string;
@@ -52,7 +53,9 @@ declare module 'styled-components' {
       inputBorderLabelFocus: string;
 
       introContainerH1: string;
+      introContainerH3: string;
 
+      projectsBackground: string;
       projectsContainerH3: string;
 
       sidebarContainerBackground: string;
@@ -61,6 +64,7 @@ declare module 'styled-components' {
       sidebarMenuLinkText: string;
       sidebarMenuLinkTextHover: string;
 
+      contactMeBackground: string;
       textAreaText: string;
       textAreaPlaceholder: string;
       textAreaBorder: string;

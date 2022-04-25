@@ -1,10 +1,37 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
-export const Container = styled.section`
+interface ProjectsContainerProps {
+  darkMode: boolean;
+}
+
+const animationBlurReal = keyframes`
+from {
+    text-shadow: 0 0 10px #8140f7, 
+                 0 0 20px #8140f7, 
+                 0 0 30px #8140f7, 
+                 0 0 40px #8140f7, 
+                 0 0 50px #8140f7, 
+                 0 0 60px #8140f7, 
+                 0 0 70px #8140f7;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #9c6af7, 
+                 0 0 30px #9c6af7, 
+                 0 0 40px #9c6af7, 
+                 0 0 50px #9c6af7, 
+                 0 0 60px #9c6af7, 
+                 0 0 70px #9c6af7, 
+                 0 0 80px #9c6af7;
+  }
+`;
+
+export const Container = styled.section<ProjectsContainerProps>`
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 100px 30px 30px 30px;
+  background: ${(props) => props.theme.colors.projectsBackground};
 
   .text-center-row {
     display: flex;
@@ -16,6 +43,10 @@ export const Container = styled.section`
       margin-top: 60px;
       font-size: 45px;
       font-family: 'Orbitron', sans-serif;
+      ${props => props.darkMode && css`
+      color: #fff;
+      animation: ${animationBlurReal} 1s ease-in-out infinite alternate;
+      `}
     }
 
     h3 {

@@ -36,7 +36,11 @@ const animate4 = keyframes`
   }
 `;
 
-export const Container = styled.div`
+interface ContainerProps {
+  buttonColorHex: string;
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,27 +49,28 @@ export const Container = styled.div`
   a {
     position: relative;
     display: inline-block;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     padding: 10px 30px;
     margin: 40px 0;
-    color: #03e9f4;
-    font-size: 24px;
+    color: ${props => props.buttonColorHex};
+    font-size: 18px;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
     transition: 0.5s;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); */
 
-    :nth-child(1) {
-      filter: hue-rotate(270deg);
-    }
+    /* :nth-child(1) {
+      filter: hue-rotate(${props => props.buttonColorHex}deg);
+    } */
 
     :hover {
-      background: #03e9f4;
+      background: ${props => props.buttonColorHex};
       color: #050801;
-      box-shadow: 0 0 5px #03e9f4,
-                  0 0 25px #03e9f4,
-                  0 0 50px #03e9f4,
-                  0 0 200px #03e9f4;
+      box-shadow: 0 0 5px ${props => props.buttonColorHex},
+                  0 0 25px ${props => props.buttonColorHex},
+                  0 0 50px ${props => props.buttonColorHex},
+                  0 0 200px ${props => props.buttonColorHex};
     }
 
     span {
@@ -77,7 +82,7 @@ export const Container = styled.div`
         left: -100%;
         width: 100%;
         height: 3px;
-        background: linear-gradient(90deg, transparent, #03e9f4);
+        background: linear-gradient(90deg, transparent, ${props => props.buttonColorHex});
         animation: ${animate1} 1s linear infinite;
       }
 
@@ -86,7 +91,7 @@ export const Container = styled.div`
         right: 0;
         width: 2px;
         height: 100%;
-        background: linear-gradient(180deg, transparent, #03e9f4);
+        background: linear-gradient(180deg, transparent, ${props => props.buttonColorHex});
         animation: ${animate2} 1s linear infinite;
         animation-delay: 0.25s;
       }
@@ -96,7 +101,7 @@ export const Container = styled.div`
         right: -100%;
         width: 100%;
         height: 2px;
-        background: linear-gradient(270deg, transparent, #03e9f4);
+        background: linear-gradient(270deg, transparent, ${props => props.buttonColorHex});
         animation: ${animate3} 1s linear infinite;
         animation-delay: 0.56s;
       }
@@ -106,7 +111,7 @@ export const Container = styled.div`
         left: 0;
         width: 2px;
         height: 100%;
-        background: linear-gradient(360deg, transparent, #03e9f4);
+        background: linear-gradient(360deg, transparent, ${props => props.buttonColorHex});
         animation: ${animate4} 1s linear infinite;
         animation-delay: 0.75s;
       }

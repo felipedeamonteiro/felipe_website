@@ -54,20 +54,52 @@ const Navbar: React.FC<NavbarProps> = ({
             <NavMenu>
               <BulbSwitch handleDarkMode={handleDarkMode} darkMode={darkMode} />
               <NavItem>
-                {/* <NavLinks href="#section-experiencia">EXPERIÊNCIA</NavLinks> */}
-                <ButtonNeon1 />
+                {darkMode ? (
+                  <NeonButtonReal
+                    href="#section-experiencia"
+                    buttonColorHex="#03E9F4"
+                  >
+                    Experiência
+                  </NeonButtonReal>
+                ) : (
+                  <NavLinks href="#section-experiencia">EXPERIÊNCIA</NavLinks>
+                )}
               </NavItem>
               <NavItem>
-                {/* <NavLinks href="#section-projetos">PROJETOS</NavLinks> */}
-                <ButtonNeon2 />
+                {darkMode ? (
+                  <NeonButtonReal
+                    href="#section-projetos"
+                    buttonColorHex="#C3A2FF"
+                  >
+                    Projetos
+                  </NeonButtonReal>
+                ) : (
+                  <NavLinks href="#section-projetos">PROJETOS</NavLinks>
+                )}
               </NavItem>
               <NavItem>
-                {/* <NavLinks href="#section-sobreMim">SOBRE MIM</NavLinks> */}
-                <ButtonNeon3 />
+                {darkMode ? (
+                  <NeonButtonReal
+                    href="#section-sobreMim"
+                    buttonColorHex="#FF839E"
+                  >
+                    Sobre Mim
+                  </NeonButtonReal>
+                ) : (
+                  <NavLinks href="#section-sobreMim">SOBRE MIM</NavLinks>
+                )}
               </NavItem>
               <NavItem>
-                {/* <NavLinks href="#section-contato">CONTATO</NavLinks> */}
-                <NeonButtonReal />
+                {darkMode ? (
+                  <NeonButtonReal
+                    href="#section-contato"
+                    buttonColorHex="#0EF462"
+                  >
+                    Contato
+                  </NeonButtonReal>
+                ) : (
+                  <NavLinks href="#section-contato">CONTATO</NavLinks>
+                )}
               </NavItem>
             </NavMenu>
           ) : (

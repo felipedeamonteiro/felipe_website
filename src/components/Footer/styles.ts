@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import { mobileScreenMax, tabletScreenMax } from '../../styles/helperScreens';
 
-export const Container = styled.footer`
+interface FooterContainerProps {
+  darkMode: boolean;
+}
+
+export const Container = styled.footer<FooterContainerProps>`
   height: 60px;
   background: ${(props) => props.theme.colors.footerBackground};
   width: 100%;

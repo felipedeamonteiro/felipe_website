@@ -2,13 +2,13 @@ export default {
   title: 'dark',
 
   colors: {
-    navbarBackground: '#252525',
+    navbarBackground: '#01162B',
     navbarHomeTitle: '#00CDE2',
     mobileIcon: '#FFFFFF',
     navLinks: '#FFFFFF',
     navLinksHover: '#00CDE2',
 
-    aboutMeBackground: '#F9F1F7',
+    aboutMeBackground: '#01162B',
     aboutMeRoundedBorders: '#00c5f2',
     aboutMeDescriptionP: '#7100d1',
     aboutMePageLinkHighlight: '#00c5f2',
@@ -24,15 +24,16 @@ export default {
     buttonBackground2: '#2800b3',
     buttonHover: '#6dd4fd',
 
-    cardBackground1: '#6dd4fd',
+    cardBackground1: '#fff',
     cardBackground2: '#2800b3',
     cardBackH2: '#FFFFFF',
     cardBackP: '#FFFFFF',
 
     contactMeH3: '#838b93',
 
-    experienceContainerBackground: '#F9F1F7',
-    experienceContainerTextMuted: '#676e75',
+    experienceContainerBackground: '#01162B',
+    experienceContainerTextUppercase: '#FFFFFF',
+    experienceContainerTextMuted: '#00d0e5',
     experienceContainerTimelineBefore: '#00d0e5',
     experienceContainerTimelineImageBack: '#FFFFFF',
     experienceContainerTimelineCircleActive: '#00d0e5',
@@ -49,8 +50,10 @@ export default {
     inputBorderLabelFocus: '#2800b3',
 
     introContainerH1: '#FFFFFF',
+    introContainerH3: '#FFFFFF',
 
-    projectsContainerH3: '#838b93',
+    projectsBackground: '#01162B',
+    projectsContainerH3: '#00CDE2',
 
     sidebarContainerBackground: '#00CDE2',
     sidebarContainerCloseIcon: '#FFFFFF',
@@ -58,6 +61,7 @@ export default {
     sidebarMenuLinkText: '#FFFFFF',
     sidebarMenuLinkTextHover: '#000000',
 
+    contactMeBackground: '#01162B',
     textAreaText: '#b5bcc7',
     textAreaPlaceholder: '#b5bcc7',
     textAreaBorder: '#808080',

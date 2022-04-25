@@ -1,18 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 interface BulbSwitchProps {
   handleDarkMode: () => void;
   darkMode: boolean;
 }
 
-const BulbSwitch: React.FC<BulbSwitchProps> = ({ handleDarkMode, darkMode }) => {
-
+const BulbSwitch: React.FC<BulbSwitchProps> = ({
+  handleDarkMode,
+  darkMode,
+}) => {
   return (
     <Container>
       <div className="switch">
-        <input type="checkbox" defaultChecked={darkMode} onChange={() => handleDarkMode()} name="toggle" />
+        <input
+          type="checkbox"
+          defaultChecked={darkMode}
+          onChange={handleDarkMode}
+          name="toggle"
+        />
         <label htmlFor="toggle">
           <i className="bulb">
             <span className="bulb-center"></span>
@@ -29,6 +36,6 @@ const BulbSwitch: React.FC<BulbSwitchProps> = ({ handleDarkMode, darkMode }) => 
       </div>
     </Container>
   );
-}
+};
 
 export default BulbSwitch;

@@ -1,10 +1,56 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../../styles/helperScreens';
+import { shade } from 'polished';
 
-export const Container = styled.section`
+interface IntroContainerProps {
+  darkMode: boolean;
+}
+
+// const animationBlur = keyframes`
+//   0% {
+//     filter: hue-rotate(0deg);
+//   }
+//   100% {
+//     filter: hue-rotate(360deg);
+//   }
+// `;
+
+const animationBlurReal = keyframes`
+from {
+    text-shadow: 0 0 10px #03E9F4, 
+                 0 0 20px #03E9F4, 
+                 0 0 30px #03E9F4, 
+                 0 0 40px #03E9F4, 
+                 0 0 50px #03E9F4, 
+                 0 0 60px #03E9F4, 
+                 0 0 70px #03E9F4;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #5ff3fa, 
+                 0 0 30px #5ff3fa, 
+                 0 0 40px #5ff3fa, 
+                 0 0 50px #5ff3fa, 
+                 0 0 60px #5ff3fa, 
+                 0 0 70px #5ff3fa, 
+                 0 0 80px #5ff3fa;
+  }
+`;
+
+export const Container = styled.section<IntroContainerProps>`
   background: ${(props) => props.theme.colors.experienceContainerBackground};
   width: 100%;
   padding: 100px 30px 30px 30px;
+
+  /* ::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 15%;
+    z-index: 1;
+    background: ${(props) => props.theme.colors.experienceContainerTextUppercase};
+    mix-blend-mode: color;
+  } */
 
   @media only screen and (max-width: ${mobileScreenMax}) {
     width: 100%;
@@ -30,6 +76,17 @@ export const Container = styled.section`
       margin-top: 60px;
       font-size: 45px;
       font-family: 'Orbitron', sans-serif;
+      color: ${(props) => props.theme.colors.experienceContainerTextUppercase};
+      /* filter: blur(1px);
+      font-weight: 100;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+                   0 0 20px rgba(255, 255, 255, 1),
+                   0 0 40px rgba(255, 255, 255, 1),
+                   0 0 80px rgba(255, 255, 255, 1),
+                   0 0 160px rgba(255, 255, 255, 1); */
+      ${props => props.darkMode && css`
+      animation: ${animationBlurReal} 1s ease-in-out infinite alternate;
+      `}
 
       @media only screen and (max-width: ${mobileScreenMax}) {
         margin-top: 40px;
@@ -203,7 +260,7 @@ export const Container = styled.section`
     h4 {
       font-size: 25px;
       margin-top: 0;
-      color: inherit;
+      color: ${props => props.darkMode ? shade(0.2, '#000') : '#000'};
 
       @media only screen and (max-width: ${mobileScreenMax}) {
         font-size: 20px;
@@ -219,7 +276,9 @@ export const Container = styled.section`
     > p {
       margin-bottom: 0;
       font-size: 20px;
-      color: ${(props) => props.theme.colors.experienceContainerTimelineBodyUlP};
+      color: ${(props) => props.darkMode ? 
+      shade(0.8, props.theme.colors.experienceContainerTimelineBodyUlP) : 
+      props.theme.colors.experienceContainerTimelineBodyUlP};
       transition: color .5s;
 
       @media only screen and (max-width: ${mobileScreenMax}) {

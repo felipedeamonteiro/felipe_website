@@ -4,15 +4,25 @@ import { Container } from "./styles";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const NeonButtonReal: React.FC<ButtonProps> = () => {
+interface NeonButtonProps extends ButtonProps {
+  children: string;
+  buttonColorHex: string;
+  href: string;
+}
+
+const NeonButtonReal: React.FC<NeonButtonProps> = ({
+  children,
+  buttonColorHex,
+  href,
+}) => {
   return (
-    <Container>
-      <a href="#">
+    <Container buttonColorHex={buttonColorHex}>
+      <a href={href}>
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Button
+        {children}
       </a>
     </Container>
   );

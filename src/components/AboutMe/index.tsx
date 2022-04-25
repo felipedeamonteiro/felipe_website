@@ -1,15 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 
-import FotoFelipe from '../../../public/Foto_felipe2.png';
-import LogoUnicamp from '../../../public/unicamp.png';
-import { Container } from './styles';
-import intersectionMethod from '../../utils/intersectionMethod';
+import FotoFelipe from "../../../public/Foto_felipe2.png";
+import LogoUnicamp from "../../../public/unicamp.png";
+import { Container } from "./styles";
+import intersectionMethod from "../../utils/intersectionMethod";
 
-const AboutMe: React.FC = () => {
+interface AboutMeProps {
+  darkMode: boolean;
+}
+
+const AboutMe: React.FC<AboutMeProps> = ({ darkMode }) => {
   const [sobreMimInViewport, setSobreMimInViewport] = useState<boolean>(false);
 
   const ref = useRef();
-  const inViewport = intersectionMethod(ref, '20px');
+  const inViewport = intersectionMethod(ref, "20px");
   useEffect(() => {
     if (inViewport) {
       setSobreMimInViewport(true);
@@ -19,7 +23,12 @@ const AboutMe: React.FC = () => {
   }, [inViewport]);
 
   return (
-    <Container sobreMimInViewport ref={ref} id="section-sobreMim">
+    <Container
+      sobreMimInViewport
+      ref={ref}
+      id="section-sobreMim"
+      darkMode={darkMode}
+    >
       <h1>Sobre mim</h1>
       <div className="skills-wrapper">
         <div className="about-me">
@@ -31,8 +40,7 @@ const AboutMe: React.FC = () => {
             Tenho paixão por tecnologia e por construir!
             <br />
             <p>Mas construir o que?</p>
-            Construir soluções inteligentes para problemas diversos.{' '}
-            <br />
+            Construir soluções inteligentes para problemas diversos. <br />
             <span className="page-link-highlight">
               Quer saber mais? Entre em contato e vamos tomar um café.
             </span>
@@ -40,96 +48,98 @@ const AboutMe: React.FC = () => {
         </div>
 
         <div className="skills-bars">
-
           <div className="bar-flex">
             <div className="bar-content">
-              <div className="bar-tag">
-                CSS
-              </div>
-              {sobreMimInViewport &&
+              <div className="bar-tag">CSS</div>
+              {sobreMimInViewport && (
                 <div className="bar-fill-css">
                   <span>95%</span>
-                </div>}
+                </div>
+              )}
             </div>
-
           </div>
 
           <div className="bar-flex">
             <div className="bar-content">
-              <div className="bar-tag">HTML
-              </div>
-              {sobreMimInViewport &&
+              <div className="bar-tag">HTML</div>
+              {sobreMimInViewport && (
                 <div className="bar-fill-html">
                   <span>95%</span>
-                </div>}
+                </div>
+              )}
             </div>
           </div>
 
           <div className="bar-flex">
             <div className="bar-content">
-              <div className="bar-tag">JavaScript
-              </div>
-              {sobreMimInViewport &&
+              <div className="bar-tag">JavaScript</div>
+              {sobreMimInViewport && (
                 <div className="bar-fill-javascript">
                   <span>85%</span>
-                </div>}
+                </div>
+              )}
             </div>
           </div>
 
           <div className="bar-flex">
             <div className="bar-content">
-              <div className="bar-tag">React
-              </div>
-              {sobreMimInViewport &&
+              <div className="bar-tag">React</div>
+              {sobreMimInViewport && (
                 <div className="bar-fill-react">
                   <span>85%</span>
-                </div>}
+                </div>
+              )}
             </div>
           </div>
 
           <div className="bar-flex">
             <div className="bar-content">
-              <div className="bar-tag">React-Native
-              </div>
-              {sobreMimInViewport && <div className="bar-fill-react-native">
-                <span>75%</span>
-              </div>}
+              <div className="bar-tag">React-Native</div>
+              {sobreMimInViewport && (
+                <div className="bar-fill-react-native">
+                  <span>75%</span>
+                </div>
+              )}
             </div>
           </div>
 
           <div className="bar-flex">
             <div className="bar-content">
-              <div className="bar-tag">Node.js
-              </div>
-              {sobreMimInViewport &&
+              <div className="bar-tag">Node.js</div>
+              {sobreMimInViewport && (
                 <div className="bar-fill-nodejs">
                   <span>70%</span>
-                </div>}
+                </div>
+              )}
             </div>
           </div>
 
           <div className="bar-flex">
             <div className="bar-content">
-              <div className="bar-tag">Python
-              </div>
-              {sobreMimInViewport &&
+              <div className="bar-tag">Python</div>
+              {sobreMimInViewport && (
                 <div className="bar-fill-python">
                   <span>60%</span>
-                </div>}
+                </div>
+              )}
             </div>
           </div>
-
         </div>
       </div>
       <div className="degree-div">
         <div className="text-center">
           <h2 className="section-heading text-uppercase">FORMAÇÃO ACADÊMICA</h2>
 
-          <h3 className="section-subheading text-muted">Desenvolvimento técnico constante em instituição de Ensino Superior de renome no Brasil</h3>
+          <h3 className="section-subheading text-muted">
+            Desenvolvimento técnico constante em instituição de Ensino Superior
+            de renome no Brasil
+          </h3>
         </div>
         <div className="box1">
           <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
-          <h4 className="service">Graduação em Engenharia Mecânica - UNICAMP - Concluído 2014</h4>
+          <h4 className="service">
+            Graduação em Engenharia Mecânica - UNICAMP - Concluído 2014
+          </h4>
         </div>
 
         {/* <div className="box2">
@@ -137,13 +147,16 @@ const AboutMe: React.FC = () => {
           <h4 className="service">Mestrado em Ciência da Computação - Inteligência Artificial e Robótica - UNICAMP - Interrompido em 2019</h4>
         </div> */}
 
-        <div className="box3">
+        {/* <div className="box3">
           <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
-          <h4 className="service">Graduação em Engenharia Elétrica - Focado em desenvolvimento de software e Inteligência Artificial - UNICAMP - Em curso desde 2021</h4>
-        </div>
+          <h4 className="service">
+            Graduação em Engenharia Elétrica - Focado em desenvolvimento de
+            software e Inteligência Artificial - UNICAMP - Em curso desde 2021
+          </h4>
+        </div> */}
       </div>
     </Container>
-  )
+  );
 };
 
 export default AboutMe;

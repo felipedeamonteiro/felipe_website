@@ -3,7 +3,30 @@ import { desktopScreenMin, mobileScreenMax, tabletScreenMax } from '../../styles
 
 interface ContainerProps {
   sobreMimInViewport: boolean;
+  darkMode: boolean;
 }
+
+const animationBlurReal = keyframes`
+from {
+    text-shadow: 0 0 10px #fc446f, 
+                 0 0 20px #fc446f, 
+                 0 0 30px #fc446f, 
+                 0 0 40px #fc446f, 
+                 0 0 50px #fc446f, 
+                 0 0 60px #fc446f, 
+                 0 0 70px #fc446f;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fa8ea7, 
+                 0 0 30px #fa8ea7, 
+                 0 0 40px #fa8ea7, 
+                 0 0 50px #fa8ea7, 
+                 0 0 60px #fa8ea7, 
+                 0 0 70px #fa8ea7, 
+                 0 0 80px #fa8ea7;
+  }
+`;
 
 const fillCssAndHtml = keyframes`
   from {
@@ -62,6 +85,10 @@ export const Container = styled.section<ContainerProps>`
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
+    ${props => props.darkMode && css`
+      color: #fff;
+      animation: ${animationBlurReal} 1s ease-in-out infinite alternate;
+    `}
   }
 
   .skills-wrapper {

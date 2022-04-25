@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import AboutMe from "../components/AboutMe";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -8,17 +8,34 @@ import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import Sidebar from "../components/Sidebar";
 
-function Home(props: any) {
+interface HomeProps {
+  toggleTheme: () => void;
+  theme: {
+    title: string;
+  };
+}
+
+function Home({ toggleTheme, theme: { title } }: HomeProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
+  useEffect(() => {
+    if (title === "dark") {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, [title]);
+
   const handleDarkMode = () => {
-    setDarkMode(!darkMode);
+    toggleTheme();
   };
 
   const toogleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
+  console.log("DdarkMode", darkMode);
 
   return (
     <>
@@ -29,11 +46,11 @@ function Home(props: any) {
         darkMode={darkMode}
       />
       <IntroContainer darkMode={darkMode} />
-      <Experience />
-      <Projects />
-      <AboutMe {...props} />
-      <ContactMe />
-      <Footer />
+      <Experience darkMode={darkMode} />
+      <Projects darkMode={darkMode} />
+      <AboutMe darkMode={darkMode} />
+      <ContactMe darkMode={darkMode} />
+      <Footer darkMode={darkMode} />
     </>
   );
 }

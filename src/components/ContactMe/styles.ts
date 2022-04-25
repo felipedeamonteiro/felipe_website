@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+interface ContactMeContainerProps {
+  darkMode: boolean;
+}
+
+export const Container = styled.section<ContactMeContainerProps>`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 100px 30px 30px 30px;
+  background: ${(props) => props.theme.colors.contactMeBackground};
 
   .text-center-row {
     align-items: center;

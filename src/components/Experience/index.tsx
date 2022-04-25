@@ -1,17 +1,20 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState } from "react";
 
-import { Container } from './styles';
-import LetrusImg from '../../../public/letrus.png';
-import AprendizImg from '../../../public/AprendizDigital.png';
-import FormulaImg from '../../../public/FormulaSAE.png';
-import LdemImg from '../../../public/LDEM.jpg';
-import MeuColegioImg from '../../../public/MeuColegio.png';
-import NubankImg from '../../../public/Nubank.jpg';
-import SiemensImg from '../../../public/Siemens.jpg';
-import ObjectEdgeLogo from '../../../public/object-edge-squarelogo.png';
+import { Container } from "./styles";
+import LetrusImg from "../../../public/letrus.png";
+import AprendizImg from "../../../public/AprendizDigital.png";
+import FormulaImg from "../../../public/FormulaSAE.png";
+import LdemImg from "../../../public/LDEM.jpg";
+import MeuColegioImg from "../../../public/MeuColegio.png";
+import NubankImg from "../../../public/Nubank.jpg";
+import SiemensImg from "../../../public/Siemens.jpg";
+import ObjectEdgeLogo from "../../../public/object-edge-squarelogo.png";
 
-const Experience: React.FC = () => {
+interface ExperienceProps {
+  darkMode: boolean;
+}
 
+const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
   const [viewCircleBorder1, setViewCircleBorder1] = useState<boolean>(false);
   const [viewText1, setViewText1] = useState<boolean>(false);
   const [viewCircleBorder2, setViewCircleBorder2] = useState<boolean>(false);
@@ -30,8 +33,6 @@ const Experience: React.FC = () => {
   const [viewText8, setViewText8] = useState<boolean>(false);
   const [viewCircleBorder9, setViewCircleBorder9] = useState<boolean>(false);
   const [viewText9, setViewText9] = useState<boolean>(false);
-
-
 
   const changeBorderLines = useCallback(() => {
     if (window.scrollY >= 769) {
@@ -99,54 +100,93 @@ const Experience: React.FC = () => {
     }
   }, []);
 
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', changeBorderLines);
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", changeBorderLines);
   }
 
   return (
-    <Container id="section-experiencia">
+    <Container id="section-experiencia" darkMode={darkMode}>
       <div className="container">
         <div className="text-center-row">
-
           <h2 className="text-uppercase">Experiência Profissional</h2>
           <h3 className="text-muted">Etapas da carreira profissional</h3>
-
         </div>
         <div className="row">
           <ul className="timeline">
-
             <li>
-              <div className={viewCircleBorder1 ? 'timeline-image circleActive' : 'timeline-image'}>
+              <div
+                className={
+                  viewCircleBorder1
+                    ? "timeline-image circleActive"
+                    : "timeline-image"
+                }
+              >
                 <img src={FormulaImg} alt="Fórmula SAE Unicamp" />
               </div>
               <div className="timeline-panel">
-                <div className="timeline-heading">
+                <div
+                  className={
+                    viewText1
+                      ? "timeline-heading activeText"
+                      : "timeline-heading"
+                  }
+                >
                   <h4>1 - DE 2009 A 2010</h4>
                   <h4 className="subheading">FÓRMULA SAE UNICAMP</h4>
                 </div>
                 <div className="timeline-body">
-                  <p className={viewText1 ? 'text-muted activeText' : 'text-muted'}>FIZ PARTE DA DIVISÃO DE FREIOS, ONDE PROJETAMOS TODO O SISTEMA DE FREIOS DO CARRO F-2009. NOS CLASSIFICAMOS EM 5º LUGAR.</p>
+                  <p
+                    className={
+                      viewText1 ? "text-muted activeText" : "text-muted"
+                    }
+                  >
+                    FIZ PARTE DA DIVISÃO DE FREIOS, ONDE PROJETAMOS TODO O
+                    SISTEMA DE FREIOS DO CARRO F-2009. NOS CLASSIFICAMOS EM 5º
+                    LUGAR.
+                  </p>
                 </div>
               </div>
             </li>
 
             <li className="timeline-inverted">
-              <div className={viewCircleBorder2 ? 'timeline-image circleActive' : 'timeline-image'}>
+              <div
+                className={
+                  viewCircleBorder2
+                    ? "timeline-image circleActive"
+                    : "timeline-image"
+                }
+              >
                 <img src={LdemImg} alt="LDEM logo" />
               </div>
               <div className="timeline-panel">
                 <div className="timeline-heading">
                   <h4>2 - DE 2011 A 2013</h4>
-                  <h4 className="subheading">INICIAÇÃO CIENTÍFICA NO ANTIGO LDEM UNICAMP</h4>
+                  <h4 className="subheading">
+                    INICIAÇÃO CIENTÍFICA NO ANTIGO LDEM UNICAMP
+                  </h4>
                 </div>
                 <div className="timeline-body">
-                  <p className={viewText2 ? 'text-muted activeText' : 'text-muted'}>INICIÇÃO CIENTÍFICA NA ÁREA DE VIBRAÇÕES MECÂNICAS COM BOLSA DO CNPQ. ESTUDEI FENÔMENOS VIBRATÓRIOS EM ENGRENAGENS PLANETÁRIAS DE TRANSMISSÕES AUTOMÁTICAS.</p>
+                  <p
+                    className={
+                      viewText2 ? "text-muted activeText" : "text-muted"
+                    }
+                  >
+                    INICIÇÃO CIENTÍFICA NA ÁREA DE VIBRAÇÕES MECÂNICAS COM BOLSA
+                    DO CNPQ. ESTUDEI FENÔMENOS VIBRATÓRIOS EM ENGRENAGENS
+                    PLANETÁRIAS DE TRANSMISSÕES AUTOMÁTICAS.
+                  </p>
                 </div>
               </div>
             </li>
 
             <li>
-              <div className={viewCircleBorder3 ? 'timeline-image circleActive' : 'timeline-image'}>
+              <div
+                className={
+                  viewCircleBorder3
+                    ? "timeline-image circleActive"
+                    : "timeline-image"
+                }
+              >
                 <img src={MeuColegioImg} alt="Meu colegio logo" />
               </div>
               <div className="timeline-panel">
@@ -155,13 +195,25 @@ const Experience: React.FC = () => {
                   <h4 className="subheading">MEU COLÉGIO</h4>
                 </div>
                 <div className="timeline-body">
-                  <p className={viewText3 ? 'text-muted activeText' : 'text-muted'}>TRABALHEI COMO PROFESSOR DO COLÉGIO TÉCNICO NOTURNO.</p>
+                  <p
+                    className={
+                      viewText3 ? "text-muted activeText" : "text-muted"
+                    }
+                  >
+                    TRABALHEI COMO PROFESSOR DO COLÉGIO TÉCNICO NOTURNO.
+                  </p>
                 </div>
               </div>
             </li>
 
             <li className="timeline-inverted">
-              <div className={viewCircleBorder4 ? 'timeline-image circleActive' : 'timeline-image'}>
+              <div
+                className={
+                  viewCircleBorder4
+                    ? "timeline-image circleActive"
+                    : "timeline-image"
+                }
+              >
                 <img src={SiemensImg} alt="Siemens" />
               </div>
               <div className="timeline-panel">
@@ -170,13 +222,26 @@ const Experience: React.FC = () => {
                   <h4 className="subheading">SIEMENS INDUSTRY SOFTWARE</h4>
                 </div>
                 <div className="timeline-body">
-                  <p className={viewText4 ? 'text-muted activeText' : 'text-muted'}>ESTÁGIO NA PARTE DE SOFTWARES LMS (ATUAL SIMCENTER) QUE ATUAM NA SIMULAÇÃO E TESTES DE PROJETOS.</p>
+                  <p
+                    className={
+                      viewText4 ? "text-muted activeText" : "text-muted"
+                    }
+                  >
+                    ESTÁGIO NA PARTE DE SOFTWARES LMS (ATUAL SIMCENTER) QUE
+                    ATUAM NA SIMULAÇÃO E TESTES DE PROJETOS.
+                  </p>
                 </div>
               </div>
             </li>
 
             <li>
-              <div className={viewCircleBorder5 ? 'timeline-image circleActive' : 'timeline-image'}>
+              <div
+                className={
+                  viewCircleBorder5
+                    ? "timeline-image circleActive"
+                    : "timeline-image"
+                }
+              >
                 <img src={SiemensImg} alt="Siemens" />
               </div>
               <div className="timeline-panel">
@@ -185,13 +250,27 @@ const Experience: React.FC = () => {
                   <h4 className="subheading">SIEMENS INDUSTRY SOFTWARE</h4>
                 </div>
                 <div className="timeline-body">
-                  <p className={viewText5 ? 'text-muted activeText' : 'text-muted'}>TRABALHEI COM PRÉ E PÓS VENDA TÉCNICA DO SOFTWARE PREACTOR, QUE CUIDA DA PROGRAMAÇÃO E PLANEJAMENTO DO PROCESSO DE PRODUÇÃO DE INDÚSTRIAS.</p>
+                  <p
+                    className={
+                      viewText5 ? "text-muted activeText" : "text-muted"
+                    }
+                  >
+                    TRABALHEI COM PRÉ E PÓS VENDA TÉCNICA DO SOFTWARE PREACTOR,
+                    QUE CUIDA DA PROGRAMAÇÃO E PLANEJAMENTO DO PROCESSO DE
+                    PRODUÇÃO DE INDÚSTRIAS.
+                  </p>
                 </div>
               </div>
             </li>
 
             <li className="timeline-inverted">
-              <div className={viewCircleBorder6 ? 'timeline-image circleActive' : 'timeline-image'}>
+              <div
+                className={
+                  viewCircleBorder6
+                    ? "timeline-image circleActive"
+                    : "timeline-image"
+                }
+              >
                 <img src={NubankImg} alt="Nubank" />
               </div>
               <div className="timeline-panel">
@@ -200,13 +279,26 @@ const Experience: React.FC = () => {
                   <h4 className="subheading">NUBANK</h4>
                 </div>
                 <div className="timeline-body">
-                  <p className={viewText6 ? 'text-muted activeText' : 'text-muted'}>ATUEI COMO ANALISTA DE RELACIONAMENTO AO CLIENTE NOS SETORES DE BILLS E CHARGEBACK.</p>
+                  <p
+                    className={
+                      viewText6 ? "text-muted activeText" : "text-muted"
+                    }
+                  >
+                    ATUEI COMO ANALISTA DE RELACIONAMENTO AO CLIENTE NOS SETORES
+                    DE BILLS E CHARGEBACK.
+                  </p>
                 </div>
               </div>
             </li>
 
             <li>
-              <div className={viewCircleBorder7 ? 'timeline-image circleActive' : 'timeline-image'}>
+              <div
+                className={
+                  viewCircleBorder7
+                    ? "timeline-image circleActive"
+                    : "timeline-image"
+                }
+              >
                 <img src={AprendizImg} alt="Aprendiz Digital" />
               </div>
               <div className="timeline-panel">
@@ -215,13 +307,26 @@ const Experience: React.FC = () => {
                   <h4 className="subheading">APRENDIZ DIGITAL</h4>
                 </div>
                 <div className="timeline-body">
-                  <p className={viewText7 ? 'text-muted activeText' : 'text-muted'}>FUI FUNDADOR DESTA STARTUP DA ÁREA DA EDUCAÇÃO. ELA OFERECIA SERVIÇOS DE AULAS PARTICULARES DE EXATAS E PROGRAMAÇÃO.</p>
+                  <p
+                    className={
+                      viewText7 ? "text-muted activeText" : "text-muted"
+                    }
+                  >
+                    FUI FUNDADOR DESTA STARTUP DA ÁREA DA EDUCAÇÃO. ELA OFERECIA
+                    SERVIÇOS DE AULAS PARTICULARES DE EXATAS E PROGRAMAÇÃO.
+                  </p>
                 </div>
               </div>
             </li>
 
             <li className="timeline-inverted">
-              <div className={viewCircleBorder8 ? 'timeline-image circleActive' : 'timeline-image'}>
+              <div
+                className={
+                  viewCircleBorder8
+                    ? "timeline-image circleActive"
+                    : "timeline-image"
+                }
+              >
                 <img alt="Letrus" src={LetrusImg} />
               </div>
               <div className="timeline-panel">
@@ -230,13 +335,28 @@ const Experience: React.FC = () => {
                   <h4 className="subheading">LETRUS</h4>
                 </div>
                 <div className="timeline-body">
-                  <p className={viewText8 ? 'text-muted activeText' : 'text-muted'}>ATUEI COMO DESENVOLVEDOR FRONTEND NOS DIVERSOS PROJETOS DA EMPRESA. ATUEI COM DESIGN SYSTEM, INTEGRAÇÃO COM HUBSPOT, RESOLUÇÃO DE BUGS, MANUTENÇÃO/ATUALIZAÇÃO DO CÓDIGO E PARTICIPAÇÃO NA CRIAÇÃO DE UM BACKOFFICE.</p>
+                  <p
+                    className={
+                      viewText8 ? "text-muted activeText" : "text-muted"
+                    }
+                  >
+                    ATUEI COMO DESENVOLVEDOR FRONTEND NOS DIVERSOS PROJETOS DA
+                    EMPRESA. ATUEI COM DESIGN SYSTEM, INTEGRAÇÃO COM HUBSPOT,
+                    RESOLUÇÃO DE BUGS, MANUTENÇÃO/ATUALIZAÇÃO DO CÓDIGO E
+                    PARTICIPAÇÃO NA CRIAÇÃO DE UM BACKOFFICE.
+                  </p>
                 </div>
               </div>
             </li>
 
             <li>
-              <div className={viewCircleBorder9 ? 'timeline-image circleActive' : 'timeline-image'}>
+              <div
+                className={
+                  viewCircleBorder9
+                    ? "timeline-image circleActive"
+                    : "timeline-image"
+                }
+              >
                 <img src={ObjectEdgeLogo} alt="Object Edge" />
               </div>
               <div className="timeline-panel">
@@ -245,11 +365,19 @@ const Experience: React.FC = () => {
                   <h4 className="subheading">OBJECT EDGE</h4>
                 </div>
                 <div className="timeline-body">
-                  <p className={viewText9 ? 'text-muted activeText' : 'text-muted'}>DESENVOLVEDOR FRONTEND REACT. ATUO EM PROJETOS INTERNACIONAIS, LIDANDO COM CLIENTES E COLEGAS DE TRABALHO ESPALHADOS PELO MUNDO. DESENVOLVENDO E FAZENDO MANUTENÇÃO PRINCIPALMENTE DE PLATAFORMAS DE E-COMMERCE.</p>
+                  <p
+                    className={
+                      viewText9 ? "text-muted activeText" : "text-muted"
+                    }
+                  >
+                    DESENVOLVEDOR FRONTEND REACT. ATUO EM PROJETOS
+                    INTERNACIONAIS, LIDANDO COM CLIENTES E COLEGAS DE TRABALHO
+                    ESPALHADOS PELO MUNDO. DESENVOLVENDO E FAZENDO MANUTENÇÃO
+                    PRINCIPALMENTE DE PLATAFORMAS DE E-COMMERCE.
+                  </p>
                 </div>
               </div>
             </li>
-
 
             {/* <li className="timeline-inverted">
                   <div className="timeline-image">
