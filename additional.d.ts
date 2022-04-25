@@ -15,12 +15,17 @@ declare module 'styled-components' {
       aboutMeRoundedBorders: string;
       aboutMeDescriptionP: string;
       aboutMePageLinkHighlight: string;
+      aboutMeLabelBold: string;
+      aboutMeText: string;
       aboutMeSkillsBarsBackground: string;
       aboutMeSkillsBarsTags: string;
       aboutMeSkillsBarsText: string;
       aboutMeSkillsBarsFill1: string;
       aboutMeSkillsBarsFill2: string;
       aboutMeSkillsBarsFillSpan: string;
+      aboutMeDegreeH2: string;
+      aboutMeDegreeH3: string;
+      aboutMeDegreeService: string;
 
       buttonText: string;
       buttonBackground1: string;
@@ -42,6 +47,7 @@ declare module 'styled-components' {
       experienceContainerTimelineCircleActive: string;
       experienceContainerTimelineLastChild: string;
       experienceContainerTimelineBodyUlP: string;
+      experienceContainerTimelineBodyUlH4ActiveText: string;
       experienceContainerTimelineBodyUlPActiveText: string;
 
       footerBackground: string;

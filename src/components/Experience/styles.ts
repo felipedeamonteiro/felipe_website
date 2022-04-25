@@ -188,13 +188,20 @@ export const Container = styled.section<IntroContainerProps>`
       margin-left: -85px;
       text-align: center;
       color: white;
-      border: 9px solid gray;
+      border: 9px solid ${(props) => props.darkMode ? 
+      shade(0.8, props.theme.colors.experienceContainerTimelineBodyUlP) : 
+      props.theme.colors.experienceContainerTimelineBodyUlP};
       border-radius: 100%;
       background-color: ${(props) => props.theme.colors.experienceContainerTimelineImageBack};
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: border-color .5s;
+      transition: border .5s;
+
+      ${props => props.darkMode && css`
+        filter: grayscale(0.5) blur(3px);
+        transition: filter .5s;
+      `}
 
       @media only screen and (max-width: ${mobileScreenMax}) {
         width: 130px;
@@ -211,6 +218,10 @@ export const Container = styled.section<IntroContainerProps>`
       &.circleActive {
         border: 9px solid ${(props) => props.theme.colors.experienceContainerTimelineCircleActive};
         transition: border-color .5s;
+        ${props => props.darkMode && css`
+          filter: grayscale(0) blur(0);
+          transition: filter .5s;
+        `}
       }
       
       img {
@@ -257,10 +268,17 @@ export const Container = styled.section<IntroContainerProps>`
   }
 
   .timeline-heading {
+    color: ${props => props.darkMode ? shade(0.2, '#000') : '#000'};
+    transition: color .5s;
+
+    &.activeText {
+      color: ${(props) => props.theme.colors.experienceContainerTimelineBodyUlH4ActiveText};
+      transition: color .5s;
+    }
+
     h4 {
       font-size: 25px;
       margin-top: 0;
-      color: ${props => props.darkMode ? shade(0.2, '#000') : '#000'};
 
       @media only screen and (max-width: ${mobileScreenMax}) {
         font-size: 20px;

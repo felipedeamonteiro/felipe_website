@@ -4,6 +4,7 @@ import { Form } from "@unform/web";
 import { FormHandles } from "@unform/core";
 
 import Button from "../Buttons/Button";
+import ButtonNeon3 from "../Buttons/ButtonNeon3";
 import Input from "../Input";
 import TextArea from "../TextArea";
 import { Container } from "./styles";
@@ -76,7 +77,11 @@ const ContactMe: React.FC<ContactMeProps> = ({ darkMode }) => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <Button type="submit">Enviar</Button>
+          {darkMode ? (
+            <ButtonNeon3 type="submit">Enviar</ButtonNeon3>
+          ) : (
+            <Button type="submit">Enviar</Button>
+          )}
         </Form>
       </div>
     </Container>

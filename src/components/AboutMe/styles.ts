@@ -77,8 +77,6 @@ export const Container = styled.section<ContainerProps>`
   padding: 100px 30px 30px 30px;
   background: ${props => props.theme.colors.aboutMeBackground};
 
-  
-
   h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 45px;
@@ -138,6 +136,7 @@ export const Container = styled.section<ContainerProps>`
         font-size: 20px;
         font-family: 'Raleway', sans-serif;
         line-height: 30px;
+        color: ${props => props.theme.colors.aboutMeText};
 
         p {
           color: ${props => props.theme.colors.aboutMeDescriptionP};
@@ -151,7 +150,7 @@ export const Container = styled.section<ContainerProps>`
       .label_bold {
         margin: 10px 0;
         font-size: 30px;
-        color: gray;
+        color: ${props => props.theme.colors.aboutMeLabelBold};
         font-family: 'Orbitron', sans-serif;
       }
     }
@@ -297,9 +296,11 @@ export const Container = styled.section<ContainerProps>`
 
       h2 {
         font-size: 28px;
+        color: ${props => props.theme.colors.aboutMeDegreeH2};
       }
 
       h3 {
+        color: ${props => props.theme.colors.aboutMeDegreeH3};
         margin-top: 10px;
         font-size: 18px;
         font-weight: 300;
@@ -314,15 +315,22 @@ export const Container = styled.section<ContainerProps>`
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      ${props => props.darkMode && css`
+        background: white;
+        border-radius: 56px;
+        box-shadow: 0 0 20px #fa8ea7;
+        padding: 5px 0;
+      `}
 
       img {
         max-width: 8%;
       }
 
-      h4 {
+      .service {
         font-size: 25px;
         margin-left: 10px;
         text-align: center;
+        color: ${props => props.theme.colors.aboutMeDegreeService};
       }
     }
   }

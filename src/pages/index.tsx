@@ -35,8 +35,6 @@ function Home({ toggleTheme, theme: { title } }: HomeProps) {
     setIsOpen(!isOpen);
   };
 
-  console.log("DdarkMode", darkMode);
-
   return (
     <>
       <Sidebar isOpen={isOpen} toogle={toogleSidebar} />

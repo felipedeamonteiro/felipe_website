@@ -159,7 +159,13 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                 <img src={LdemImg} alt="LDEM logo" />
               </div>
               <div className="timeline-panel">
-                <div className="timeline-heading">
+                <div
+                  className={
+                    viewText2
+                      ? "timeline-heading activeText"
+                      : "timeline-heading"
+                  }
+                >
                   <h4>2 - DE 2011 A 2013</h4>
                   <h4 className="subheading">
                     INICIAÇÃO CIENTÍFICA NO ANTIGO LDEM UNICAMP
@@ -190,7 +196,13 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                 <img src={MeuColegioImg} alt="Meu colegio logo" />
               </div>
               <div className="timeline-panel">
-                <div className="timeline-heading">
+                <div
+                  className={
+                    viewText3
+                      ? "timeline-heading activeText"
+                      : "timeline-heading"
+                  }
+                >
                   <h4>3 - 2º SEMESTRE DE 2013</h4>
                   <h4 className="subheading">MEU COLÉGIO</h4>
                 </div>
@@ -217,7 +229,13 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                 <img src={SiemensImg} alt="Siemens" />
               </div>
               <div className="timeline-panel">
-                <div className="timeline-heading">
+                <div
+                  className={
+                    viewText4
+                      ? "timeline-heading activeText"
+                      : "timeline-heading"
+                  }
+                >
                   <h4>4 - DE JUNHO A DEZEMBRO DE 2014</h4>
                   <h4 className="subheading">SIEMENS INDUSTRY SOFTWARE</h4>
                 </div>
@@ -245,7 +263,13 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                 <img src={SiemensImg} alt="Siemens" />
               </div>
               <div className="timeline-panel">
-                <div className="timeline-heading">
+                <div
+                  className={
+                    viewText5
+                      ? "timeline-heading activeText"
+                      : "timeline-heading"
+                  }
+                >
                   <h4>5 - DE JANEIRO DE 2015 A MARÇO DE 2016</h4>
                   <h4 className="subheading">SIEMENS INDUSTRY SOFTWARE</h4>
                 </div>
@@ -274,7 +298,13 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                 <img src={NubankImg} alt="Nubank" />
               </div>
               <div className="timeline-panel">
-                <div className="timeline-heading">
+                <div
+                  className={
+                    viewText6
+                      ? "timeline-heading activeText"
+                      : "timeline-heading"
+                  }
+                >
                   <h4>6 - DE MARÇO A JUNHO DE 2017</h4>
                   <h4 className="subheading">NUBANK</h4>
                 </div>
@@ -302,7 +332,13 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                 <img src={AprendizImg} alt="Aprendiz Digital" />
               </div>
               <div className="timeline-panel">
-                <div className="timeline-heading">
+                <div
+                  className={
+                    viewText7
+                      ? "timeline-heading activeText"
+                      : "timeline-heading"
+                  }
+                >
                   <h4>7 - DE JUNHO DE 2016 ATÉ OUTUBRO DE 2019</h4>
                   <h4 className="subheading">APRENDIZ DIGITAL</h4>
                 </div>
@@ -330,7 +366,13 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                 <img alt="Letrus" src={LetrusImg} />
               </div>
               <div className="timeline-panel">
-                <div className="timeline-heading">
+                <div
+                  className={
+                    viewText8
+                      ? "timeline-heading activeText"
+                      : "timeline-heading"
+                  }
+                >
                   <h4>8 - DE JANEIRO A SETEMBRO DE 2020</h4>
                   <h4 className="subheading">LETRUS</h4>
                 </div>
@@ -360,7 +402,13 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                 <img src={ObjectEdgeLogo} alt="Object Edge" />
               </div>
               <div className="timeline-panel">
-                <div className="timeline-heading">
+                <div
+                  className={
+                    viewText9
+                      ? "timeline-heading activeText"
+                      : "timeline-heading"
+                  }
+                >
                   <h4>9 - DE FEVEREIRO DE 2021 ATÉ AGORA</h4>
                   <h4 className="subheading">OBJECT EDGE</h4>
                 </div>

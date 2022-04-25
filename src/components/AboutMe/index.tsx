@@ -131,8 +131,8 @@ const AboutMe: React.FC<AboutMeProps> = ({ darkMode }) => {
           <h2 className="section-heading text-uppercase">FORMAÇÃO ACADÊMICA</h2>
 
           <h3 className="section-subheading text-muted">
-            Desenvolvimento técnico constante em instituição de Ensino Superior
-            de renome no Brasil
+            Formação acadêmica sólida em Instituição de Ensino Superior de
+            renome no Brasil
           </h3>
         </div>
         <div className="box1">
@@ -142,18 +142,21 @@ const AboutMe: React.FC<AboutMeProps> = ({ darkMode }) => {
           </h4>
         </div>
 
-        {/* <div className="box2">
+        <div className="box2">
           <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
-          <h4 className="service">Mestrado em Ciência da Computação - Inteligência Artificial e Robótica - UNICAMP - Interrompido em 2019</h4>
-        </div> */}
+          <h4 className="service">
+            Mestrado em Ciência da Computação - Inteligência Artificial e
+            Robótica - UNICAMP - Interrompido em 2019
+          </h4>
+        </div>
 
-        {/* <div className="box3">
+        <div className="box3">
           <img alt="Logo Unicamp" className="unicamp-img" src={LogoUnicamp} />
           <h4 className="service">
             Graduação em Engenharia Elétrica - Focado em desenvolvimento de
             software e Inteligência Artificial - UNICAMP - Em curso desde 2021
           </h4>
-        </div> */}
+        </div>
       </div>
     </Container>
   );

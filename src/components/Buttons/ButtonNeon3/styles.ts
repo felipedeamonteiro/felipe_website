@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   a {
     position: relative;
-    width: 160px;
+    width: 100%;
     height: 60px;
     display: inline-block;
     background: #fff;
@@ -27,6 +27,7 @@ export const Container = styled.div`
       justify-content: center;
       align-items: center;
       font-size: 1.2em;
+      font-family: 'Orbitron', sans-serif;
       text-transform: uppercase;
       color: #fff;
       border: 1px, solid #040a29;

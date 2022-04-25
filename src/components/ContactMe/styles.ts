@@ -1,8 +1,30 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 interface ContactMeContainerProps {
   darkMode: boolean;
 }
+
+const animationBlurReal = keyframes`
+from {
+    text-shadow: 0 0 10px #49fc8b, 
+                 0 0 20px #49fc8b, 
+                 0 0 30px #49fc8b, 
+                 0 0 40px #49fc8b, 
+                 0 0 50px #49fc8b, 
+                 0 0 60px #49fc8b, 
+                 0 0 70px #49fc8b;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #02cf4d, 
+                 0 0 30px #02cf4d, 
+                 0 0 40px #02cf4d, 
+                 0 0 50px #02cf4d, 
+                 0 0 60px #02cf4d, 
+                 0 0 70px #02cf4d, 
+                 0 0 80px #02cf4d;
+  }
+`;
 
 export const Container = styled.section<ContactMeContainerProps>`
   display: flex;
@@ -17,13 +39,17 @@ export const Container = styled.section<ContactMeContainerProps>`
     justify-content: center;
     flex-direction: column;
 
-    h1 {
+    .text-uppercase {
       margin-top: 60px;
       font-size: 45px;
       font-family: 'Orbitron', sans-serif;
+      ${props => props.darkMode && css`
+      color: #fff;
+      animation: ${animationBlurReal} 1s ease-in-out infinite alternate;
+      `}
     }
 
-    h3 {
+    .text-muted {
       margin: 25px 0 50px 0;
       font-style: 'italic';
       font-weight: lighter;

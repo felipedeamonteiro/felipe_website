@@ -1,8 +1,10 @@
+import {grayscale} from "polished";
+
 export default {
   title: 'dark',
 
   colors: {
-    navbarBackground: '#01162B',
+    navbarBackground: '#06072A',
     navbarHomeTitle: '#00CDE2',
     mobileIcon: '#FFFFFF',
     navLinks: '#FFFFFF',
@@ -12,12 +14,17 @@ export default {
     aboutMeRoundedBorders: '#00c5f2',
     aboutMeDescriptionP: '#7100d1',
     aboutMePageLinkHighlight: '#00c5f2',
+    aboutMeLabelBold: '#FFFFFF',
+    aboutMeText: '#FFFFFF',
     aboutMeSkillsBarsBackground: '#edeef5',
     aboutMeSkillsBarsTags: '#00c5f2',
     aboutMeSkillsBarsText: '#FFFFFF',
     aboutMeSkillsBarsFill1: '#70008c',
     aboutMeSkillsBarsFill2: '#7100d1',
     aboutMeSkillsBarsFillSpan: '#FFFFFF',
+    aboutMeDegreeH2: '#FFFFFF',
+    aboutMeDegreeH3: '#FFFFFF',
+    aboutMeDegreeService: '#000000',
 
     buttonText: '#FFFFFF',
     buttonBackground1: '#6dd4fd',
@@ -29,7 +36,7 @@ export default {
     cardBackH2: '#FFFFFF',
     cardBackP: '#FFFFFF',
 
-    contactMeH3: '#838b93',
+    contactMeH3: '#00d0e5',
 
     experienceContainerBackground: '#01162B',
     experienceContainerTextUppercase: '#FFFFFF',
@@ -39,6 +46,7 @@ export default {
     experienceContainerTimelineCircleActive: '#00d0e5',
     experienceContainerTimelineLastChild: '#00d0e5',
     experienceContainerTimelineBodyUlP: '#6c757d',
+    experienceContainerTimelineBodyUlH4ActiveText: '#FFFFFF',
     experienceContainerTimelineBodyUlPActiveText: '#13b5c5',
 
     footerBackground: '#c0faeb',
