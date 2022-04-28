@@ -57,6 +57,7 @@ const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
           backCardDescritption="Backend pronto, mas ainda falta o front. Em construção..."
         />
       </div>
+      <div className="animation-div" />
     </Container>
   );
 };

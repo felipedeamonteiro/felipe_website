@@ -37,10 +37,43 @@ from {
   }
 `;
 
+const animationBlurBox = keyframes`
+from {
+    box-shadow: 0 0 10px #03E9F4, 
+                 0 0 20px #03E9F4, 
+                 0 0 30px #03E9F4, 
+                 0 0 40px #03E9F4, 
+                 0 0 50px #03E9F4, 
+                 0 0 60px #03E9F4, 
+                 0 0 70px #03E9F4;
+  }
+  
+  to {
+    box-shadow: 0 0 20px #5ff3fa, 
+                 0 0 30px #5ff3fa, 
+                 0 0 40px #5ff3fa, 
+                 0 0 50px #5ff3fa, 
+                 0 0 60px #5ff3fa, 
+                 0 0 70px #5ff3fa, 
+                 0 0 80px #5ff3fa;
+  }
+`;
+
 export const Container = styled.section<IntroContainerProps>`
   background: ${(props) => props.theme.colors.experienceContainerBackground};
   width: 100%;
   padding: 100px 30px 30px 30px;
+
+  .animation-div {
+    margin-top: 30px;
+    width: 100%;
+    height: 6px;
+    ${props => props.darkMode && css`
+      background: white;
+      left: 0;
+      animation: ${animationBlurBox} 2s ease-in-out infinite alternate;
+    `}
+  }
 
   /* ::before {
     content: '';

@@ -437,6 +437,7 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
           </ul>
         </div>
       </div>
+      <div className="animation-div" />
     </Container>
   );
 };

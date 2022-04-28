@@ -26,12 +26,45 @@ from {
   }
 `;
 
+const animationBlurBox = keyframes`
+from {
+    box-shadow: 0 0 10px #8140f7, 
+                 0 0 20px #8140f7, 
+                 0 0 30px #8140f7, 
+                 0 0 40px #8140f7, 
+                 0 0 50px #8140f7, 
+                 0 0 60px #8140f7, 
+                 0 0 70px #8140f7;
+  }
+  
+  to {
+    box-shadow: 0 0 20px #9c6af7, 
+                 0 0 30px #9c6af7, 
+                 0 0 40px #9c6af7, 
+                 0 0 50px #9c6af7, 
+                 0 0 60px #9c6af7, 
+                 0 0 70px #9c6af7, 
+                 0 0 80px #9c6af7;
+  }
+`;
+
 export const Container = styled.section<ProjectsContainerProps>`
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 100px 30px 30px 30px;
   background: ${(props) => props.theme.colors.projectsBackground};
+
+  .animation-div {
+    margin-top: 40px;
+    width: 100%;
+    height: 6px;
+    ${props => props.darkMode && css`
+      background: white;
+      left: 0;
+      animation: ${animationBlurBox} 2s ease-in-out infinite alternate;
+    `}
+  }
 
   .text-center-row {
     display: flex;

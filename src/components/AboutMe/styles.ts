@@ -36,6 +36,27 @@ from {
                  0 0 80px #fa8ea7;
   }
 `;
+const animationBlurBox = keyframes`
+from {
+    box-shadow: 0 0 10px #fc446f, 
+                 0 0 20px #fc446f, 
+                 0 0 30px #fc446f, 
+                 0 0 40px #fc446f, 
+                 0 0 50px #fc446f, 
+                 0 0 60px #fc446f, 
+                 0 0 70px #fc446f;
+  }
+  
+  to {
+    box-shadow: 0 0 20px #fa8ea7, 
+                 0 0 30px #fa8ea7, 
+                 0 0 40px #fa8ea7, 
+                 0 0 50px #fa8ea7, 
+                 0 0 60px #fa8ea7, 
+                 0 0 70px #fa8ea7, 
+                 0 0 80px #fa8ea7;
+  }
+`;
 
 const fillCssAndHtml = keyframes`
   from {
@@ -87,24 +108,16 @@ export const Container = styled.section<ContainerProps>`
   background: ${props => props.theme.colors.aboutMeBackground};
   overflow: hidden;
 
-  ${props => props.darkMode && css`
-    .animation-div {
+  .animation-div {
       width: 100%;
-      height: 100%;
-      position: absolute;
-      display: block;
-
-      .end-section-animated {
-        bottom: 0;
-        left: -100%;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(90deg, transparent, ${props => props.theme.colors.endOfSectionLineColor});
-        animation: ${endOfSectionAnimation} 1s linear infinite;
-        }
-      }
+      height: 6px;
+      ${props => props.darkMode && css`
+        background: white;
+        left: 0;
+        animation: ${animationBlurBox} 2s ease-in-out infinite alternate;
+      `}
     }
-  `}
+  
 
   h1 {
     font-family: 'Orbitron', sans-serif;
