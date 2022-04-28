@@ -169,6 +169,10 @@ export const Container = styled.section<IntroContainerProps>`
     font-size: 50px;
     text-align: center;
     margin-top: 200px;
+
+    ${props => !props.darkMode && css`
+      text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    `}
   }
 
   h1 {
@@ -178,6 +182,10 @@ export const Container = styled.section<IntroContainerProps>`
     font-size: 75px;
     text-align: center;
     margin-bottom: 150px;
+
+    ${props => !props.darkMode && css`
+      text-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    `}
   }
 
   @media only screen and (max-width: ${mobileScreenMax}) {

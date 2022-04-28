@@ -13,6 +13,7 @@ export const Container = styled.footer<FooterContainerProps>`
   justify-content: center;
   align-items: center;
   bottom: 0;
+  color: ${(props) => props.theme.colors.footerText};
 
   /* @media only screen and (max-width: ${mobileScreenMax}) {
     width: 401%;

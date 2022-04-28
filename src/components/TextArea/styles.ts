@@ -1,17 +1,23 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  darkMode: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   box-sizing: border-box;
   display: flex;
   flex-direction: column-reverse;
 
   label {
     font-weight: 500;
+    font-size: 18px;
+    color: ${(props) => props.theme.colors.TextAreaLabel};
   }
 
   textarea {
     resize: none;
-    border: 1px solid ${(props) => props.theme.colors.textAreaBorder};
+    border: ${props => props.darkMode ? '4px' : '1px'} solid ${(props) => props.theme.colors.textAreaBorder};
     //color: ${(props) => props.theme.colors.textAreaText};
     border-radius: 4px;
     padding: 5px;
@@ -25,7 +31,7 @@ export const Container = styled.div`
 
     &:focus {
       outline: none;
-      border: 1px solid ${(props) => props.theme.colors.textAreaBorderFocus};
+      border: ${props => props.darkMode ? '4px' : '1px'} solid ${(props) => props.theme.colors.textAreaBorderFocus};
     }
   }
 

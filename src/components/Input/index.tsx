@@ -1,7 +1,7 @@
-import React, { InputHTMLAttributes, useEffect, useRef, useState } from 'react';
-import { useField } from '@unform/core';
+import React, { InputHTMLAttributes, useEffect, useRef, useState } from "react";
+import { useField } from "@unform/core";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
@@ -10,6 +10,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   disabled?: boolean;
   value?: string;
   updateDefaultValue?: string;
+  darkMode: boolean;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -18,9 +19,10 @@ const Input: React.FC<InputProps> = ({
   name,
   placeholder,
   updateDefaultValue,
+  darkMode,
   ...rest
 }) => {
-  const [defaultValueState, setDefaultValueState] = useState('');
+  const [defaultValueState, setDefaultValueState] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const { fieldName, defaultValue, error, registerField } = useField(name);
 
@@ -28,7 +30,7 @@ const Input: React.FC<InputProps> = ({
     registerField({
       name: fieldName,
       ref: inputRef.current,
-      path: 'value',
+      path: "value",
     });
     if (updateDefaultValue) {
       setDefaultValueState(updateDefaultValue);
@@ -36,7 +38,7 @@ const Input: React.FC<InputProps> = ({
   }, [fieldName, registerField, updateDefaultValue]);
 
   return (
-    <Container isErrored={!!error} isDisabled={disabled}>
+    <Container darkMode={darkMode} isErrored={!!error} isDisabled={disabled}>
       <input
         ref={inputRef}
         type="text"
@@ -45,15 +47,15 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         disabled={disabled}
         value={defaultValueState}
-        onChange={e => setDefaultValueState(e.target.value)}
-        onKeyPress={e => {
-          if (e.key === 'Enter') e.preventDefault();
+        onChange={(e) => setDefaultValueState(e.target.value)}
+        onKeyPress={(e) => {
+          if (e.key === "Enter") e.preventDefault();
         }}
         {...rest}
       />
 
-      {label ? <label htmlFor={name}>{label}</label> : ''}
-      <span style={{ color: '#c53030' }}>{error}</span>
+      {label ? <label htmlFor={name}>{label}</label> : ""}
+      <span style={{ color: "#c53030" }}>{error}</span>
     </Container>
   );
 };

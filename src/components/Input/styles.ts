@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 interface ContainerProps {
   isErrored: boolean;
   isDisabled: boolean;
+  darkMode: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -13,9 +14,9 @@ export const Container = styled.div<ContainerProps>`
     width: 370px;
     margin-bottom: 30px;
     box-sizing: border-box;
-    border: 1px solid grey;
+    border: ${props => props.darkMode ? '4px' : '1px'} solid ${(props) => props.theme.colors.inputBorderColor};
     border-radius: 4px;
-    padding: 5px;
+    padding: ${props => props.darkMode ? '5px' : '8px'};
     font-size: 16px;
     font-family: 'Roboto Slab', serif;
 
@@ -37,12 +38,14 @@ export const Container = styled.div<ContainerProps>`
 
     &:focus {
       outline: none;
-      border: 1px solid ${(props) => props.theme.colors.inputBorderFocus};
+      border: ${props => props.darkMode ? '4px' : '1px'} solid ${(props) => props.theme.colors.inputBorderFocus};
     }
   }
 
   label {
     font-weight: 500;
+    font-size: 18px;
+    color: ${(props) => props.theme.colors.inputBorderLabel};
   }
 
   input:focus + label {

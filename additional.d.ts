@@ -51,11 +51,14 @@ declare module 'styled-components' {
       experienceContainerTimelineBodyUlPActiveText: string;
 
       footerBackground: string;
+      footerText: string;
 
       inputBorderError: string;
+      inputBorderColor: string;
       inputBorderDisabled: string;
       inputBorderPlaceholder: string;
       inputBorderFocus: string;
+      inputBorderLabel: string;
       inputBorderLabelFocus: string;
 
       introContainerH1: string;
@@ -71,11 +74,14 @@ declare module 'styled-components' {
       sidebarMenuLinkTextHover: string;
 
       contactMeBackground: string;
+      TextAreaLabel: string;
       textAreaText: string;
       textAreaPlaceholder: string;
       textAreaBorder: string;
       textAreaBorderFocus: string;
       textAreaLabelFocus: string;
+
+      endOfSectionLineColor: string;
     };
   }
 };

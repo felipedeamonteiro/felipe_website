@@ -12,7 +12,7 @@ export const Container = styled.div`
     height: 60px;
     display: inline-block;
     background: #fff;
-    margin: 20px;
+    margin-top: 20px;
 
     span {
       position: absolute;

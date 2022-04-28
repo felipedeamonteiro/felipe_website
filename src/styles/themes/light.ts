@@ -6,7 +6,7 @@ export default {
     navbarHomeTitle: '#2b3391',
     mobileIcon: '#FFFFFF',
     navLinks: '#2b3391',
-    navLinksHover: '#de6304',
+    navLinksHover: '#ff0000',
 
     aboutMeBackground: '#F9F1F7',
     aboutMeRoundedBorders: '#00c5f2',
@@ -48,11 +48,14 @@ export default {
     experienceContainerTimelineBodyUlPActiveText: '#13b5c5',
 
     footerBackground: '#c0faeb',
+    footerText: '#000000',
 
     inputBorderError: '#ff0000',
+    inputBorderColor: '#808080',
     inputBorderDisabled: '#d3d3d3',
     inputBorderPlaceholder: '#b5bcc7',
     inputBorderFocus: '#2800b3',
+    inputBorderLabel: '#000000',
     inputBorderLabelFocus: '#2800b3',
 
     introContainerH1: '#2b3391',
@@ -68,10 +71,13 @@ export default {
     sidebarMenuLinkTextHover: '#000000',
 
     contactMeBackground: '#edeef5',
+    TextAreaLabel: '#000000',
     textAreaText: '#b5bcc7',
     textAreaPlaceholder: '#b5bcc7',
     textAreaBorder: '#808080',
     textAreaBorderFocus: '#2800b3',
     textAreaLabelFocus: '#2800b3',
+
+    endOfSectionLineColor: '#FFFFFF',
   },
 };

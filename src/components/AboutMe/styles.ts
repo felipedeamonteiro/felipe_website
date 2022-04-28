@@ -6,6 +6,15 @@ interface ContainerProps {
   darkMode: boolean;
 }
 
+const endOfSectionAnimation = keyframes`
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+`;
+
 const animationBlurReal = keyframes`
 from {
     text-shadow: 0 0 10px #fc446f, 
@@ -334,6 +343,20 @@ export const Container = styled.section<ContainerProps>`
       }
     }
   }
+
+  ${props => props.darkMode && css`
+    .end-section-animated {
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: -100%;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, ${props => props.theme.colors.endOfSectionLineColor});
+      animation: ${endOfSectionAnimation} 1s linear infinite;
+    }  
+  `}
+
 
   /* @media only screen and (max-width: 414px) {
     width: 401%;

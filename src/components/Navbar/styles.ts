@@ -103,9 +103,10 @@ export const NavLinks = styled.a`
   align-items: center;
   font-size: 18px;
   font-weight: 400;
-  letter-spacing: 1px;
   transition: color 0.2s;
   text-decoration: none;
+  padding: 10px 30px;
+  margin: 40px 0;
 
   :hover {
     color: ${props => props.theme.colors.navLinksHover};

@@ -1,14 +1,20 @@
-import React, { TextareaHTMLAttributes, useEffect, useRef } from 'react';
-import { useField } from '@unform/core';
+import React, { TextareaHTMLAttributes, useEffect, useRef } from "react";
+import { useField } from "@unform/core";
 
-import { Container } from './styles';
+import { Container } from "./styles";
 
 interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
   name: string;
+  darkMode: boolean;
 }
 
-const TextArea: React.FC<TextAreaProps> = ({ label, name, ...props }) => {
+const TextArea: React.FC<TextAreaProps> = ({
+  label,
+  name,
+  darkMode,
+  ...props
+}) => {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const { fieldName, defaultValue, registerField } = useField(name);
 
@@ -16,12 +22,12 @@ const TextArea: React.FC<TextAreaProps> = ({ label, name, ...props }) => {
     registerField({
       name: fieldName,
       ref: inputRef.current,
-      path: 'value',
+      path: "value",
     });
   }, [fieldName, registerField]);
 
   return (
-    <Container>
+    <Container darkMode={darkMode}>
       <textarea
         name={name}
         ref={inputRef}

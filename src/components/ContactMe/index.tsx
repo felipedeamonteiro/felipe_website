@@ -54,24 +54,28 @@ const ContactMe: React.FC<ContactMeProps> = ({ darkMode }) => {
       <div className="contact-form-div">
         <Form ref={formRef} onSubmit={handleSubmit}>
           <Input
+            darkMode={darkMode}
             name="name"
             label="Nome"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <Input
+            darkMode={darkMode}
             name="mail"
             label="E-mail"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <Input
+            darkMode={darkMode}
             name="subject"
             label="Assunto"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
           />
           <TextArea
+            darkMode={darkMode}
             name="message"
             label="Mensagem"
             value={message}

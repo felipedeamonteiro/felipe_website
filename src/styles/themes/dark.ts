@@ -5,10 +5,10 @@ export default {
 
   colors: {
     navbarBackground: '#06072A',
-    navbarHomeTitle: '#00CDE2',
+    navbarHomeTitle: '#00d0e5',
     mobileIcon: '#FFFFFF',
     navLinks: '#FFFFFF',
-    navLinksHover: '#00CDE2',
+    navLinksHover: '#00d0e5',
 
     aboutMeBackground: '#01162B',
     aboutMeRoundedBorders: '#00c5f2',
@@ -47,33 +47,39 @@ export default {
     experienceContainerTimelineLastChild: '#00d0e5',
     experienceContainerTimelineBodyUlP: '#6c757d',
     experienceContainerTimelineBodyUlH4ActiveText: '#FFFFFF',
-    experienceContainerTimelineBodyUlPActiveText: '#13b5c5',
+    experienceContainerTimelineBodyUlPActiveText: '#00d0e5',
 
-    footerBackground: '#c0faeb',
+    footerBackground: '#1E043B',
+    footerText: '#FFFFFF',
 
     inputBorderError: '#ff0000',
+    inputBorderColor: '#FFFFFF',
     inputBorderDisabled: '#d3d3d3',
     inputBorderPlaceholder: '#b5bcc7',
-    inputBorderFocus: '#2800b3',
-    inputBorderLabelFocus: '#2800b3',
+    inputBorderFocus: '#00d0e5',
+    inputBorderLabel: '#FFFFFF',
+    inputBorderLabelFocus: '#00d0e5',
 
     introContainerH1: '#FFFFFF',
     introContainerH3: '#FFFFFF',
 
     projectsBackground: '#01162B',
-    projectsContainerH3: '#00CDE2',
+    projectsContainerH3: '#00d0e5',
 
-    sidebarContainerBackground: '#00CDE2',
+    sidebarContainerBackground: '#00d0e5',
     sidebarContainerCloseIcon: '#FFFFFF',
     sidebarContainerWrapper: '#FFFFFF',
     sidebarMenuLinkText: '#FFFFFF',
     sidebarMenuLinkTextHover: '#000000',
 
     contactMeBackground: '#01162B',
+    TextAreaLabel: '#FFFFFF',
     textAreaText: '#b5bcc7',
     textAreaPlaceholder: '#b5bcc7',
-    textAreaBorder: '#808080',
-    textAreaBorderFocus: '#2800b3',
-    textAreaLabelFocus: '#2800b3',
+    textAreaBorder: '#FFFFFF',
+    textAreaBorderFocus: '#00d0e5',
+    textAreaLabelFocus: '#00d0e5',
+
+    endOfSectionLineColor: '#FFFFFF',
   },
 };
