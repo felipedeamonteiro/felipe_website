@@ -1,6 +1,6 @@
 import styled, { keyframes, css } from 'styled-components';
 import darkThemeImage from '../../../public/blue_night_sky.jpg';
-import lightThemeImage from '../../../public/brightsky.jpg';
+import lightThemeImage from '../../../public/white_landscape.jpg';
 import { mobileScreenMax, tabletScreenMax } from '../../styles/helperScreens';
 
 interface IntroContainerProps {
@@ -43,7 +43,7 @@ export const Container = styled.section<IntroContainerProps>`
   justify-content: space-between;
   align-items: center;
   padding: 0 30px 30px 30px;
-  transition: background-image 0.5s ease-in-out;
+  transition: background-image 0.5s ease-out;
   //animation: ${animateBg} 5s linear infinite;
 
   ${props => props.darkMode && css`
