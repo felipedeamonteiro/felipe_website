@@ -17,44 +17,44 @@ const endOfSectionAnimation = keyframes`
 
 const animationBlurReal = keyframes`
 from {
-    text-shadow: 0 0 10px #fc446f, 
-                 0 0 20px #fc446f, 
-                 0 0 30px #fc446f, 
-                 0 0 40px #fc446f, 
-                 0 0 50px #fc446f, 
-                 0 0 60px #fc446f, 
-                 0 0 70px #fc446f;
+    text-shadow: 0 0 10px #fc1249, 
+                 0 0 20px #fc1249, 
+                 0 0 30px #fc1249, 
+                 0 0 40px #fc1249, 
+                 0 0 50px #fc1249, 
+                 0 0 60px #fc1249, 
+                 0 0 70px #fc1249;
   }
   
   to {
-    text-shadow: 0 0 20px #fa8ea7, 
-                 0 0 30px #fa8ea7, 
-                 0 0 40px #fa8ea7, 
-                 0 0 50px #fa8ea7, 
-                 0 0 60px #fa8ea7, 
-                 0 0 70px #fa8ea7, 
-                 0 0 80px #fa8ea7;
+    text-shadow: 0 0 20px #f73e69, 
+                 0 0 30px #f73e69, 
+                 0 0 40px #f73e69, 
+                 0 0 50px #f73e69, 
+                 0 0 60px #f73e69, 
+                 0 0 70px #f73e69, 
+                 0 0 80px #f73e69;
   }
 `;
 const animationBlurBox = keyframes`
 from {
-    box-shadow: 0 0 10px #fc446f, 
-                 0 0 20px #fc446f, 
-                 0 0 30px #fc446f, 
-                 0 0 40px #fc446f, 
-                 0 0 50px #fc446f, 
-                 0 0 60px #fc446f, 
-                 0 0 70px #fc446f;
+    box-shadow: 0 0 10px #fc1249, 
+                 0 0 20px #fc1249, 
+                 0 0 30px #fc1249, 
+                 0 0 40px #fc1249, 
+                 0 0 50px #fc1249, 
+                 0 0 60px #fc1249, 
+                 0 0 70px #fc1249;
   }
   
   to {
-    box-shadow: 0 0 20px #fa8ea7, 
-                 0 0 30px #fa8ea7, 
-                 0 0 40px #fa8ea7, 
-                 0 0 50px #fa8ea7, 
-                 0 0 60px #fa8ea7, 
-                 0 0 70px #fa8ea7, 
-                 0 0 80px #fa8ea7;
+    box-shadow: 0 0 20px #f73e69, 
+                 0 0 30px #f73e69, 
+                 0 0 40px #f73e69, 
+                 0 0 50px #f73e69, 
+                 0 0 60px #f73e69, 
+                 0 0 70px #f73e69, 
+                 0 0 80px #f73e69;
   }
 `;
 
@@ -360,7 +360,7 @@ export const Container = styled.section<ContainerProps>`
       ${props => props.darkMode && css`
         background: white;
         border-radius: 56px;
-        box-shadow: 0 0 20px #fa8ea7;
+        box-shadow: 0 0 20px #f73e69;
         padding: 5px 0;
       `}
 
@@ -376,12 +376,4 @@ export const Container = styled.section<ContainerProps>`
       }
     }
   }
-
-  /* @media only screen and (max-width: 414px) {
-    width: 401%;
-  }
-
-  @media only screen and (min-width: 415px) and (max-width: 975px) {
-    width: 122%;
-  } */
 `;

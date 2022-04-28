@@ -6,15 +6,6 @@ interface IntroContainerProps {
   darkMode: boolean;
 }
 
-// const animationBlur = keyframes`
-//   0% {
-//     filter: hue-rotate(0deg);
-//   }
-//   100% {
-//     filter: hue-rotate(360deg);
-//   }
-// `;
-
 const animationBlurReal = keyframes`
 from {
     text-shadow: 0 0 10px #03E9F4, 
@@ -75,16 +66,6 @@ export const Container = styled.section<IntroContainerProps>`
     `}
   }
 
-  /* ::before {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 15%;
-    z-index: 1;
-    background: ${(props) => props.theme.colors.experienceContainerTextUppercase};
-    mix-blend-mode: color;
-  } */
-
   @media only screen and (max-width: ${mobileScreenMax}) {
     width: 100%;
     padding: 80px 20px 20px 20px;
@@ -110,13 +91,6 @@ export const Container = styled.section<IntroContainerProps>`
       font-size: 45px;
       font-family: 'Orbitron', sans-serif;
       color: ${(props) => props.theme.colors.experienceContainerTextUppercase};
-      /* filter: blur(1px);
-      font-weight: 100;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 1),
-                   0 0 20px rgba(255, 255, 255, 1),
-                   0 0 40px rgba(255, 255, 255, 1),
-                   0 0 80px rgba(255, 255, 255, 1),
-                   0 0 160px rgba(255, 255, 255, 1); */
       ${props => props.darkMode && css`
       animation: ${animationBlurReal} 1s ease-in-out infinite alternate;
       `}
@@ -146,7 +120,7 @@ export const Container = styled.section<IntroContainerProps>`
   list-style: none;
   &:before {
     position: absolute;
-    top: 0;
+    top: 5px;
     bottom: 85px;
     left: 50%;
     width: 3px;
@@ -342,101 +316,5 @@ export const Container = styled.section<IntroContainerProps>`
       }
     }
   }
-  
 }
-
-/* @media only screen and (max-width: ${mobileScreenMax}) {
-  width: 100%;
-}
-
-@media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
-  width: 122%;
-} */
-
-/* @media only screen and (min-width:992px) {
-  .timeline {
-    > li {
-      min-height: 150px;
-      .timeline-panel {
-        padding: 0 20px 20px;
-      }
-      .timeline-image {
-        width: 150px;
-        height: 150px;
-        margin-left: -75px;
-        h4 {
-          font-size: 18px;
-          line-height: 26px;
-          margin-top: 30px;
-        }
-      }
-      &.timeline-inverted > .timeline-panel {
-        padding: 0 20px 20px;
-      }
-    }
-  }
-} */
-
-/* @media only screen and (min-width: ${desktopScreenMin}) {
-  .timeline {
-    > li {
-      min-height: 170px;
-      .timeline-panel {
-        padding: 36px 20px 20px 14px;
-      }
-      .timeline-image {
-        width: 170px;
-        height: 170px;
-        margin-left: -85px;
-        h4 {
-          margin-top: 40px;
-        }
-      }
-      &.timeline-inverted > .timeline-panel {
-        padding: 30px 5px 20px 20px;
-      }
-    }
-  }
-} */
-
-/* @media only screen and (min-width: ${mobileScreenMax}) and (max-width: ${tabletScreenMax}) {
-  width: 401%;
-  height: 3370px;
-
-  .timeline {
-    position: relative;
-    width: 80%;
-
-    &:before {
-      left: 50%;
-    }
-    > li {
-      width: 375px;
-      min-height: 100px;
-      margin-bottom: 100px;
-      .timeline-panel {
-        float: left;
-        width: 41%;
-        padding: 0 20px 20px 30px;
-        text-align: right;
-      }
-      .timeline-image {
-        left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-left: -50px;
-        h4 {
-          font-size: 13px;
-          line-height: 18px;
-          margin-top: 16px;
-        }
-      }
-      &.timeline-inverted > .timeline-panel {
-        float: right;
-        padding: 0 30px 20px 20px;
-        text-align: left;
-      }
-    }
-  }
-} */
 `;

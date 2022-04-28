@@ -35,63 +35,63 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
   const [viewText9, setViewText9] = useState<boolean>(false);
 
   const changeBorderLines = useCallback(() => {
-    if (window.scrollY >= 769) {
+    if (window.scrollY >= 669) {
       setViewCircleBorder1(true);
       setViewText1(true);
     } else {
       setViewCircleBorder1(false);
       setViewText1(false);
     }
-    if (window.scrollY >= 1087) {
+    if (window.scrollY >= 987) {
       setViewCircleBorder2(true);
       setViewText2(true);
     } else {
       setViewCircleBorder2(false);
       setViewText2(false);
     }
-    if (window.scrollY >= 1511) {
+    if (window.scrollY >= 1411) {
       setViewCircleBorder3(true);
       setViewText3(true);
     } else {
       setViewCircleBorder3(false);
       setViewText3(false);
     }
-    if (window.scrollY >= 1776) {
+    if (window.scrollY >= 1676) {
       setViewCircleBorder4(true);
       setViewText4(true);
     } else {
       setViewCircleBorder4(false);
       setViewText4(false);
     }
-    if (window.scrollY >= 2041) {
+    if (window.scrollY >= 1941) {
       setViewCircleBorder5(true);
       setViewText5(true);
     } else {
       setViewCircleBorder5(false);
       setViewText5(false);
     }
-    if (window.scrollY >= 2412) {
+    if (window.scrollY >= 2312) {
       setViewCircleBorder6(true);
       setViewText6(true);
     } else {
       setViewCircleBorder6(false);
       setViewText6(false);
     }
-    if (window.scrollY >= 2677) {
+    if (window.scrollY >= 2577) {
       setViewCircleBorder7(true);
       setViewText7(true);
     } else {
       setViewCircleBorder7(false);
       setViewText7(false);
     }
-    if (window.scrollY >= 3048) {
+    if (window.scrollY >= 2848) {
       setViewCircleBorder8(true);
       setViewText8(true);
     } else {
       setViewCircleBorder8(false);
       setViewText8(false);
     }
-    if (window.scrollY >= 3472) {
+    if (window.scrollY >= 3150) {
       setViewCircleBorder9(true);
       setViewText9(true);
     } else {
