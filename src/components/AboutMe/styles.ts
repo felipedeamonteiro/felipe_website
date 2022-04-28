@@ -85,6 +85,26 @@ const fillPython = keyframes`
 export const Container = styled.section<ContainerProps>`
   padding: 100px 30px 30px 30px;
   background: ${props => props.theme.colors.aboutMeBackground};
+  overflow: hidden;
+
+  ${props => props.darkMode && css`
+    .animation-div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: block;
+
+      .end-section-animated {
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, ${props => props.theme.colors.endOfSectionLineColor});
+        animation: ${endOfSectionAnimation} 1s linear infinite;
+        }
+      }
+    }
+  `}
 
   h1 {
     font-family: 'Orbitron', sans-serif;
@@ -343,20 +363,6 @@ export const Container = styled.section<ContainerProps>`
       }
     }
   }
-
-  ${props => props.darkMode && css`
-    .end-section-animated {
-      position: absolute;
-      display: block;
-      bottom: 0;
-      left: -100%;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, ${props => props.theme.colors.endOfSectionLineColor});
-      animation: ${endOfSectionAnimation} 1s linear infinite;
-    }  
-  `}
-
 
   /* @media only screen and (max-width: 414px) {
     width: 401%;

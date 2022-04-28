@@ -158,7 +158,9 @@ const AboutMe: React.FC<AboutMeProps> = ({ darkMode }) => {
           </h4>
         </div>
       </div>
-      <span className="end-section-animated"></span>
+      <div className="animation-div">
+        <span className="end-section-animated">CARAAAAALHOOOOOO</span>
+      </div>
     </Container>
   );
 };
