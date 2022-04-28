@@ -9,6 +9,7 @@ import MeuColegioImg from "../../../public/MeuColegio.png";
 import NubankImg from "../../../public/Nubank.jpg";
 import SiemensImg from "../../../public/Siemens.jpg";
 import ObjectEdgeLogo from "../../../public/object-edge-squarelogo.png";
+import { useDeviceScreenSize } from "../../hooks/useDeviceScreenSize";
 
 interface ExperienceProps {
   darkMode: boolean;
@@ -34,69 +35,201 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
   const [viewCircleBorder9, setViewCircleBorder9] = useState<boolean>(false);
   const [viewText9, setViewText9] = useState<boolean>(false);
 
+  const { isMobile, isTablet } = useDeviceScreenSize();
+
   const changeBorderLines = useCallback(() => {
-    if (window.scrollY >= 669) {
-      setViewCircleBorder1(true);
-      setViewText1(true);
+    if (isMobile) {
+      if (window.scrollY >= 769) {
+        setViewCircleBorder1(true);
+        setViewText1(true);
+      } else {
+        setViewCircleBorder1(false);
+        setViewText1(false);
+      }
+      if (window.scrollY >= 987) {
+        setViewCircleBorder2(true);
+        setViewText2(true);
+      } else {
+        setViewCircleBorder2(false);
+        setViewText2(false);
+      }
+      if (window.scrollY >= 1511) {
+        setViewCircleBorder3(true);
+        setViewText3(true);
+      } else {
+        setViewCircleBorder3(false);
+        setViewText3(false);
+      }
+      if (window.scrollY >= 1976) {
+        setViewCircleBorder4(true);
+        setViewText4(true);
+      } else {
+        setViewCircleBorder4(false);
+        setViewText4(false);
+      }
+      if (window.scrollY >= 2541) {
+        setViewCircleBorder5(true);
+        setViewText5(true);
+      } else {
+        setViewCircleBorder5(false);
+        setViewText5(false);
+      }
+      if (window.scrollY >= 3012) {
+        setViewCircleBorder6(true);
+        setViewText6(true);
+      } else {
+        setViewCircleBorder6(false);
+        setViewText6(false);
+      }
+      if (window.scrollY >= 3377) {
+        setViewCircleBorder7(true);
+        setViewText7(true);
+      } else {
+        setViewCircleBorder7(false);
+        setViewText7(false);
+      }
+      if (window.scrollY >= 3948) {
+        setViewCircleBorder8(true);
+        setViewText8(true);
+      } else {
+        setViewCircleBorder8(false);
+        setViewText8(false);
+      }
+      if (window.scrollY >= 4450) {
+        setViewCircleBorder9(true);
+        setViewText9(true);
+      } else {
+        setViewCircleBorder9(false);
+        setViewText9(false);
+      }
+    } else if (isTablet) {
+      if (window.scrollY >= 669) {
+        setViewCircleBorder1(true);
+        setViewText1(true);
+      } else {
+        setViewCircleBorder1(false);
+        setViewText1(false);
+      }
+      if (window.scrollY >= 787) {
+        setViewCircleBorder2(true);
+        setViewText2(true);
+      } else {
+        setViewCircleBorder2(false);
+        setViewText2(false);
+      }
+      if (window.scrollY >= 1011) {
+        setViewCircleBorder3(true);
+        setViewText3(true);
+      } else {
+        setViewCircleBorder3(false);
+        setViewText3(false);
+      }
+      if (window.scrollY >= 1376) {
+        setViewCircleBorder4(true);
+        setViewText4(true);
+      } else {
+        setViewCircleBorder4(false);
+        setViewText4(false);
+      }
+      if (window.scrollY >= 1641) {
+        setViewCircleBorder5(true);
+        setViewText5(true);
+      } else {
+        setViewCircleBorder5(false);
+        setViewText5(false);
+      }
+      if (window.scrollY >= 1912) {
+        setViewCircleBorder6(true);
+        setViewText6(true);
+      } else {
+        setViewCircleBorder6(false);
+        setViewText6(false);
+      }
+      if (window.scrollY >= 2277) {
+        setViewCircleBorder7(true);
+        setViewText7(true);
+      } else {
+        setViewCircleBorder7(false);
+        setViewText7(false);
+      }
+      if (window.scrollY >= 2548) {
+        setViewCircleBorder8(true);
+        setViewText8(true);
+      } else {
+        setViewCircleBorder8(false);
+        setViewText8(false);
+      }
+      if (window.scrollY >= 2850) {
+        setViewCircleBorder9(true);
+        setViewText9(true);
+      } else {
+        setViewCircleBorder9(false);
+        setViewText9(false);
+      }
     } else {
-      setViewCircleBorder1(false);
-      setViewText1(false);
-    }
-    if (window.scrollY >= 987) {
-      setViewCircleBorder2(true);
-      setViewText2(true);
-    } else {
-      setViewCircleBorder2(false);
-      setViewText2(false);
-    }
-    if (window.scrollY >= 1411) {
-      setViewCircleBorder3(true);
-      setViewText3(true);
-    } else {
-      setViewCircleBorder3(false);
-      setViewText3(false);
-    }
-    if (window.scrollY >= 1676) {
-      setViewCircleBorder4(true);
-      setViewText4(true);
-    } else {
-      setViewCircleBorder4(false);
-      setViewText4(false);
-    }
-    if (window.scrollY >= 1941) {
-      setViewCircleBorder5(true);
-      setViewText5(true);
-    } else {
-      setViewCircleBorder5(false);
-      setViewText5(false);
-    }
-    if (window.scrollY >= 2312) {
-      setViewCircleBorder6(true);
-      setViewText6(true);
-    } else {
-      setViewCircleBorder6(false);
-      setViewText6(false);
-    }
-    if (window.scrollY >= 2577) {
-      setViewCircleBorder7(true);
-      setViewText7(true);
-    } else {
-      setViewCircleBorder7(false);
-      setViewText7(false);
-    }
-    if (window.scrollY >= 2848) {
-      setViewCircleBorder8(true);
-      setViewText8(true);
-    } else {
-      setViewCircleBorder8(false);
-      setViewText8(false);
-    }
-    if (window.scrollY >= 3150) {
-      setViewCircleBorder9(true);
-      setViewText9(true);
-    } else {
-      setViewCircleBorder9(false);
-      setViewText9(false);
+      if (window.scrollY >= 669) {
+        setViewCircleBorder1(true);
+        setViewText1(true);
+      } else {
+        setViewCircleBorder1(false);
+        setViewText1(false);
+      }
+      if (window.scrollY >= 987) {
+        setViewCircleBorder2(true);
+        setViewText2(true);
+      } else {
+        setViewCircleBorder2(false);
+        setViewText2(false);
+      }
+      if (window.scrollY >= 1411) {
+        setViewCircleBorder3(true);
+        setViewText3(true);
+      } else {
+        setViewCircleBorder3(false);
+        setViewText3(false);
+      }
+      if (window.scrollY >= 1676) {
+        setViewCircleBorder4(true);
+        setViewText4(true);
+      } else {
+        setViewCircleBorder4(false);
+        setViewText4(false);
+      }
+      if (window.scrollY >= 1941) {
+        setViewCircleBorder5(true);
+        setViewText5(true);
+      } else {
+        setViewCircleBorder5(false);
+        setViewText5(false);
+      }
+      if (window.scrollY >= 2312) {
+        setViewCircleBorder6(true);
+        setViewText6(true);
+      } else {
+        setViewCircleBorder6(false);
+        setViewText6(false);
+      }
+      if (window.scrollY >= 2577) {
+        setViewCircleBorder7(true);
+        setViewText7(true);
+      } else {
+        setViewCircleBorder7(false);
+        setViewText7(false);
+      }
+      if (window.scrollY >= 2848) {
+        setViewCircleBorder8(true);
+        setViewText8(true);
+      } else {
+        setViewCircleBorder8(false);
+        setViewText8(false);
+      }
+      if (window.scrollY >= 3150) {
+        setViewCircleBorder9(true);
+        setViewText9(true);
+      } else {
+        setViewCircleBorder9(false);
+        setViewText9(false);
+      }
     }
   }, []);
 

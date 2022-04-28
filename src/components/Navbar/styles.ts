@@ -14,7 +14,7 @@ export const Nav = styled.nav<NavbarProps>`
   align-items: center;
   font-size: 1rem;
   position: sticky;
-  top: 0;
+  top: -1px;
   z-index: 1000;
   
   @media screen and (max-width: ${tabletScreenMax}) {

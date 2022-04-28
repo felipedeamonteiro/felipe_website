@@ -12,9 +12,6 @@ import {
   NavLinks,
 } from "./styles";
 import { FaBars } from "react-icons/fa";
-import ButtonNeon1 from "../Buttons/ButtonNeon1";
-import ButtonNeon2 from "../Buttons/ButtonNeon2";
-import ButtonNeon3 from "../Buttons/ButtonNeon3";
 import NeonButtonReal from "../Buttons/NeonButtonReal";
 
 interface NavbarProps {
