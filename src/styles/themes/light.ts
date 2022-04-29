@@ -79,5 +79,7 @@ export default {
     textAreaLabelFocus: '#2800b3',
 
     endOfSectionLineColor: '#FFFFFF',
+
+    scrollColor: '#00CDE2',
   },
 };

@@ -82,6 +82,8 @@ declare module 'styled-components' {
       textAreaLabelFocus: string;
 
       endOfSectionLineColor: string;
+
+      scrollColor: string;
     };
   }
 };

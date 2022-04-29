@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { shade } from 'polished';
 
 export default createGlobalStyle`
   * {
@@ -11,6 +12,21 @@ export default createGlobalStyle`
     margin: 0;
     font-family: 'Roboto Slab', sans-serif;
     min-height: 100vh;
+
+    overflow-y: auto;
+
+    ::-webkit-scrollbar {
+      width: 18px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: ${(props) => props.theme.colors.scrollColor};
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: ${(props) => shade(0.1, props.theme.colors.scrollColor)};
+    }
   }
 
   html {
