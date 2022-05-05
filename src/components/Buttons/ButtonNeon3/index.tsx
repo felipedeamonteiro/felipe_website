@@ -4,12 +4,10 @@ import { Container } from "./styles";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const ButtonNeon1: React.FC<ButtonProps> = ({ children }) => {
+const ButtonNeon1: React.FC<ButtonProps> = ({ children, ...props }) => {
   return (
-    <Container>
-      <a href={""}>
-        <span>{children}</span>
-      </a>
+    <Container type="button" {...props}>
+      <span>{children}</span>
     </Container>
   );
 };

@@ -37,7 +37,10 @@ export const NavbarHome = styled.a`
   color: ${props => props.theme.colors.navbarHomeTitle};
   font-size: 26px;
   font-weight: 400;
-  font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; 
+  /* font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;  */
+  //font-family: 'Roboto Slab', serif;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
   text-decoration: none;
   transition: font-size .5s;
 

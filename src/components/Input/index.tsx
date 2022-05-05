@@ -1,5 +1,5 @@
-import React, { InputHTMLAttributes, useEffect, useRef, useState } from "react";
-import { useField } from "@unform/core";
+import React, { InputHTMLAttributes, useState } from "react";
+import { FieldError } from "react-hook-form";
 
 import { Container } from "./styles";
 
@@ -11,6 +11,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   value?: string;
   updateDefaultValue?: string;
   darkMode: boolean;
+  error?: any;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -20,30 +21,16 @@ const Input: React.FC<InputProps> = ({
   placeholder,
   updateDefaultValue,
   darkMode,
+  error,
   ...rest
 }) => {
   const [defaultValueState, setDefaultValueState] = useState("");
-  const inputRef = useRef<HTMLInputElement>(null);
-  const { fieldName, defaultValue, error, registerField } = useField(name);
-
-  useEffect(() => {
-    registerField({
-      name: fieldName,
-      ref: inputRef.current,
-      path: "value",
-    });
-    if (updateDefaultValue) {
-      setDefaultValueState(updateDefaultValue);
-    }
-  }, [fieldName, registerField, updateDefaultValue]);
 
   return (
     <Container darkMode={darkMode} isErrored={!!error} isDisabled={disabled}>
       <input
-        ref={inputRef}
         type="text"
         name={name}
-        defaultValue={defaultValue}
         placeholder={placeholder}
         disabled={disabled}
         value={defaultValueState}
@@ -53,7 +40,6 @@ const Input: React.FC<InputProps> = ({
         }}
         {...rest}
       />
-
       {label ? <label htmlFor={name}>{label}</label> : ""}
       <span style={{ color: "#c53030" }}>{error}</span>
     </Container>
