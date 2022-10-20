@@ -13,7 +13,7 @@ export default createGlobalStyle`
     font-family: 'Roboto Slab', sans-serif;
     min-height: 100vh;
 
-    overflow-y: auto;
+    /* overflow-y: auto;
 
     ::-webkit-scrollbar {
       width: 18px;
@@ -26,7 +26,7 @@ export default createGlobalStyle`
 
     ::-webkit-scrollbar-thumb:hover {
       background: ${(props) => shade(0.1, props.theme.colors.scrollColor)};
-    }
+    } */
   }
 
   html {
