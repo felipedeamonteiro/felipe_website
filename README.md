@@ -3,6 +3,8 @@ Portfolio Website
 
 Node version v14.18.1
 
+But to deploy at vercel, Node >=v18
+
 After downloading the repo, install packages:
 
 ```
