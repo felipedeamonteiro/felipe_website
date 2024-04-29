@@ -1,6 +1,8 @@
 # felipe_website
 Portfolio Website
 
+Node version v14.18.1
+
 After downloading the repo, install packages:
 
 ```
